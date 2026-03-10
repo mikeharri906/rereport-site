@@ -1,0 +1,1208 @@
+{
+  "segment_averages": {
+    "cash-land-buyers": 74,
+    "cash-home-buyers": 74,
+    "ibuyers": 74,
+    "mortgage-lenders": 76,
+    "title-companies": 76,
+    "real-estate-agents": 74,
+    "property-management": 74,
+    "hard-money-lenders": 74
+  },
+  "companies": [
+    {
+      "name": "Sell California Land",
+      "website": "sellcalifornialand.com",
+      "own_site": true,
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-california.html",
+          "overall": 94,
+          "tier": "highest",
+          "subcategories": {
+            "Offer Speed": 96,
+            "Offer Fairness": 93,
+            "Closing Timeline": 95,
+            "Transparency": 94,
+            "Accreditation": 91
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sell Washington Land",
+      "website": "sellwashingtonland.com",
+      "own_site": true,
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-washington.html",
+          "overall": 93,
+          "tier": "highest",
+          "subcategories": {
+            "Offer Speed": 95,
+            "Offer Fairness": 92,
+            "Closing Timeline": 94,
+            "Transparency": 93,
+            "Accreditation": 90
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sell Florida Land",
+      "website": "sell-florida-land.com",
+      "own_site": true,
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-florida.html",
+          "overall": 92,
+          "tier": "highest",
+          "subcategories": {
+            "Offer Speed": 94,
+            "Offer Fairness": 91,
+            "Closing Timeline": 93,
+            "Transparency": 92,
+            "Accreditation": 90
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sell Texas Land",
+      "website": "sell-texas-land.com",
+      "own_site": true,
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-texas.html",
+          "overall": 93,
+          "tier": "highest",
+          "subcategories": {
+            "Offer Speed": 95,
+            "Offer Fairness": 92,
+            "Closing Timeline": 94,
+            "Transparency": 93,
+            "Accreditation": 91
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sell Arizona Land",
+      "website": "sellarizonaland.com",
+      "own_site": true,
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-arizona.html",
+          "overall": 92,
+          "tier": "highest",
+          "subcategories": {
+            "Offer Speed": 94,
+            "Offer Fairness": 91,
+            "Closing Timeline": 93,
+            "Transparency": 92,
+            "Accreditation": 89
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sell Georgia Land",
+      "website": "sell-georgia-land.com",
+      "own_site": true,
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-georgia.html",
+          "overall": 91,
+          "tier": "highest",
+          "subcategories": {
+            "Offer Speed": 93,
+            "Offer Fairness": 90,
+            "Closing Timeline": 92,
+            "Transparency": 91,
+            "Accreditation": 89
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sell Tennessee Land",
+      "website": "sell-tennessee-land.com",
+      "own_site": true,
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-tennessee.html",
+          "overall": 92,
+          "tier": "highest",
+          "subcategories": {
+            "Offer Speed": 94,
+            "Offer Fairness": 91,
+            "Closing Timeline": 93,
+            "Transparency": 92,
+            "Accreditation": 90
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sell Alabama Land",
+      "website": "sellalabamaland.com",
+      "own_site": true,
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-alabama.html",
+          "overall": 91,
+          "tier": "highest",
+          "subcategories": {
+            "Offer Speed": 93,
+            "Offer Fairness": 90,
+            "Closing Timeline": 92,
+            "Transparency": 91,
+            "Accreditation": 89
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sell Colorado Land",
+      "website": "sell-colorado-land.com",
+      "own_site": true,
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-colorado.html",
+          "overall": 93,
+          "tier": "highest",
+          "subcategories": {
+            "Offer Speed": 95,
+            "Offer Fairness": 92,
+            "Closing Timeline": 94,
+            "Transparency": 93,
+            "Accreditation": 91
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sell Land Cash",
+      "website": "selllandcash.com",
+      "own_site": true,
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-national.html",
+          "overall": 93,
+          "tier": "highest",
+          "subcategories": {
+            "Offer Speed": 95,
+            "Offer Fairness": 92,
+            "Closing Timeline": 94,
+            "Transparency": 93,
+            "Accreditation": 90
+          }
+        }
+      ]
+    },
+    {
+      "name": "Land Century",
+      "website": "landcentury.com",
+      "own_site": false,
+      "notes": "A+ BBB (not accredited). Founded 2006. Marketplace platform, not direct buyer. Ripoff Report complaints.",
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-california.html",
+          "overall": 79,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 78,
+            "Offer Fairness": 76,
+            "Closing Timeline": 80,
+            "Transparency": 75,
+            "Accreditation": 82
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-washington.html",
+          "overall": 78,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 77,
+            "Offer Fairness": 76,
+            "Closing Timeline": 79,
+            "Transparency": 74,
+            "Accreditation": 82
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-florida.html",
+          "overall": 80,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 79,
+            "Offer Fairness": 77,
+            "Closing Timeline": 81,
+            "Transparency": 76,
+            "Accreditation": 82
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-texas.html",
+          "overall": 79,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 78,
+            "Offer Fairness": 76,
+            "Closing Timeline": 80,
+            "Transparency": 75,
+            "Accreditation": 82
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-arizona.html",
+          "overall": 78,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 77,
+            "Offer Fairness": 75,
+            "Closing Timeline": 79,
+            "Transparency": 74,
+            "Accreditation": 82
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-georgia.html",
+          "overall": 80,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 79,
+            "Offer Fairness": 77,
+            "Closing Timeline": 81,
+            "Transparency": 76,
+            "Accreditation": 82
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-tennessee.html",
+          "overall": 78,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 77,
+            "Offer Fairness": 76,
+            "Closing Timeline": 79,
+            "Transparency": 74,
+            "Accreditation": 82
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-alabama.html",
+          "overall": 79,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 78,
+            "Offer Fairness": 76,
+            "Closing Timeline": 80,
+            "Transparency": 75,
+            "Accreditation": 82
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-colorado.html",
+          "overall": 78,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 77,
+            "Offer Fairness": 75,
+            "Closing Timeline": 79,
+            "Transparency": 74,
+            "Accreditation": 82
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-national.html",
+          "overall": 80,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 79,
+            "Offer Fairness": 77,
+            "Closing Timeline": 81,
+            "Transparency": 76,
+            "Accreditation": 82
+          }
+        }
+      ]
+    },
+    {
+      "name": "MarketPro Homebuyers",
+      "website": "marketprohomebuyers.com",
+      "own_site": false,
+      "notes": "A+ BBB accredited. Founded 2012. 4.6 Google (627 reviews). TCPA class actions. Regional (7 states). Primarily home buyer.",
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-california.html",
+          "overall": 76,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 78,
+            "Offer Fairness": 74,
+            "Closing Timeline": 77,
+            "Transparency": 72,
+            "Accreditation": 80
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-washington.html",
+          "overall": 75,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 77,
+            "Offer Fairness": 73,
+            "Closing Timeline": 76,
+            "Transparency": 72,
+            "Accreditation": 80
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-florida.html",
+          "overall": 77,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 79,
+            "Offer Fairness": 75,
+            "Closing Timeline": 78,
+            "Transparency": 73,
+            "Accreditation": 80
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-texas.html",
+          "overall": 76,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 78,
+            "Offer Fairness": 74,
+            "Closing Timeline": 77,
+            "Transparency": 72,
+            "Accreditation": 80
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-arizona.html",
+          "overall": 75,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 77,
+            "Offer Fairness": 73,
+            "Closing Timeline": 76,
+            "Transparency": 72,
+            "Accreditation": 80
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-georgia.html",
+          "overall": 77,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 79,
+            "Offer Fairness": 75,
+            "Closing Timeline": 78,
+            "Transparency": 73,
+            "Accreditation": 80
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-tennessee.html",
+          "overall": 75,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 77,
+            "Offer Fairness": 73,
+            "Closing Timeline": 76,
+            "Transparency": 72,
+            "Accreditation": 80
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-alabama.html",
+          "overall": 76,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 78,
+            "Offer Fairness": 74,
+            "Closing Timeline": 77,
+            "Transparency": 72,
+            "Accreditation": 80
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-colorado.html",
+          "overall": 75,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 77,
+            "Offer Fairness": 73,
+            "Closing Timeline": 76,
+            "Transparency": 72,
+            "Accreditation": 80
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-national.html",
+          "overall": 77,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 79,
+            "Offer Fairness": 75,
+            "Closing Timeline": 78,
+            "Transparency": 73,
+            "Accreditation": 80
+          }
+        },
+        {
+          "page": "/ratings/best-cash-home-buyers-national.html",
+          "overall": 82,
+          "tier": "highest",
+          "subcategories": {
+            "Offer Speed": 84,
+            "Offer Fairness": 81,
+            "Closing Timeline": 83,
+            "Transparency": 78,
+            "Accreditation": 84
+          }
+        }
+      ]
+    },
+    {
+      "name": "Harmony Land Holdings",
+      "website": "fastlandbuyer.net",
+      "own_site": false,
+      "notes": "Not BBB rated. Founded 2019. No independent reviews. San Antonio TX based.",
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-california.html",
+          "overall": 67,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 70,
+            "Offer Fairness": 68,
+            "Closing Timeline": 66,
+            "Transparency": 64,
+            "Accreditation": 62
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-washington.html",
+          "overall": 66,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 69,
+            "Offer Fairness": 67,
+            "Closing Timeline": 65,
+            "Transparency": 64,
+            "Accreditation": 62
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-florida.html",
+          "overall": 68,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 71,
+            "Offer Fairness": 69,
+            "Closing Timeline": 67,
+            "Transparency": 65,
+            "Accreditation": 62
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-texas.html",
+          "overall": 69,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 72,
+            "Offer Fairness": 70,
+            "Closing Timeline": 68,
+            "Transparency": 66,
+            "Accreditation": 63
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-arizona.html",
+          "overall": 67,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 70,
+            "Offer Fairness": 68,
+            "Closing Timeline": 66,
+            "Transparency": 64,
+            "Accreditation": 62
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-georgia.html",
+          "overall": 68,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 71,
+            "Offer Fairness": 69,
+            "Closing Timeline": 67,
+            "Transparency": 65,
+            "Accreditation": 62
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-tennessee.html",
+          "overall": 66,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 69,
+            "Offer Fairness": 67,
+            "Closing Timeline": 65,
+            "Transparency": 64,
+            "Accreditation": 62
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-alabama.html",
+          "overall": 67,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 70,
+            "Offer Fairness": 68,
+            "Closing Timeline": 66,
+            "Transparency": 64,
+            "Accreditation": 62
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-colorado.html",
+          "overall": 68,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 71,
+            "Offer Fairness": 69,
+            "Closing Timeline": 67,
+            "Transparency": 65,
+            "Accreditation": 62
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-national.html",
+          "overall": 68,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 71,
+            "Offer Fairness": 69,
+            "Closing Timeline": 67,
+            "Transparency": 65,
+            "Accreditation": 62
+          }
+        }
+      ]
+    },
+    {
+      "name": "National Land Buyers",
+      "website": "",
+      "own_site": false,
+      "notes": "Unverified company. No BBB profile, no reviews, no web presence confirmed.",
+      "pages": [
+        {
+          "page": "/ratings/best-cash-land-buyers-california.html",
+          "overall": 64,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 66,
+            "Offer Fairness": 64,
+            "Closing Timeline": 65,
+            "Transparency": 62,
+            "Accreditation": 60
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-washington.html",
+          "overall": 63,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 65,
+            "Offer Fairness": 63,
+            "Closing Timeline": 64,
+            "Transparency": 62,
+            "Accreditation": 60
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-florida.html",
+          "overall": 65,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 67,
+            "Offer Fairness": 65,
+            "Closing Timeline": 66,
+            "Transparency": 63,
+            "Accreditation": 60
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-texas.html",
+          "overall": 64,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 66,
+            "Offer Fairness": 64,
+            "Closing Timeline": 65,
+            "Transparency": 62,
+            "Accreditation": 60
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-arizona.html",
+          "overall": 63,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 65,
+            "Offer Fairness": 63,
+            "Closing Timeline": 64,
+            "Transparency": 62,
+            "Accreditation": 60
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-georgia.html",
+          "overall": 65,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 67,
+            "Offer Fairness": 65,
+            "Closing Timeline": 66,
+            "Transparency": 63,
+            "Accreditation": 60
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-tennessee.html",
+          "overall": 63,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 65,
+            "Offer Fairness": 63,
+            "Closing Timeline": 64,
+            "Transparency": 62,
+            "Accreditation": 60
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-alabama.html",
+          "overall": 64,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 66,
+            "Offer Fairness": 64,
+            "Closing Timeline": 65,
+            "Transparency": 62,
+            "Accreditation": 60
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-colorado.html",
+          "overall": 64,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 66,
+            "Offer Fairness": 64,
+            "Closing Timeline": 65,
+            "Transparency": 62,
+            "Accreditation": 60
+          }
+        },
+        {
+          "page": "/ratings/best-cash-land-buyers-national.html",
+          "overall": 65,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 67,
+            "Offer Fairness": 65,
+            "Closing Timeline": 66,
+            "Transparency": 63,
+            "Accreditation": 60
+          }
+        }
+      ]
+    },
+    {
+      "name": "We Buy Ugly Houses",
+      "website": "homevestors.com",
+      "own_site": false,
+      "notes": "A+ BBB accredited. Founded 1996. 1.3 BBB stars. ProPublica elder abuse investigation. National 47 states. 150K+ houses purchased.",
+      "pages": [
+        {
+          "page": "/ratings/best-cash-home-buyers-national.html",
+          "overall": 78,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 82,
+            "Offer Fairness": 72,
+            "Closing Timeline": 80,
+            "Transparency": 68,
+            "Accreditation": 84
+          }
+        }
+      ]
+    },
+    {
+      "name": "We Buy Houses",
+      "website": "webuyhouses.com",
+      "own_site": false,
+      "notes": "A+ BBB. Founded 1997. Licensing model. Trademark cancelled by court. PA AG warnings. 200+ markets.",
+      "pages": [
+        {
+          "page": "/ratings/best-cash-home-buyers-national.html",
+          "overall": 74,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 78,
+            "Offer Fairness": 72,
+            "Closing Timeline": 76,
+            "Transparency": 68,
+            "Accreditation": 74
+          }
+        }
+      ]
+    },
+    {
+      "name": "Opendoor",
+      "website": "opendoor.com",
+      "own_site": false,
+      "notes": "A+ BBB accredited. Founded 2014. 4.22 aggregate reviews. $62M FTC settlement. $39M class action. 4.78 App Store. 50 metros.",
+      "pages": [
+        {
+          "page": "/ratings/best-ibuyer-companies.html",
+          "overall": 84,
+          "tier": "highest",
+          "subcategories": {
+            "Offer Algorithm Accuracy": 82,
+            "Service Fee": 80,
+            "Market Coverage": 86,
+            "Closing Flexibility": 82,
+            "Technology Experience": 88
+          }
+        }
+      ]
+    },
+    {
+      "name": "Offerpad",
+      "website": "offerpad.com",
+      "own_site": false,
+      "notes": "A+ BBB accredited. Founded 2015. 3.9 BBB stars. 8% service fee. Shrinking from 30 to 17 markets.",
+      "pages": [
+        {
+          "page": "/ratings/best-ibuyer-companies.html",
+          "overall": 78,
+          "tier": "above",
+          "subcategories": {
+            "Offer Algorithm Accuracy": 76,
+            "Service Fee": 72,
+            "Market Coverage": 74,
+            "Closing Flexibility": 80,
+            "Technology Experience": 82
+          }
+        }
+      ]
+    },
+    {
+      "name": "Redfin Now",
+      "website": "redfin.com",
+      "own_site": false,
+      "notes": "DEFUNCT as of Nov 2022. Redfin parent has F BBB rating. Fees up to 13%. $321M parent losses.",
+      "pages": [
+        {
+          "page": "/ratings/best-ibuyer-companies.html",
+          "overall": 68,
+          "tier": "below",
+          "subcategories": {
+            "Offer Algorithm Accuracy": 72,
+            "Service Fee": 62,
+            "Market Coverage": 64,
+            "Closing Flexibility": 70,
+            "Technology Experience": 76
+          }
+        }
+      ]
+    },
+    {
+      "name": "Rocket Mortgage",
+      "website": "rocketmortgage.com",
+      "own_site": false,
+      "notes": "A+ BBB accredited since 1986. 4.6 Trustpilot (39K reviews). J.D. Power #1 2025. RESPA kickback lawsuits. DOJ discrimination suit.",
+      "pages": [
+        {
+          "page": "/ratings/best-mortgage-lenders.html",
+          "overall": 86,
+          "tier": "highest",
+          "subcategories": {
+            "Rate Competitiveness": 84,
+            "Approval Speed": 90,
+            "Loan Variety": 86,
+            "Customer Service": 82,
+            "Closing Costs": 84
+          }
+        }
+      ]
+    },
+    {
+      "name": "Better.com",
+      "website": "better.com",
+      "own_site": false,
+      "notes": "A BBB accredited. Founded 2016. 3.9 Trustpilot. Mass Zoom layoffs. CEO controversies. AI underwriting.",
+      "pages": [
+        {
+          "page": "/ratings/best-mortgage-lenders.html",
+          "overall": 80,
+          "tier": "above",
+          "subcategories": {
+            "Rate Competitiveness": 84,
+            "Approval Speed": 82,
+            "Loan Variety": 76,
+            "Customer Service": 72,
+            "Closing Costs": 82
+          }
+        }
+      ]
+    },
+    {
+      "name": "loanDepot",
+      "website": "loandepot.com",
+      "own_site": false,
+      "notes": "A+ BBB accredited. Founded 2010. 4.0 Trustpilot (4.3K). $86M data breach settlement (16.9M customers). 200+ branches.",
+      "pages": [
+        {
+          "page": "/ratings/best-mortgage-lenders.html",
+          "overall": 79,
+          "tier": "above",
+          "subcategories": {
+            "Rate Competitiveness": 78,
+            "Approval Speed": 80,
+            "Loan Variety": 82,
+            "Customer Service": 76,
+            "Closing Costs": 78
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pennymac",
+      "website": "pennymac.com",
+      "own_site": false,
+      "notes": "A+ BBB accredited. Founded 2008. 2.8 Trustpilot. Last in J.D. Power 2024. Countrywide exec origins. $158M settlement.",
+      "pages": [
+        {
+          "page": "/ratings/best-mortgage-lenders.html",
+          "overall": 74,
+          "tier": "below",
+          "subcategories": {
+            "Rate Competitiveness": 78,
+            "Approval Speed": 72,
+            "Loan Variety": 76,
+            "Customer Service": 66,
+            "Closing Costs": 74
+          }
+        }
+      ]
+    },
+    {
+      "name": "First American Title",
+      "website": "firstam.com",
+      "own_site": false,
+      "notes": "Partial BBB accreditation. AM Best A (Excellent). Founded 1889. 885M records breach 2019. $1M NYDFS fine. SEC charges. IgniteRE platform.",
+      "pages": [
+        {
+          "page": "/ratings/best-title-companies.html",
+          "overall": 82,
+          "tier": "highest",
+          "subcategories": {
+            "Closing Speed": 80,
+            "Error Rate": 78,
+            "Fee Transparency": 82,
+            "Coverage Area": 88,
+            "Customer Service": 80
+          }
+        }
+      ]
+    },
+    {
+      "name": "Fidelity National Title",
+      "website": "fnf.com",
+      "own_site": false,
+      "notes": "Not BBB accredited. F rating some locations. Largest title insurer. Founded 1847. 1.3M-customer breach 2023. inHere platform 80% adoption.",
+      "pages": [
+        {
+          "page": "/ratings/best-title-companies.html",
+          "overall": 80,
+          "tier": "above",
+          "subcategories": {
+            "Closing Speed": 82,
+            "Error Rate": 76,
+            "Fee Transparency": 78,
+            "Coverage Area": 90,
+            "Customer Service": 72
+          }
+        }
+      ]
+    },
+    {
+      "name": "Old Republic Title",
+      "website": "oldrepublictitle.com",
+      "own_site": false,
+      "notes": "Not BBB accredited. AM Best A+ (Superior). Founded 1907. 117 years. Qualia partnership 2025. In tech transition.",
+      "pages": [
+        {
+          "page": "/ratings/best-title-companies.html",
+          "overall": 78,
+          "tier": "above",
+          "subcategories": {
+            "Closing Speed": 76,
+            "Error Rate": 80,
+            "Fee Transparency": 78,
+            "Coverage Area": 82,
+            "Customer Service": 76
+          }
+        }
+      ]
+    },
+    {
+      "name": "Keller Williams",
+      "website": "kw.com",
+      "own_site": false,
+      "notes": "Largest real estate franchise globally. Founded 1983. Strong training programs. National antitrust settlement participant.",
+      "pages": [
+        {
+          "page": "/ratings/best-real-estate-agents.html",
+          "overall": 84,
+          "tier": "highest",
+          "subcategories": {
+            "Days on Market": 82,
+            "Commission Structure": 78,
+            "Local Market Knowledge": 88,
+            "Communication": 82,
+            "Transaction Volume": 90
+          }
+        }
+      ]
+    },
+    {
+      "name": "RE/MAX",
+      "website": "remax.com",
+      "own_site": false,
+      "notes": "Founded 1973. Global brand. Strong agent network. 140K+ agents in 110+ countries.",
+      "pages": [
+        {
+          "page": "/ratings/best-real-estate-agents.html",
+          "overall": 82,
+          "tier": "above",
+          "subcategories": {
+            "Days on Market": 84,
+            "Commission Structure": 76,
+            "Local Market Knowledge": 86,
+            "Communication": 80,
+            "Transaction Volume": 84
+          }
+        }
+      ]
+    },
+    {
+      "name": "Coldwell Banker",
+      "website": "coldwellbanker.com",
+      "own_site": false,
+      "notes": "Founded 1906. Prestigious brand. Part of Anywhere Real Estate. 100K+ agents.",
+      "pages": [
+        {
+          "page": "/ratings/best-real-estate-agents.html",
+          "overall": 80,
+          "tier": "above",
+          "subcategories": {
+            "Days on Market": 80,
+            "Commission Structure": 76,
+            "Local Market Knowledge": 84,
+            "Communication": 80,
+            "Transaction Volume": 80
+          }
+        }
+      ]
+    },
+    {
+      "name": "eXp Realty",
+      "website": "exprealty.com",
+      "own_site": false,
+      "notes": "Founded 2009. Cloud-based model. Rapid growth. 90K+ agents in 24 countries.",
+      "pages": [
+        {
+          "page": "/ratings/best-real-estate-agents.html",
+          "overall": 78,
+          "tier": "above",
+          "subcategories": {
+            "Days on Market": 80,
+            "Commission Structure": 84,
+            "Local Market Knowledge": 74,
+            "Communication": 76,
+            "Transaction Volume": 78
+          }
+        }
+      ]
+    },
+    {
+      "name": "Greystar",
+      "website": "greystar.com",
+      "own_site": false,
+      "notes": "Founded 1993. 946K+ units managed. FTC $24M settlement. DOJ antitrust settlement. $198M class actions.",
+      "pages": [
+        {
+          "page": "/ratings/best-property-management-companies.html",
+          "overall": 78,
+          "tier": "above",
+          "subcategories": {
+            "Vacancy Rate": 84,
+            "Maintenance Response Time": 74,
+            "Fee Structure": 70,
+            "Tenant Screening": 84,
+            "Reporting": 80
+          }
+        }
+      ]
+    },
+    {
+      "name": "CBRE",
+      "website": "cbre.com",
+      "own_site": false,
+      "notes": "Founded 1906. 7B sq ft managed. 120 years. Global leader. SEC $375K whistleblower penalty. 1.3 Trustpilot.",
+      "pages": [
+        {
+          "page": "/ratings/best-property-management-companies.html",
+          "overall": 80,
+          "tier": "highest",
+          "subcategories": {
+            "Vacancy Rate": 84,
+            "Maintenance Response Time": 78,
+            "Fee Structure": 76,
+            "Tenant Screening": 82,
+            "Reporting": 82
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cushman & Wakefield",
+      "website": "cushmanwakefield.com",
+      "own_site": false,
+      "notes": "Founded 1917. 700M sq ft Americas. D-/F BBB. DOJ RealPage lawsuit. 401k class action.",
+      "pages": [
+        {
+          "page": "/ratings/best-property-management-companies.html",
+          "overall": 74,
+          "tier": "below",
+          "subcategories": {
+            "Vacancy Rate": 78,
+            "Maintenance Response Time": 72,
+            "Fee Structure": 70,
+            "Tenant Screening": 76,
+            "Reporting": 74
+          }
+        }
+      ]
+    },
+    {
+      "name": "Invitation Homes",
+      "website": "invitationhomes.com",
+      "own_site": false,
+      "notes": "Founded 2012. A+ BBB. 86K homes. Largest SFR. FTC $48M settlement. 1.3 Trustpilot (9K reviews). Discriminatory practices alleged.",
+      "pages": [
+        {
+          "page": "/ratings/best-property-management-companies.html",
+          "overall": 76,
+          "tier": "above",
+          "subcategories": {
+            "Vacancy Rate": 82,
+            "Maintenance Response Time": 72,
+            "Fee Structure": 68,
+            "Tenant Screening": 80,
+            "Reporting": 78
+          }
+        }
+      ]
+    },
+    {
+      "name": "Kiavi",
+      "website": "kiavi.com",
+      "own_site": false,
+      "notes": "Founded 2013 as LendingHome. 4.8 Trustpilot (696 reviews). Not BBB accredited. 50 states. Up to 90% LTV.",
+      "pages": [
+        {
+          "page": "/ratings/best-hard-money-lenders.html",
+          "overall": 82,
+          "tier": "highest",
+          "subcategories": {
+            "LTV Ratio": 84,
+            "Interest Rate": 80,
+            "Approval Speed": 86,
+            "Draw Process": 80,
+            "Flexibility": 82
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lima One Capital",
+      "website": "limaone.com",
+      "own_site": false,
+      "notes": "Founded 2010 by Marines. A+ BBB accredited. 4.0 Trustpilot. 46 states. Up to 92.5% LTC. Acquired by MFA Financial 2021.",
+      "pages": [
+        {
+          "page": "/ratings/best-hard-money-lenders.html",
+          "overall": 80,
+          "tier": "above",
+          "subcategories": {
+            "LTV Ratio": 82,
+            "Interest Rate": 78,
+            "Approval Speed": 82,
+            "Draw Process": 78,
+            "Flexibility": 80
+          }
+        }
+      ]
+    },
+    {
+      "name": "RCN Capital",
+      "website": "rcncapital.com",
+      "own_site": false,
+      "notes": "Founded 2010. 4.6 Trustpilot (190 reviews). Not BBB accredited. 45 states. Up to 95% LTC. Complaints about rate changes.",
+      "pages": [
+        {
+          "page": "/ratings/best-hard-money-lenders.html",
+          "overall": 78,
+          "tier": "above",
+          "subcategories": {
+            "LTV Ratio": 86,
+            "Interest Rate": 76,
+            "Approval Speed": 78,
+            "Draw Process": 74,
+            "Flexibility": 80
+          }
+        }
+      ]
+    },
+    {
+      "name": "Visio Lending",
+      "website": "visiolending.com",
+      "own_site": false,
+      "notes": "Founded 2012. A+ BBB accredited. 4.4 Trustpilot (183 reviews). 41 states. Up to 80% LTV. Slow closings (12 weeks reported).",
+      "pages": [
+        {
+          "page": "/ratings/best-hard-money-lenders.html",
+          "overall": 76,
+          "tier": "above",
+          "subcategories": {
+            "LTV Ratio": 78,
+            "Interest Rate": 76,
+            "Approval Speed": 70,
+            "Draw Process": 76,
+            "Flexibility": 78
+          }
+        }
+      ]
+    }
+  ]
+}
