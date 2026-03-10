@@ -2,6 +2,66 @@
 $page_title = "Best Cash Home Buyers 2026 | RE Report";
 $page_description = "Independent ratings of the best cash home buyers in 2026. Compare We Buy Ugly Houses, MarketPro Homebuyers, and We Buy Houses by speed and fairness.";
 $page_canonical = "https://rereport.org/ratings/best-cash-home-buyers-national.html";
+
+$breadcrumbs = [
+  ['label' => 'Ratings', 'url' => 'cash-home-buyers.html'],
+  ['label' => 'Cash Home Buyers', 'url' => 'cash-home-buyers.html'],
+  ['label' => 'Best Cash Home Buyers 2026']
+];
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Article",
+  "headline" => $page_title,
+  "description" => $page_description,
+  "datePublished" => "2026-03-01",
+  "dateModified" => "2026-03-01",
+  "publisher" => [
+    "@type" => "Organization",
+    "name" => "RE Report",
+    "url" => "https://rereport.org"
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+$page_faq_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "FAQPage",
+  "mainEntity" => [
+    [
+      "@type" => "Question",
+      "name" => "How does RE Report evaluate cash home buyers?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Cash home buyers are evaluated across five categories: Offer Speed, Offer Fairness, Closing Timeline, Transparency, and Accreditation. Scores are based on publicly available data including BBB ratings, consumer reviews, and regulatory records."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Are cash home buyer offers fair?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Cash offers typically fall below full market value in exchange for speed and convenience. RE Report's Offer Fairness scores measure how competitive each buyer's offers are relative to fair market value in their operating markets."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What should homeowners look for in a cash buyer?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Key factors include BBB accreditation, a strong track record of consumer reviews, transparent fee structures, and flexibility on closing timelines. The RE Report ratings weigh all of these factors."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How often are cash home buyer ratings updated?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Ratings are reviewed and updated annually during the RE Report evaluation cycle. Current ratings reflect data collected through March 2026."
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 include '../header.php';
 ?>
 
@@ -53,6 +113,27 @@ include '../header.php';
               <span class="score">84</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>A+ BBB accredited with 4.6 Google rating across 627 reviews</li>
+                <li>Fast offer delivery with established process since 2012</li>
+                <li>Professional closing with dedicated transaction coordinators</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Regional coverage limited to 7 states</li>
+                <li>Past TCPA-related class actions noted</li>
+                <li>Land purchasing is secondary to home acquisitions</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>MarketPro Homebuyers leads the 2026 cash home buyer ratings with strong accreditation and a substantial body of positive consumer reviews. The company's regional focus means consistent quality in the markets it serves.</p>
+          </div>
         </div>
       </div>
 
@@ -92,6 +173,27 @@ include '../header.php';
               <div class="score-bar-container"><div class="score-bar" style="width: 84%;"></div></div>
               <span class="score">84</span>
             </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>National coverage spanning 47 states with 1,100+ franchises</li>
+                <li>Over 150,000 houses purchased since founding in 1996</li>
+                <li>A+ BBB accredited organization</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Franchise model means quality varies by location</li>
+                <li>Low BBB consumer star rating of 1.3</li>
+                <li>Subject of investigative reports concerning business practices</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>We Buy Ugly Houses offers unmatched national reach through its franchise network, but the franchise model introduces variability in service quality. RE Report analysts noted the gap between the organization's BBB letter grade and its consumer star rating.</p>
           </div>
         </div>
       </div>
@@ -138,10 +240,50 @@ include '../header.php';
               <span class="score">74</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Recognizable national brand operating since 1997</li>
+                <li>Wide market presence with 200+ markets covered</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Licensing model means inconsistent buyer quality</li>
+                <li>Trademark has faced legal challenges</li>
+                <li>State attorney general warnings issued regarding some licensees</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>We Buy Houses operates through a licensing model where independent operators use the brand name. This means the experience can vary dramatically depending on the local licensee, and the company has faced regulatory scrutiny in certain markets.</p>
+          </div>
         </div>
       </div>
 
       <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <details class="faq-item">
+          <summary>How does RE Report evaluate cash home buyers?</summary>
+          <p>Cash home buyers are evaluated across five categories: Offer Speed, Offer Fairness, Closing Timeline, Transparency, and Accreditation. Scores are based on publicly available data including BBB ratings, consumer reviews, and regulatory records.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are cash home buyer offers fair?</summary>
+          <p>Cash offers typically fall below full market value in exchange for speed and convenience. RE Report's Offer Fairness scores measure how competitive each buyer's offers are relative to fair market value in their operating markets.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What should homeowners look for in a cash buyer?</summary>
+          <p>Key factors include BBB accreditation, a strong track record of consumer reviews, transparent fee structures, and flexibility on closing timelines. The RE Report ratings weigh all of these factors.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How often are cash home buyer ratings updated?</summary>
+          <p>Ratings are reviewed and updated annually during the RE Report evaluation cycle. Current ratings reflect data collected through March 2026.</p>
+        </details>
+      </div>
 
     </div>
   </section>

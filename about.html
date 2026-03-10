@@ -2,6 +2,16 @@
 $page_title = "About RE Report | Independent Real Estate Company Ratings";
 $page_description = "RE Report is an independent team of real estate consumers, investors, and researchers providing unbiased company ratings across all major real estate categories.";
 $page_canonical = "https://rereport.org/about.html";
+$breadcrumbs = [
+  ['label' => 'About']
+];
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "AboutPage",
+  "name" => $page_title,
+  "description" => $page_description,
+  "url" => $page_canonical
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 include 'header.php';
 ?>
 

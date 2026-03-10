@@ -2,6 +2,18 @@
 $page_title = "Methodology | How RE Report Rates Real Estate Companies 2026";
 $page_description = "Learn how RE Report evaluates and scores real estate companies using public data, BBB records, consumer reviews, and proprietary methodology across five factors.";
 $page_canonical = "https://rereport.org/methodology.html";
+$breadcrumbs = [
+  ['label' => 'Methodology']
+];
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Article",
+  "headline" => $page_title,
+  "description" => $page_description,
+  "datePublished" => "2026-03-01",
+  "dateModified" => "2026-03-01",
+  "publisher" => ["@type" => "Organization", "name" => "RE Report", "url" => "https://rereport.org"]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 include 'header.php';
 ?>
 

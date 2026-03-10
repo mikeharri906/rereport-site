@@ -1,0 +1,70 @@
+<?php
+$page_title = "Our Team | RE Report";
+$page_description = "Meet the research and editorial team behind RE Report's independent real estate company ratings.";
+$page_canonical = "https://rereport.org/team.html";
+$breadcrumbs = [
+  ['label' => 'Our Team']
+];
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "AboutPage",
+  "name" => $page_title,
+  "description" => $page_description,
+  "url" => $page_canonical
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+include 'header.php';
+?>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Team</h1>
+      <p>The research and editorial professionals behind RE Report's independent ratings.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <p>RE Report's ratings are produced by a team of research analysts and editors with backgrounds in real estate, financial analysis, and consumer advocacy. The team brings collective experience spanning mortgage lending, property management, title insurance, and residential real estate transactions.</p>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <h3>Editorial Director</h3>
+          <div class="role">Ratings Oversight</div>
+          <p>Oversees all published ratings and ensures editorial independence across every evaluation cycle. Brings extensive experience in real estate market analysis and consumer research methodologies.</p>
+        </div>
+        <div class="team-card">
+          <h3>Senior Research Analyst</h3>
+          <div class="role">Lending & Title</div>
+          <p>Leads the evaluation process for mortgage lenders, hard money lenders, and title companies. Background in mortgage origination and financial services compliance.</p>
+        </div>
+        <div class="team-card">
+          <h3>Senior Research Analyst</h3>
+          <div class="role">Cash Buyers & iBuyers</div>
+          <p>Manages ratings for cash home buyers, cash land buyers, and iBuyer companies. Specializes in alternative real estate transaction models and investor-focused markets.</p>
+        </div>
+        <div class="team-card">
+          <h3>Research Analyst</h3>
+          <div class="role">Agents & Property Management</div>
+          <p>Handles evaluations for real estate agent brokerages and property management companies. Focused on operational metrics and consumer satisfaction data.</p>
+        </div>
+        <div class="team-card">
+          <h3>Data Analyst</h3>
+          <div class="role">Scoring & Methodology</div>
+          <p>Maintains the scoring models and data pipelines that power RE Report's rating system. Ensures consistency and accuracy across all published scores and segment averages.</p>
+        </div>
+        <div class="team-card">
+          <h3>Editor</h3>
+          <div class="role">Content & Compliance</div>
+          <p>Reviews all published content for accuracy, neutrality, and compliance with RE Report's editorial standards. Manages the corrections process and responds to company inquiries.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <p>RE Report's editorial standards are detailed in the <a href="editorial-policy.html">Editorial Policy</a>. For inquiries, contact the team at <strong>info@rereport.org</strong>.</p>
+      </div>
+
+    </div>
+  </section>
+
+<?php include 'footer.php'; ?>

@@ -2,6 +2,66 @@
 $page_title = "Best Mortgage Lenders 2026 | RE Report";
 $page_description = "Independent ratings of the best mortgage lenders in 2026. Compare Rocket Mortgage, Better.com, loanDepot, and Pennymac by rates, speed, and service.";
 $page_canonical = "https://rereport.org/ratings/best-mortgage-lenders.html";
+
+$breadcrumbs = [
+  ['label' => 'Ratings', 'url' => 'mortgage-lenders.html'],
+  ['label' => 'Mortgage Lenders', 'url' => 'mortgage-lenders.html'],
+  ['label' => 'Best Mortgage Lenders 2026']
+];
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Article",
+  "headline" => $page_title,
+  "description" => $page_description,
+  "datePublished" => "2026-03-01",
+  "dateModified" => "2026-03-01",
+  "publisher" => [
+    "@type" => "Organization",
+    "name" => "RE Report",
+    "url" => "https://rereport.org"
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+$page_faq_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "FAQPage",
+  "mainEntity" => [
+    [
+      "@type" => "Question",
+      "name" => "How are mortgage lenders rated by RE Report?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Mortgage lenders are evaluated across five categories: Rate Competitiveness, Approval Speed, Loan Variety, Customer Service, and Closing Costs. Scores incorporate J.D. Power data, consumer reviews, and regulatory records."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What is the segment average for mortgage lenders?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "The 2026 segment average is 76, reflecting the overall quality of major mortgage lenders. Companies above this threshold demonstrate stronger performance across evaluated criteria."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Should borrowers compare multiple lender offers?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Absolutely. Even small rate differences can save thousands over the life of a loan. RE Report recommends obtaining at least three quotes and comparing not just rates but total closing costs and fee structures."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How often are mortgage lender ratings updated?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "RE Report reviews and updates mortgage lender ratings annually. The current ratings reflect the 2026 evaluation cycle with data through March 2026."
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 include '../header.php';
 ?>
 
@@ -53,6 +113,27 @@ include '../header.php';
               <span class="score">84</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Ranked #1 in J.D. Power 2025 mortgage origination satisfaction</li>
+                <li>A+ BBB accredited since 1986 with 4.6 Trustpilot rating</li>
+                <li>Fast digital approval process with extensive loan variety</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>RESPA kickback-related lawsuits in recent years</li>
+                <li>DOJ discrimination suit settlement</li>
+                <li>Rates may not always be the most competitive for all loan types</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Rocket Mortgage earns the top position through a combination of customer satisfaction, digital innovation, and loan product breadth. The company's long track record and consistently high third-party ratings support its leading position.</p>
+          </div>
         </div>
       </div>
 
@@ -93,6 +174,27 @@ include '../header.php';
               <span class="score">82</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>AI-powered underwriting for faster approvals</li>
+                <li>Competitive rate offerings with low closing costs</li>
+                <li>A BBB accredited with fully digital process</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Controversial mass layoffs raised operational concerns</li>
+                <li>CEO leadership controversies widely reported</li>
+                <li>3.9 Trustpilot rating shows room for improvement</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Better.com offers a competitive digital mortgage experience with strong rate pricing. However, well-publicized internal turbulence has raised questions about long-term operational stability that RE Report continues to monitor.</p>
+          </div>
         </div>
         <div class="company-card">
           <div class="company-header">
@@ -128,6 +230,27 @@ include '../header.php';
               <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
               <span class="score">78</span>
             </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>A+ BBB accredited with 4.0 Trustpilot rating</li>
+                <li>Wide loan variety including FHA, VA, and jumbo products</li>
+                <li>Over 200 branches for in-person support</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>$86M data breach settlement affecting 16.9 million customers</li>
+                <li>Higher rates reported compared to digital-first competitors</li>
+                <li>Branch network adds overhead reflected in fees</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>loanDepot provides a solid mix of digital and in-person lending services. The significant data breach settlement is a notable concern, though the company has since invested in cybersecurity improvements.</p>
           </div>
         </div>
       </div>
@@ -174,10 +297,50 @@ include '../header.php';
               <span class="score">74</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>A+ BBB accredited with broad loan program availability</li>
+                <li>Large servicing portfolio with established operations since 2008</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Last place in J.D. Power 2024 mortgage origination satisfaction</li>
+                <li>2.8 Trustpilot rating indicates widespread customer dissatisfaction</li>
+                <li>$158M settlement related to loan servicing practices</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Pennymac's low J.D. Power ranking and Trustpilot scores indicate consistent customer service challenges. While the company offers competitive products, the servicing experience has drawn significant criticism from borrowers.</p>
+          </div>
         </div>
       </div>
 
       <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <details class="faq-item">
+          <summary>How are mortgage lenders rated by RE Report?</summary>
+          <p>Mortgage lenders are evaluated across five categories: Rate Competitiveness, Approval Speed, Loan Variety, Customer Service, and Closing Costs. Scores incorporate J.D. Power data, consumer reviews, and regulatory records.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is the segment average for mortgage lenders?</summary>
+          <p>The 2026 segment average is 76, reflecting the overall quality of major mortgage lenders. Companies above this threshold demonstrate stronger performance across evaluated criteria.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Should borrowers compare multiple lender offers?</summary>
+          <p>Absolutely. Even small rate differences can save thousands over the life of a loan. RE Report recommends obtaining at least three quotes and comparing not just rates but total closing costs and fee structures.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How often are mortgage lender ratings updated?</summary>
+          <p>RE Report reviews and updates mortgage lender ratings annually. The current ratings reflect the 2026 evaluation cycle with data through March 2026.</p>
+        </details>
+      </div>
 
     </div>
   </section>

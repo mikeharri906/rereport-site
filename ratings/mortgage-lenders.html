@@ -2,6 +2,19 @@
 $page_title = "Best Mortgage Lenders 2026 | RE Report Ratings";
 $page_description = "Independent ratings of the best mortgage lenders in 2026. Compare Rocket Mortgage, Better.com, loanDepot, and Pennymac by rates, speed, and service.";
 $page_canonical = "https://rereport.org/ratings/mortgage-lenders.html";
+$breadcrumbs = [
+  ['label' => 'Ratings', 'url' => 'cash-land-buyers.html'],
+  ['label' => 'Mortgage Lenders']
+];
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Article",
+  "headline" => $page_title,
+  "description" => $page_description,
+  "datePublished" => "2026-03-01",
+  "dateModified" => "2026-03-01",
+  "publisher" => ["@type" => "Organization", "name" => "RE Report", "url" => "https://rereport.org"]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 include '../header.php';
 ?>
 

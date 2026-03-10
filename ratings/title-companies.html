@@ -2,6 +2,19 @@
 $page_title = "Best Title Companies 2026 | RE Report Ratings";
 $page_description = "Independent ratings of the best title insurance and escrow companies in 2026. Compare First American, Fidelity National, and Old Republic by speed and service.";
 $page_canonical = "https://rereport.org/ratings/title-companies.html";
+$breadcrumbs = [
+  ['label' => 'Ratings', 'url' => 'cash-land-buyers.html'],
+  ['label' => 'Title Companies']
+];
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Article",
+  "headline" => $page_title,
+  "description" => $page_description,
+  "datePublished" => "2026-03-01",
+  "dateModified" => "2026-03-01",
+  "publisher" => ["@type" => "Organization", "name" => "RE Report", "url" => "https://rereport.org"]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 include '../header.php';
 ?>
 

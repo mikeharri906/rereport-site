@@ -2,6 +2,66 @@
 $page_title = "Best iBuyer Companies 2026 | RE Report";
 $page_description = "Independent ratings of the best iBuyer companies in 2026. Compare Opendoor, Offerpad, and Redfin Now by algorithm accuracy, fees, and technology.";
 $page_canonical = "https://rereport.org/ratings/best-ibuyer-companies.html";
+
+$breadcrumbs = [
+  ['label' => 'Ratings', 'url' => 'ibuyers.html'],
+  ['label' => 'iBuyers', 'url' => 'ibuyers.html'],
+  ['label' => 'Best iBuyer Companies 2026']
+];
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Article",
+  "headline" => $page_title,
+  "description" => $page_description,
+  "datePublished" => "2026-03-01",
+  "dateModified" => "2026-03-01",
+  "publisher" => [
+    "@type" => "Organization",
+    "name" => "RE Report",
+    "url" => "https://rereport.org"
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+$page_faq_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "FAQPage",
+  "mainEntity" => [
+    [
+      "@type" => "Question",
+      "name" => "What is an iBuyer?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "An iBuyer is a company that uses automated valuation models to make near-instant offers on homes, typically closing within days or weeks. The model trades a service fee for speed and convenience compared to a traditional sale."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How are iBuyer companies rated?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "RE Report scores iBuyers across five factors: Offer Algorithm Accuracy, Service Fee, Market Coverage, Closing Flexibility, and Technology Experience. Scores range from 0 to 100."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Are iBuyer offers competitive with traditional sales?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "iBuyer offers typically include a service fee that reduces the net proceeds compared to a traditional sale. However, sellers benefit from speed, certainty, and the ability to avoid showings and repairs."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Is the iBuyer market still active in 2026?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "The iBuyer market has consolidated significantly. Some major players like Redfin Now have exited, while Opendoor and Offerpad continue to operate in select markets."
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 include '../header.php';
 ?>
 
@@ -53,6 +113,27 @@ include '../header.php';
               <span class="score">88</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Market leader covering 50+ metropolitan areas</li>
+                <li>Strong technology platform with 4.78 App Store rating</li>
+                <li>Streamlined digital process from offer to close</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Service fees can be significant for sellers</li>
+                <li>$62M FTC settlement over pricing practices</li>
+                <li>Algorithm-based offers may not capture unique property features</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Opendoor continues to lead the iBuyer segment with the broadest market coverage and strongest technology experience scores. Despite regulatory challenges, the company's platform provides a benchmark for the instant offer category.</p>
+          </div>
         </div>
       </div>
 
@@ -92,6 +173,27 @@ include '../header.php';
               <div class="score-bar-container"><div class="score-bar" style="width: 82%;"></div></div>
               <span class="score">82</span>
             </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>A+ BBB accredited with 3.9 consumer star rating</li>
+                <li>Flexible closing dates that accommodate seller timelines</li>
+                <li>Competitive technology platform</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Market coverage has contracted from 30 to 17 markets</li>
+                <li>Service fees reported around 8%</li>
+                <li>Smaller operational footprint than the market leader</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Offerpad scores well on closing flexibility and technology experience but trails in market coverage. The company's shrinking geographic footprint is a consideration for sellers in fringe markets.</p>
           </div>
         </div>
       </div>
@@ -138,10 +240,50 @@ include '../header.php';
               <span class="score">76</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Backed by publicly traded Redfin parent company</li>
+                <li>Technology-forward approach with integrated platform</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>iBuyer program discontinued as of November 2022</li>
+                <li>Parent company carries F BBB rating</li>
+                <li>Fees reported as high as 13% of sale price</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Redfin Now is no longer accepting new offers, having shut down its iBuyer program in late 2022. The rating reflects its historical performance. Sellers should note this program is no longer operational.</p>
+          </div>
         </div>
       </div>
 
       <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <details class="faq-item">
+          <summary>What is an iBuyer?</summary>
+          <p>An iBuyer is a company that uses automated valuation models to make near-instant offers on homes, typically closing within days or weeks. The model trades a service fee for speed and convenience compared to a traditional sale.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How are iBuyer companies rated?</summary>
+          <p>RE Report scores iBuyers across five factors: Offer Algorithm Accuracy, Service Fee, Market Coverage, Closing Flexibility, and Technology Experience. Scores range from 0 to 100.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are iBuyer offers competitive with traditional sales?</summary>
+          <p>iBuyer offers typically include a service fee that reduces the net proceeds compared to a traditional sale. However, sellers benefit from speed, certainty, and the ability to avoid showings and repairs.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is the iBuyer market still active in 2026?</summary>
+          <p>The iBuyer market has consolidated significantly. Some major players like Redfin Now have exited, while Opendoor and Offerpad continue to operate in select markets.</p>
+        </details>
+      </div>
 
     </div>
   </section>

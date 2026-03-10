@@ -380,6 +380,197 @@ a:hover { color: var(--gold); }
   color: var(--navy);
 }
 
+/* --- Breadcrumbs --- */
+.breadcrumbs {
+  background: #f0f2f5;
+  padding: 0.6rem 0;
+  font-size: 0.85rem;
+}
+.breadcrumbs ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumbs li::after {
+  content: "›";
+  margin-left: 0.4rem;
+  color: var(--text-light);
+}
+.breadcrumbs li:last-child::after {
+  content: "";
+}
+.breadcrumbs a {
+  color: var(--navy);
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+.breadcrumbs li[aria-current="page"] {
+  color: var(--text-light);
+}
+
+/* --- Pros / Cons --- */
+.pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.pros, .cons {
+  padding: 1rem;
+  border-radius: 8px;
+}
+.pros {
+  background: #eef6ee;
+  border-left: 4px solid #3a8a3a;
+}
+.cons {
+  background: #fdf0ef;
+  border-left: 4px solid #c0392b;
+}
+.pros h4, .cons h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.pros h4 { color: #3a8a3a; }
+.cons h4 { color: #c0392b; }
+.pros ul, .cons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pros li, .cons li {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.pros li::before {
+  content: "✓ ";
+  color: #3a8a3a;
+  font-weight: 700;
+}
+.cons li::before {
+  content: "✗ ";
+  color: #c0392b;
+  font-weight: 700;
+}
+
+/* --- Company Analysis --- */
+.company-analysis {
+  margin: 0.75rem 0 0;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* --- FAQ Section --- */
+.faq-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+.faq-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--navy);
+}
+.faq-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+.faq-item summary {
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: #f8f9fa;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-light);
+  transition: transform 0.2s;
+}
+.faq-item[open] summary::after {
+  content: "−";
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item p {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* --- Editorial / Team Pages --- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.team-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.team-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  color: var(--navy);
+}
+.team-card .role {
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.team-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+.policy-section {
+  margin-bottom: 2rem;
+}
+.policy-section h2 {
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--gold);
+}
+.policy-section p, .policy-section ul {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.policy-section ul {
+  padding-left: 1.5rem;
+}
+.policy-section li {
+  margin-bottom: 0.5rem;
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .hero h1 { font-size: 1.8rem; }
@@ -409,6 +600,8 @@ a:hover { color: var(--gold); }
   .company-score { font-size: 1.5rem; }
 
   .subcategory-list { grid-template-columns: 1fr; }
+
+  .pros-cons { grid-template-columns: 1fr; }
 
   .category-grid { grid-template-columns: 1fr; }
 

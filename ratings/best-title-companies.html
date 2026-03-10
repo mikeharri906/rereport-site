@@ -2,6 +2,66 @@
 $page_title = "Best Title Companies 2026 | RE Report";
 $page_description = "Independent ratings of the best title insurance companies in 2026. Compare First American Title, Fidelity National Title, and Old Republic Title.";
 $page_canonical = "https://rereport.org/ratings/best-title-companies.html";
+
+$breadcrumbs = [
+  ['label' => 'Ratings', 'url' => 'title-companies.html'],
+  ['label' => 'Title Companies', 'url' => 'title-companies.html'],
+  ['label' => 'Best Title Companies 2026']
+];
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Article",
+  "headline" => $page_title,
+  "description" => $page_description,
+  "datePublished" => "2026-03-01",
+  "dateModified" => "2026-03-01",
+  "publisher" => [
+    "@type" => "Organization",
+    "name" => "RE Report",
+    "url" => "https://rereport.org"
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+$page_faq_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "FAQPage",
+  "mainEntity" => [
+    [
+      "@type" => "Question",
+      "name" => "What does a title company do?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Title companies verify property ownership, search for liens or encumbrances, issue title insurance policies, and facilitate the closing process. They protect both buyers and lenders from title defects."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How are title companies evaluated?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "RE Report rates title companies across five factors: Closing Speed, Error Rate, Fee Transparency, Coverage Area, and Customer Service. Financial strength ratings from AM Best are also considered."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Does it matter which title company handles closing?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Yes, the choice of title company can affect closing speed, costs, and the risk of title issues. Companies with lower error rates and stronger financial ratings provide more reliable protection."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How often are these ratings updated?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Ratings are reviewed annually during the RE Report evaluation cycle. Current ratings use data collected through March 2026."
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 include '../header.php';
 ?>
 
@@ -53,6 +113,27 @@ include '../header.php';
               <span class="score">80</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>AM Best A (Excellent) financial strength rating</li>
+                <li>Founded in 1889 with over 130 years of operation</li>
+                <li>IgniteRE technology platform for digital closings</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>885 million record data breach in 2019</li>
+                <li>$1M NYDFS fine and SEC charges related to cybersecurity</li>
+                <li>Mixed BBB accreditation across regional offices</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>First American Title earns the top position through industry-leading coverage and financial strength. Despite significant cybersecurity incidents, the company's operational breadth and closing capabilities remain strong across all evaluated markets.</p>
+          </div>
         </div>
       </div>
 
@@ -93,6 +174,27 @@ include '../header.php';
               <span class="score">72</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Largest title insurance underwriter in the United States</li>
+                <li>inHere digital closing platform with 80% adoption rate</li>
+                <li>Strong financial stability as industry leader</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>F rating at some BBB locations</li>
+                <li>Not BBB accredited at the national level</li>
+                <li>1.3 million customer data breach in 2023</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Fidelity National Title commands the largest market share in title insurance. The company's digital transformation through its inHere platform is notable, though cybersecurity concerns and mixed BBB standing temper the overall score.</p>
+          </div>
         </div>
         <div class="company-card">
           <div class="company-header">
@@ -129,6 +231,27 @@ include '../header.php';
               <span class="score">76</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>AM Best A+ (Superior) financial strength rating, the highest in the industry</li>
+                <li>117 years of continuous operation since 1907</li>
+                <li>Conservative underwriting with low claims history</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Technology adoption trails competitors</li>
+                <li>Not BBB accredited</li>
+                <li>Transitioning to digital closings via Qualia partnership, still in progress</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Old Republic Title offers the strongest financial stability rating in the title insurance sector. The company's conservative approach means fewer technology bells and whistles, but it also translates to reliable, low-risk title services.</p>
+          </div>
         </div>
       </div>
 
@@ -138,6 +261,26 @@ include '../header.php';
       </div>
 
       <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <details class="faq-item">
+          <summary>What does a title company do?</summary>
+          <p>Title companies verify property ownership, search for liens or encumbrances, issue title insurance policies, and facilitate the closing process. They protect both buyers and lenders from title defects.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How are title companies evaluated?</summary>
+          <p>RE Report rates title companies across five factors: Closing Speed, Error Rate, Fee Transparency, Coverage Area, and Customer Service. Financial strength ratings from AM Best are also considered.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does it matter which title company handles closing?</summary>
+          <p>Yes, the choice of title company can affect closing speed, costs, and the risk of title issues. Companies with lower error rates and stronger financial ratings provide more reliable protection.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How often are these ratings updated?</summary>
+          <p>Ratings are reviewed annually during the RE Report evaluation cycle. Current ratings use data collected through March 2026.</p>
+        </details>
+      </div>
 
     </div>
   </section>

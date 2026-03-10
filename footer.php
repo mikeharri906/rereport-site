@@ -6,6 +6,8 @@
       <nav class="footer-nav">
         <a href="<?php echo $base; ?>methodology.html">Methodology</a>
         <a href="<?php echo $base; ?>about.html">About</a>
+        <a href="<?php echo $base; ?>team.html">Our Team</a>
+        <a href="<?php echo $base; ?>editorial-policy.html">Editorial Policy</a>
         <a href="<?php echo $base; ?>privacy.html">Privacy Policy</a>
         <a href="<?php echo $base; ?>contact.html">Contact</a>
       </nav>

@@ -2,6 +2,16 @@
 $page_title = "Privacy Policy | RE Report";
 $page_description = "RE Report privacy policy. Learn how our independent real estate ratings publication handles visitor data and protects your privacy.";
 $page_canonical = "https://rereport.org/privacy.html";
+$breadcrumbs = [
+  ['label' => 'Privacy Policy']
+];
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "WebPage",
+  "name" => $page_title,
+  "description" => $page_description,
+  "url" => $page_canonical
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 include 'header.php';
 ?>
 

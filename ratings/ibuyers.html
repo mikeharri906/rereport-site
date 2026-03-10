@@ -2,6 +2,19 @@
 $page_title = "Best iBuyer Companies 2026 | RE Report Ratings";
 $page_description = "Independent ratings of the best iBuyer companies in 2026. Compare Opendoor, Offerpad, and more by algorithm accuracy, fees, coverage, and technology.";
 $page_canonical = "https://rereport.org/ratings/ibuyers.html";
+$breadcrumbs = [
+  ['label' => 'Ratings', 'url' => 'cash-land-buyers.html'],
+  ['label' => 'iBuyers']
+];
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Article",
+  "headline" => $page_title,
+  "description" => $page_description,
+  "datePublished" => "2026-03-01",
+  "dateModified" => "2026-03-01",
+  "publisher" => ["@type" => "Organization", "name" => "RE Report", "url" => "https://rereport.org"]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 include '../header.php';
 ?>
 

@@ -26,6 +26,27 @@
   <?php endif; ?>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RE Report">
+  <link rel="icon" type="image/svg+xml" href="<?php echo $base ?? ''; ?>favicon.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "RE Report",
+    "url": "https://rereport.org",
+    "description": "Independent ratings and reviews for real estate companies across all major categories.",
+    "logo": "https://rereport.org/favicon.svg"
+  }
+  </script>
+  <?php if (isset($page_schema)): ?>
+  <script type="application/ld+json">
+  <?php echo $page_schema; ?>
+  </script>
+  <?php endif; ?>
+  <?php if (isset($page_faq_schema)): ?>
+  <script type="application/ld+json">
+  <?php echo $page_faq_schema; ?>
+  </script>
+  <?php endif; ?>
 </head>
 <body>
   <header class="site-header">
@@ -43,4 +64,20 @@
       </nav>
     </div>
   </header>
+  <?php if (isset($breadcrumbs) && is_array($breadcrumbs)): ?>
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="<?php echo $base; ?>index.html">Home</a></li>
+        <?php foreach ($breadcrumbs as $crumb): ?>
+        <?php if (isset($crumb['url'])): ?>
+        <li><a href="<?php echo $crumb['url']; ?>"><?php echo $crumb['label']; ?></a></li>
+        <?php else: ?>
+        <li aria-current="page"><?php echo $crumb['label']; ?></li>
+        <?php endif; ?>
+        <?php endforeach; ?>
+      </ol>
+    </div>
+  </nav>
+  <?php endif; ?>
   <main>

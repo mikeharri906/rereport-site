@@ -2,6 +2,66 @@
 $page_title = "Best Property Management Companies 2026 | RE Report";
 $page_description = "Independent ratings of the best property management companies in 2026. Compare CBRE, Greystar, Invitation Homes, and Cushman and Wakefield.";
 $page_canonical = "https://rereport.org/ratings/best-property-management-companies.html";
+
+$breadcrumbs = [
+  ['label' => 'Ratings', 'url' => 'property-management.html'],
+  ['label' => 'Property Management', 'url' => 'property-management.html'],
+  ['label' => 'Best Property Management Companies 2026']
+];
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Article",
+  "headline" => $page_title,
+  "description" => $page_description,
+  "datePublished" => "2026-03-01",
+  "dateModified" => "2026-03-01",
+  "publisher" => [
+    "@type" => "Organization",
+    "name" => "RE Report",
+    "url" => "https://rereport.org"
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+$page_faq_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "FAQPage",
+  "mainEntity" => [
+    [
+      "@type" => "Question",
+      "name" => "How are property management companies rated?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "RE Report evaluates property management companies across five factors: Vacancy Rate, Maintenance Response Time, Fee Structure, Tenant Screening, and Reporting. Scores are based on operational data, consumer reviews, and regulatory records."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What fees should property owners expect?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Management fees typically range from 8-12% of monthly rent for residential properties, with additional charges for leasing, maintenance coordination, and evictions. RE Report's Fee Structure score evaluates transparency and competitiveness."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What is the difference between commercial and residential property management?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Commercial managers like CBRE and Cushman & Wakefield focus on office, retail, and industrial properties. Residential specialists like Invitation Homes focus on single-family rentals. Greystar spans multifamily apartments."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How often are property management ratings updated?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Ratings are reviewed annually during the RE Report evaluation cycle. Current ratings reflect data collected through March 2026."
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 include '../header.php';
 ?>
 
@@ -53,6 +113,27 @@ include '../header.php';
               <span class="score">82</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Global leader managing 7 billion square feet of commercial property</li>
+                <li>120 years of operation since 1906</li>
+                <li>Comprehensive reporting and tenant screening capabilities</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>SEC whistleblower penalty of $375K raises governance questions</li>
+                <li>1.3 Trustpilot rating suggests customer service gaps</li>
+                <li>Primarily commercial focus may not suit residential investors</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>CBRE's scale and operational breadth earn it the top property management position. The company excels in vacancy management and reporting but commercial focus means residential property owners should verify local service capabilities.</p>
+          </div>
         </div>
       </div>
 
@@ -93,6 +174,27 @@ include '../header.php';
               <span class="score">80</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>946,000+ units managed making it the largest U.S. apartment manager</li>
+                <li>Strong vacancy rate and tenant screening performance</li>
+                <li>Established operations since 1993</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>$24M FTC settlement and DOJ antitrust settlement</li>
+                <li>$198M in class action settlements</li>
+                <li>Fee structures scored below segment average</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Greystar's massive scale brings operational expertise to property management, particularly for multifamily assets. Regulatory settlements are notable but the company maintains strong operational metrics across vacancy and tenant screening.</p>
+          </div>
         </div>
         <div class="company-card">
           <div class="company-header">
@@ -128,6 +230,27 @@ include '../header.php';
               <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
               <span class="score">78</span>
             </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>A+ BBB accredited with largest single-family rental portfolio</li>
+                <li>86,000 homes managed with specialized SFR expertise</li>
+                <li>Strong vacancy rate performance</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>$48M FTC settlement for unfair practices</li>
+                <li>1.3 Trustpilot rating across 9,000+ reviews</li>
+                <li>Discriminatory practices alleged in federal actions</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Invitation Homes specializes in single-family rental management at an unmatched scale. However, the combination of regulatory actions and low consumer ratings indicates significant tenant experience challenges that property owners should weigh.</p>
           </div>
         </div>
       </div>
@@ -174,10 +297,51 @@ include '../header.php';
               <span class="score">74</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>700 million square feet managed across the Americas</li>
+                <li>Founded in 1917 with deep institutional knowledge</li>
+                <li>Global commercial real estate expertise</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>D-/F BBB rating at multiple locations</li>
+                <li>Named in DOJ RealPage algorithmic pricing lawsuit</li>
+                <li>401k class action settlement</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Cushman and Wakefield brings institutional-grade management capabilities but trails in consumer-facing metrics. The company's involvement in the RealPage pricing lawsuit and poor BBB standing lower the overall score.</p>
+          </div>
         </div>
       </div>
 
       <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <details class="faq-item">
+          <summary>How are property management companies rated?</summary>
+          <p>RE Report evaluates property management companies across five factors: Vacancy Rate, Maintenance Response Time, Fee Structure, Tenant Screening, and Reporting. Scores are based on operational data, consumer reviews, and regulatory records.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What fees should property owners expect?</summary>
+          <p>Management fees typically range from 8-12% of monthly rent for residential properties, with additional charges for leasing, maintenance coordination, and evictions. RE Report's Fee Structure score evaluates transparency and competitiveness.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is the difference between commercial and residential property management?</summary>
+          <p>Commercial managers like CBRE and Cushman &amp; Wakefield focus on office, retail, and industrial properties. Residential specialists like Invitation Homes focus on single-family rentals. Greystar spans multifamily apartments.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How often are property management ratings updated?</summary>
+          <p>Ratings are reviewed annually during the RE Report evaluation cycle. Current ratings reflect data collected through March 2026.</p>
+        </details>
+      </div>
 
     </div>
   </section>

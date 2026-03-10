@@ -2,6 +2,66 @@
 $page_title = "Best Real Estate Agents and Brokerages 2026 | RE Report";
 $page_description = "Independent ratings of the best real estate brokerages in 2026. Compare Keller Williams, RE/MAX, Coldwell Banker, and eXp Realty by performance.";
 $page_canonical = "https://rereport.org/ratings/best-real-estate-agents.html";
+
+$breadcrumbs = [
+  ['label' => 'Ratings', 'url' => 'real-estate-agents.html'],
+  ['label' => 'Real Estate Agents', 'url' => 'real-estate-agents.html'],
+  ['label' => 'Best Real Estate Agents and Brokerages 2026']
+];
+
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Article",
+  "headline" => $page_title,
+  "description" => $page_description,
+  "datePublished" => "2026-03-01",
+  "dateModified" => "2026-03-01",
+  "publisher" => [
+    "@type" => "Organization",
+    "name" => "RE Report",
+    "url" => "https://rereport.org"
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+$page_faq_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "FAQPage",
+  "mainEntity" => [
+    [
+      "@type" => "Question",
+      "name" => "How does RE Report rate real estate agent brokerages?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "RE Report evaluates agent brokerages across five factors: Days on Market, Commission Structure, Local Market Knowledge, Communication, and Transaction Volume. Data comes from MLS records, consumer reviews, and industry reports."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What is a fair real estate commission in 2026?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Following the 2024 NAR settlement, commission structures have become more negotiable. Rates vary by market and brokerage, but transparency around agent compensation has increased industry-wide."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Does the brokerage matter when choosing an agent?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "The individual agent matters most, but the brokerage provides training, tools, and support that can affect service quality. RE Report's scores reflect the overall quality observed across each brokerage's network."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How often are agent brokerage ratings updated?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "RE Report reviews agent brokerage ratings annually. Current ratings reflect the 2026 evaluation cycle with data through March 2026."
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
 include '../header.php';
 ?>
 
@@ -53,6 +113,27 @@ include '../header.php';
               <span class="score">90</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Largest real estate franchise globally with extensive agent training programs</li>
+                <li>Strong local market knowledge scores across evaluated offices</li>
+                <li>High transaction volume demonstrating market demand</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Commission structures are agent-dependent and can vary widely</li>
+                <li>Participant in the national antitrust commission settlement</li>
+                <li>Technology platform still evolving compared to newer competitors</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Keller Williams leads the 2026 agent ratings through superior training programs and local market expertise. The franchise model produces consistently knowledgeable agents, though commission structures are negotiated individually.</p>
+          </div>
         </div>
       </div>
 
@@ -93,6 +174,27 @@ include '../header.php';
               <span class="score">84</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Global brand recognition with 140,000+ agents in 110+ countries</li>
+                <li>Experienced agent network known for higher-than-average production</li>
+                <li>Strong days-on-market performance in evaluated transactions</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Higher commission splits common across offices</li>
+                <li>Agent quality varies by franchise location</li>
+                <li>Commission structure may not favor budget-conscious sellers</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>RE/MAX agents typically bring significant experience and high production levels. The brand's strength lies in agent quality, though the traditional commission model means sellers should compare fee structures carefully.</p>
+          </div>
         </div>
         <div class="company-card">
           <div class="company-header">
@@ -128,6 +230,27 @@ include '../header.php';
               <div class="score-bar-container"><div class="score-bar" style="width: 80%;"></div></div>
               <span class="score">80</span>
             </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Prestigious brand founded in 1906 with strong luxury market presence</li>
+                <li>100,000+ agents with broad geographic coverage</li>
+                <li>Consistent local market knowledge scores</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Commission structures tend toward traditional rates</li>
+                <li>Technology tools vary by franchise office</li>
+                <li>Part of Anywhere Real Estate corporate structure</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Coldwell Banker delivers consistent performance across markets with particular strength in the luxury and upper-tier segments. The brand's long history provides established processes and broad network advantages.</p>
           </div>
         </div>
         <div class="company-card">
@@ -165,6 +288,27 @@ include '../header.php';
               <span class="score">78</span>
             </div>
           </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Cloud-based model often translates to more competitive commission structures</li>
+                <li>Rapid growth to 90,000+ agents in 24 countries since 2009</li>
+                <li>Agent-friendly revenue sharing model</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Newer company with less established brand recognition</li>
+                <li>Local market knowledge scores trail legacy brokerages</li>
+                <li>Cloud model means less physical office support</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>eXp Realty's innovative cloud-based model offers potential cost advantages for sellers. However, the company's rapid growth and newer market presence mean agent experience levels can be inconsistent.</p>
+          </div>
         </div>
       </div>
 
@@ -174,6 +318,26 @@ include '../header.php';
       </div>
 
       <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <details class="faq-item">
+          <summary>How does RE Report rate real estate agent brokerages?</summary>
+          <p>RE Report evaluates agent brokerages across five factors: Days on Market, Commission Structure, Local Market Knowledge, Communication, and Transaction Volume. Data comes from MLS records, consumer reviews, and industry reports.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is a fair real estate commission in 2026?</summary>
+          <p>Following the 2024 NAR settlement, commission structures have become more negotiable. Rates vary by market and brokerage, but transparency around agent compensation has increased industry-wide.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does the brokerage matter when choosing an agent?</summary>
+          <p>The individual agent matters most, but the brokerage provides training, tools, and support that can affect service quality. RE Report's scores reflect the overall quality observed across each brokerage's network.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How often are agent brokerage ratings updated?</summary>
+          <p>RE Report reviews agent brokerage ratings annually. Current ratings reflect the 2026 evaluation cycle with data through March 2026.</p>
+        </details>
+      </div>
 
     </div>
   </section>

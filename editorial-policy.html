@@ -1,0 +1,69 @@
+<?php
+$page_title = "Editorial Policy | RE Report";
+$page_description = "RE Report's editorial policy outlines the standards, independence, and methodology behind our real estate company ratings.";
+$page_canonical = "https://rereport.org/editorial-policy.html";
+$breadcrumbs = [
+  ['label' => 'Editorial Policy']
+];
+$page_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "WebPage",
+  "name" => $page_title,
+  "description" => $page_description,
+  "url" => $page_canonical
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+include 'header.php';
+?>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Editorial Policy</h1>
+      <p>The standards and principles that guide RE Report's independent ratings.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="policy-section">
+        <h2>Editorial Independence</h2>
+        <p>RE Report maintains complete editorial independence in all ratings and evaluations. No company can pay for a higher score, and no advertising relationship influences the outcome of any evaluation. The editorial team operates independently from any business development or partnership activities.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>Rating Methodology</h2>
+        <p>All ratings are produced using a standardized methodology that evaluates companies across five category-specific factors. Scores are derived from publicly available data sources including:</p>
+        <ul>
+          <li>Better Business Bureau ratings and complaint records</li>
+          <li>Consumer review aggregates from verified platforms</li>
+          <li>Regulatory filings and enforcement actions</li>
+          <li>Industry performance benchmarks</li>
+          <li>Financial stability indicators where applicable</li>
+        </ul>
+        <p>For a detailed breakdown of scoring criteria by category, visit the <a href="methodology.html">Methodology</a> page.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>Data Sources</h2>
+        <p>RE Report relies exclusively on publicly available information when generating ratings. Sources include government regulatory databases, accreditation bodies, consumer review platforms, court records, and industry reports. The editorial team does not accept self-reported data from rated companies as a primary scoring input.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>Conflicts of Interest</h2>
+        <p>RE Report discloses any material relationships that could be perceived as conflicts of interest. The editorial team is required to flag potential conflicts during the evaluation process, and any flagged items are reviewed before publication. Ratings are never adjusted based on commercial considerations.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>Corrections Policy</h2>
+        <p>If a factual error is identified in any published rating or analysis, RE Report will investigate and issue a correction promptly. Companies and consumers can report potential errors by contacting the editorial team at <strong>info@rereport.org</strong>. All correction requests are reviewed within five business days.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>Update Schedule</h2>
+        <p>Ratings are reviewed and updated on an annual cycle. The current ratings reflect the 2026 evaluation period. Mid-cycle updates may be issued if significant developments materially affect a company's score, such as major regulatory actions, data breaches, or cessation of operations.</p>
+      </div>
+
+    </div>
+  </section>
+
+<?php include 'footer.php'; ?>
