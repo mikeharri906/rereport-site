@@ -1,10 +1,5 @@
 AddType application/x-httpd-php .html
 
-# Disable LiteSpeed cache to force fresh content
-<IfModule LiteSpeed>
-  CacheLookup off
-</IfModule>
-
 # Enable gzip compression
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/json image/svg+xml
