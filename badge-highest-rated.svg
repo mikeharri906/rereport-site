@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140" width="120" height="140">
+  <!-- Shield body -->
+  <path d="M60 8 L108 28 L108 75 C108 100 85 122 60 132 C35 122 12 100 12 75 L12 28 Z" fill="#1a2b4a" stroke="#c9a84c" stroke-width="2.5"/>
+  <!-- Inner shield -->
+  <path d="M60 16 L100 33 L100 74 C100 95 80 114 60 123 C40 114 20 95 20 74 L20 33 Z" fill="#1a2b4a" stroke="#c9a84c" stroke-width="1"/>
+  <!-- Star -->
+  <polygon points="60,30 66,46 83,46 69,56 74,72 60,62 46,72 51,56 37,46 54,46" fill="#c9a84c"/>
+  <!-- Year -->
+  <text x="60" y="90" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" fill="#c9a84c" text-anchor="middle">2026</text>
+  <!-- Label line 1 -->
+  <text x="60" y="104" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8.5" font-weight="600" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">HIGHEST</text>
+  <!-- Label line 2 -->
+  <text x="60" y="115" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="8.5" font-weight="600" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">RATED</text>
+</svg>

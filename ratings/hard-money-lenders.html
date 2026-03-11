@@ -3,7 +3,6 @@ $page_title = "Best Hard Money Lenders 2026 | RE Report Ratings";
 $page_description = "Independent ratings of the best hard money lenders in 2026. Compare Kiavi, Lima One Capital, RCN Capital, and Visio Lending by LTV, rates, and speed.";
 $page_canonical = "https://rereport.org/ratings/hard-money-lenders.html";
 $breadcrumbs = [
-  ['label' => 'Ratings', 'url' => 'cash-land-buyers.html'],
   ['label' => 'Hard Money Lenders']
 ];
 $page_schema = json_encode([
@@ -36,7 +35,15 @@ include '../header.php';
       </ul>
 
       <h2 class="section-title" style="margin-top: 2rem;">Scoring Factors</h2>
-      <p>Hard money lenders are evaluated across five factors: LTV Ratio, Interest Rate, Approval Speed, Draw Process, and Flexibility. <a href="../methodology.html">Read our full methodology &rarr;</a></p>
+      <p>Hard money lenders are evaluated across five weighted factors on a 100-point scale.</p>
+      <div class="factors-grid">
+        <div class="factor-card"><div class="factor-num">1</div><h4>LTV Ratio</h4><p>Maximum loan-to-value offered and leverage flexibility.</p></div>
+        <div class="factor-card"><div class="factor-num">2</div><h4>Interest Rate</h4><p>Competitiveness of rates relative to private lending market.</p></div>
+        <div class="factor-card"><div class="factor-num">3</div><h4>Approval Speed</h4><p>Time from application to funded loan commitment.</p></div>
+        <div class="factor-card"><div class="factor-num">4</div><h4>Draw Process</h4><p>Efficiency of construction draw requests and inspections.</p></div>
+        <div class="factor-card"><div class="factor-num">5</div><h4>Flexibility</h4><p>Willingness to structure creative deals and accommodate investors.</p></div>
+      </div>
+      <p style="margin-top: 1.5rem;"><a href="../methodology.html" class="methodology-link">Read Full Methodology &rarr;</a></p>
     </div>
   </section>
 

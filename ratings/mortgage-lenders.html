@@ -3,7 +3,6 @@ $page_title = "Best Mortgage Lenders 2026 | RE Report Ratings";
 $page_description = "Independent ratings of the best mortgage lenders in 2026. Compare Rocket Mortgage, Better.com, loanDepot, and Pennymac by rates, speed, and service.";
 $page_canonical = "https://rereport.org/ratings/mortgage-lenders.html";
 $breadcrumbs = [
-  ['label' => 'Ratings', 'url' => 'cash-land-buyers.html'],
   ['label' => 'Mortgage Lenders']
 ];
 $page_schema = json_encode([
@@ -36,7 +35,15 @@ include '../header.php';
       </ul>
 
       <h2 class="section-title" style="margin-top: 2rem;">Scoring Factors</h2>
-      <p>Mortgage lenders are evaluated across five factors: Rate Competitiveness, Approval Speed, Loan Variety, Customer Service, and Closing Costs. <a href="../methodology.html">Read our full methodology &rarr;</a></p>
+      <p>Mortgage lenders are evaluated across five weighted factors on a 100-point scale.</p>
+      <div class="factors-grid">
+        <div class="factor-card"><div class="factor-num">1</div><h4>Rate Competitiveness</h4><p>How competitive interest rates are across loan products.</p></div>
+        <div class="factor-card"><div class="factor-num">2</div><h4>Approval Speed</h4><p>Time from application to conditional and final approval.</p></div>
+        <div class="factor-card"><div class="factor-num">3</div><h4>Loan Variety</h4><p>Range of loan products: conventional, FHA, VA, jumbo, etc.</p></div>
+        <div class="factor-card"><div class="factor-num">4</div><h4>Customer Service</h4><p>Responsiveness, communication, and borrower satisfaction ratings.</p></div>
+        <div class="factor-card"><div class="factor-num">5</div><h4>Closing Costs</h4><p>Total fees and charges relative to industry benchmarks.</p></div>
+      </div>
+      <p style="margin-top: 1.5rem;"><a href="../methodology.html" class="methodology-link">Read Full Methodology &rarr;</a></p>
     </div>
   </section>
 

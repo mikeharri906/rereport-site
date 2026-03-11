@@ -1,6 +1,6 @@
 <?php
-$page_title = "RE Report | Independent Ratings for Real Estate Companies 2026";
-$page_description = "RE Report provides independent, data-driven ratings for real estate companies across all major categories. Trusted consumer research since day one.";
+$page_title = "Independent Real Estate Company Ratings 2026 | RE Report";
+$page_description = "Data-driven ratings for real estate companies across 8 categories. Compare cash buyers, mortgage lenders, iBuyers, and more. No ads, no affiliates.";
 $page_canonical = "https://rereport.org/";
 $page_schema = json_encode([
   "@context" => "https://schema.org",
@@ -16,56 +16,104 @@ include 'header.php';
     <div class="container">
       <h1>Independent Ratings for Real Estate Companies</h1>
       <p class="tagline">Data-driven evaluations across every major real estate category. No advertising. No affiliate relationships. No paid placements.</p>
+      <div class="trust-stats">
+        <div class="stat"><span class="stat-number">8</span><span class="stat-label">Categories</span></div>
+        <div class="stat"><span class="stat-number">50+</span><span class="stat-label">Companies Rated</span></div>
+        <div class="stat"><span class="stat-number">2026</span><span class="stat-label">Current Data</span></div>
+        <div class="stat"><span class="stat-number">5</span><span class="stat-label">Scoring Factors</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section featured-section">
+    <div class="container">
+      <div class="featured-banner">
+        <div class="featured-badge">New</div>
+        <div class="featured-text">
+          <strong>2026 Ratings Now Available</strong> — All categories have been updated with data through March 2026.
+          <a href="ratings/cash-land-buyers.html">View Ratings &rarr;</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <h2 class="section-title">2026 Ratings by Category</h2>
-      <p>Our analysts evaluate companies using publicly available data, including BBB accreditation, consumer reviews, regulatory history, and operational transparency. Explore the categories below to find the highest-rated companies in each segment.</p>
-
       <div class="category-grid">
         <a href="ratings/cash-land-buyers.html" class="category-card">
+          <img src="icons/icon-land.svg" alt="" class="category-icon" width="40" height="40">
           <h3>Cash Land Buyers</h3>
-          <p>Companies that purchase vacant land directly from owners for cash. Rated on offer speed, fairness, closing timeline, transparency, and accreditation.</p>
+          <p class="category-desc">Rated on offer speed, fairness, closing timeline, transparency, and accreditation.</p>
+          <span class="card-link">View Ratings &rarr;</span>
         </a>
         <a href="ratings/cash-home-buyers.html" class="category-card">
+          <img src="icons/icon-home.svg" alt="" class="category-icon" width="40" height="40">
           <h3>Cash Home Buyers</h3>
-          <p>Companies that buy homes as-is for cash. Evaluated on offer speed, fairness, closing process, transparency, and industry accreditation.</p>
+          <p class="category-desc">Rated on offer speed, fairness, closing timeline, transparency, and accreditation.</p>
+          <span class="card-link">View Ratings &rarr;</span>
         </a>
         <a href="ratings/ibuyers.html" class="category-card">
+          <img src="icons/icon-ibuyer.svg" alt="" class="category-icon" width="40" height="40">
           <h3>iBuyers</h3>
-          <p>Technology-driven companies that use algorithms to make instant offers on homes. Rated on accuracy, fees, coverage, flexibility, and tech experience.</p>
+          <p class="category-desc">Rated on algorithm accuracy, service fee, market coverage, closing flexibility, and technology.</p>
+          <span class="card-link">View Ratings &rarr;</span>
         </a>
         <a href="ratings/mortgage-lenders.html" class="category-card">
+          <img src="icons/icon-mortgage.svg" alt="" class="category-icon" width="40" height="40">
           <h3>Mortgage Lenders</h3>
-          <p>Mortgage origination companies rated on rate competitiveness, approval speed, loan variety, customer service, and closing costs.</p>
+          <p class="category-desc">Rated on rate competitiveness, approval speed, loan variety, service, and closing costs.</p>
+          <span class="card-link">View Ratings &rarr;</span>
         </a>
         <a href="ratings/title-companies.html" class="category-card">
+          <img src="icons/icon-title.svg" alt="" class="category-icon" width="40" height="40">
           <h3>Title Companies</h3>
-          <p>Title insurance and escrow companies evaluated on closing speed, error rate, fee transparency, coverage area, and customer service.</p>
+          <p class="category-desc">Rated on closing speed, error rate, fee transparency, coverage area, and service.</p>
+          <span class="card-link">View Ratings &rarr;</span>
         </a>
         <a href="ratings/real-estate-agents.html" class="category-card">
+          <img src="icons/icon-agents.svg" alt="" class="category-icon" width="40" height="40">
           <h3>Real Estate Agents</h3>
-          <p>Brokerages and agent networks rated on days on market, commission structure, local knowledge, communication, and transaction volume.</p>
+          <p class="category-desc">Rated on days on market, commission structure, local knowledge, communication, and volume.</p>
+          <span class="card-link">View Ratings &rarr;</span>
         </a>
         <a href="ratings/property-management.html" class="category-card">
+          <img src="icons/icon-property.svg" alt="" class="category-icon" width="40" height="40">
           <h3>Property Management</h3>
-          <p>Property management firms evaluated on vacancy rate, maintenance response time, fee structure, tenant screening, and reporting quality.</p>
+          <p class="category-desc">Rated on vacancy rate, maintenance response, fee structure, screening, and reporting.</p>
+          <span class="card-link">View Ratings &rarr;</span>
         </a>
         <a href="ratings/hard-money-lenders.html" class="category-card">
+          <img src="icons/icon-hardmoney.svg" alt="" class="category-icon" width="40" height="40">
           <h3>Hard Money Lenders</h3>
-          <p>Private and hard money lenders rated on LTV ratio, interest rate, approval speed, draw process, and flexibility for investors.</p>
+          <p class="category-desc">Rated on LTV ratio, interest rate, approval speed, draw process, and flexibility.</p>
+          <span class="card-link">View Ratings &rarr;</span>
         </a>
       </div>
     </div>
   </section>
 
-  <section class="section" style="background: var(--gray-50);">
+  <section class="section how-it-works">
     <div class="container">
       <h2 class="section-title">How Our Ratings Work</h2>
-      <p>RE Report evaluates companies using a proprietary methodology that synthesizes multiple public data sources. Every company is scored across five category-specific factors on a 100-point scale. Our team does not accept advertising, affiliate commissions, or paid placements of any kind. Companies cannot pay for a higher rating.</p>
-      <p><a href="methodology.html" style="font-weight: 600;">Read our full methodology &rarr;</a></p>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Data Collection</h3>
+          <p>Our analysts gather data from BBB records, consumer reviews, regulatory filings, and industry databases.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Scoring</h3>
+          <p>Each company is scored across five category-specific factors on a 100-point scale using standardized methodology.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Publication</h3>
+          <p>Results are published with full transparency. Companies cannot pay for placement or influence their scores.</p>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top:1.5rem;"><a href="methodology.html" class="methodology-link">Read Full Methodology &rarr;</a></p>
     </div>
   </section>
 

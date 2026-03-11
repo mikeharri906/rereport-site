@@ -3,7 +3,6 @@ $page_title = "Best Real Estate Agents 2026 | RE Report Ratings";
 $page_description = "Independent ratings of the best real estate brokerages in 2026. Compare Keller Williams, RE/MAX, Coldwell Banker, and eXp Realty by performance metrics.";
 $page_canonical = "https://rereport.org/ratings/real-estate-agents.html";
 $breadcrumbs = [
-  ['label' => 'Ratings', 'url' => 'cash-land-buyers.html'],
   ['label' => 'Real Estate Agents']
 ];
 $page_schema = json_encode([
@@ -36,7 +35,15 @@ include '../header.php';
       </ul>
 
       <h2 class="section-title" style="margin-top: 2rem;">Scoring Factors</h2>
-      <p>Real estate brokerages are evaluated across five factors: Days on Market, Commission Structure, Local Market Knowledge, Communication, and Transaction Volume. <a href="../methodology.html">Read our full methodology &rarr;</a></p>
+      <p>Real estate brokerages are evaluated across five weighted factors on a 100-point scale.</p>
+      <div class="factors-grid">
+        <div class="factor-card"><div class="factor-num">1</div><h4>Days on Market</h4><p>Average listing time compared to local market benchmarks.</p></div>
+        <div class="factor-card"><div class="factor-num">2</div><h4>Commission Structure</h4><p>Competitiveness and transparency of fee arrangements.</p></div>
+        <div class="factor-card"><div class="factor-num">3</div><h4>Local Knowledge</h4><p>Market expertise, neighborhood data, and pricing accuracy.</p></div>
+        <div class="factor-card"><div class="factor-num">4</div><h4>Communication</h4><p>Responsiveness, updates, and client satisfaction ratings.</p></div>
+        <div class="factor-card"><div class="factor-num">5</div><h4>Transaction Volume</h4><p>Number of completed transactions and market share.</p></div>
+      </div>
+      <p style="margin-top: 1.5rem;"><a href="../methodology.html" class="methodology-link">Read Full Methodology &rarr;</a></p>
     </div>
   </section>
 

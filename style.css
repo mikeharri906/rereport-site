@@ -571,6 +571,175 @@ a:hover { color: var(--gold); }
   margin-bottom: 0.5rem;
 }
 
+/* --- Trust Stats (Homepage Hero) --- */
+.trust-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.trust-stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.trust-stats .stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.trust-stats .stat-label {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.35rem;
+}
+
+/* --- Featured Banner --- */
+.featured-section { padding: 1.5rem 0; }
+.featured-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fefcf5;
+  border: 1px solid var(--gold);
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+}
+.featured-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.featured-text {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+.featured-text a {
+  font-weight: 600;
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+
+/* --- Category Card Icons & Link --- */
+.category-icon {
+  margin-bottom: 0.75rem;
+  opacity: 0.85;
+}
+.category-desc {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+.card-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: auto;
+}
+.category-card:hover .card-link { color: var(--gold); }
+.category-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- How It Works --- */
+.how-it-works { background: var(--gray-50); }
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.step {
+  text-align: center;
+  padding: 1.5rem;
+}
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.step h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.step p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+.methodology-link {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--navy);
+}
+.methodology-link:hover { color: var(--gold); }
+
+/* --- Scoring Factors Grid (category index pages) --- */
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.factor-card {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+.factor-card .factor-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.factor-card h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 0.35rem;
+}
+.factor-card p {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.4;
+  margin: 0;
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .hero h1 { font-size: 1.8rem; }
@@ -605,6 +774,14 @@ a:hover { color: var(--gold); }
 
   .category-grid { grid-template-columns: 1fr; }
 
+  .trust-stats { gap: 1.5rem; flex-wrap: wrap; }
+  .trust-stats .stat-number { font-size: 1.4rem; }
+
+  .featured-banner { flex-direction: column; align-items: flex-start; }
+
+  .steps-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .factors-grid { grid-template-columns: repeat(2, 1fr); }
+
   .scoring-table { font-size: 0.8rem; }
   .scoring-table th, .scoring-table td { padding: 0.5rem; }
 }
@@ -614,4 +791,5 @@ a:hover { color: var(--gold); }
   .hero h1 { font-size: 1.5rem; }
   .section { padding: 2rem 0; }
   .container { padding: 0 1rem; }
+  .factors-grid { grid-template-columns: 1fr; }
 }
