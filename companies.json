@@ -753,7 +753,7 @@
         {
           "page": "/ratings/best-cash-home-buyers-national.html",
           "overall": 74,
-          "tier": "below",
+          "tier": "average",
           "subcategories": {
             "Offer Speed": 78,
             "Offer Fairness": 72,
@@ -892,14 +892,14 @@
       "pages": [
         {
           "page": "/ratings/best-mortgage-lenders.html",
-          "overall": 74,
-          "tier": "below",
+          "overall": 78,
+          "tier": "above",
           "subcategories": {
-            "Rate Competitiveness": 78,
-            "Approval Speed": 72,
-            "Loan Variety": 76,
-            "Customer Service": 66,
-            "Closing Costs": 74
+            "Rate Competitiveness": 82,
+            "Approval Speed": 78,
+            "Loan Variety": 80,
+            "Customer Service": 72,
+            "Closing Costs": 78
           }
         }
       ]

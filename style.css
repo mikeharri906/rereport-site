@@ -1059,6 +1059,77 @@ a:active { opacity: 0.8; }
   margin: 0;
 }
 
+/* --- Badge Grid --- */
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.badge-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.badge-card img {
+  margin-bottom: 1rem;
+}
+.badge-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.badge-card p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+.badge-card details summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  padding: 0.4rem 0;
+}
+.badge-card details summary:hover {
+  color: var(--gold);
+}
+.embed-code {
+  width: 100%;
+  font-family: monospace;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  background: var(--gray-50);
+  resize: vertical;
+  margin-top: 0.5rem;
+}
+.badge-usage {
+  background: var(--gray-50);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin-top: 1rem;
+}
+.badge-usage h2 {
+  font-size: 1.15rem;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+.badge-usage ul {
+  padding-left: 1.5rem;
+}
+.badge-usage li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
 /* --- Focus Visible --- */
 :focus-visible {
   outline: 2px solid var(--navy);

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="200" height="220">
+  <defs>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3258"/>
+      <stop offset="100%" stop-color="#1a2b4a"/>
+    </linearGradient>
+  </defs>
+  <path d="M100 10 L185 38 L185 110 C185 155 145 190 100 205 C55 190 15 155 15 110 L15 38 Z" fill="url(#shield)" stroke="#c9a84c" stroke-width="3"/>
+  <path d="M100 22 L175 46 L175 108 C175 148 140 180 100 193 C60 180 25 148 25 108 L25 46 Z" fill="url(#shield)" stroke="#c9a84c" stroke-width="1.5"/>
+  <polygon points="100,40 108,60 130,60 113,73 119,93 100,80 81,93 87,73 70,60 92,60" fill="#c9a84c"/>
+  <text x="100" y="115" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="18" font-weight="700" fill="#c9a84c" text-anchor="middle">2026</text>
+  <text x="100" y="135" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">HIGHEST RATED</text>
+  <text x="100" y="152" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="9" font-weight="600" fill="#c9a84c" text-anchor="middle" letter-spacing="0.5">TITLE COMPANIES</text>
+  <line x1="55" y1="160" x2="145" y2="160" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/>
+  <text x="100" y="176" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="8" font-weight="400" fill="#ffffff" text-anchor="middle" opacity="0.8">rereport.org</text>
+</svg>

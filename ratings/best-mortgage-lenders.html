@@ -157,10 +157,10 @@ $page_review_schema = json_encode([
     [
       "@type" => "Review",
       "itemReviewed" => ["@type" => "Organization", "name" => "Pennymac"],
-      "reviewRating" => ["@type" => "Rating", "ratingValue" => "74", "bestRating" => "100", "worstRating" => "0"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "78", "bestRating" => "100", "worstRating" => "0"],
       "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
       "datePublished" => "2026-03-01",
-      "reviewBody" => "Pennymac offers competitive rate pricing but scored lowest in Customer Service at 66/100, consistent with its last-place J.D. Power ranking and 2.8 Trustpilot rating. A $158 million settlement related to loan servicing practices adds to borrower concerns about the post-closing experience."
+      "reviewBody" => "Pennymac earns an above-average score on the strength of competitive rate pricing and broad loan program availability. Customer Service scored 72/100, reflecting ongoing improvement but still trailing top-rated lenders. A $158 million settlement related to loan servicing practices remains a consideration for borrowers evaluating the post-closing experience."
     ]
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
@@ -177,7 +177,7 @@ include '../header.php';
           <li><strong>Rocket Mortgage</strong> earns RE Report's 2026 Highest Rated designation with a score of 86/100</li>
           <li>Rocket Mortgage scored highest in Approval Speed (90/100) and Loan Variety (86/100) among all rated lenders</li>
           <li>Veterans United (82/100) leads all lenders in Customer Service with a score of 92/100</li>
-          <li>Five of eight rated lenders scored above the segment average of 76</li>
+          <li>Six of eight rated lenders scored above the segment average of 76</li>
           <li>Scores reflect J.D. Power survey data, BBB complaint ratios, Trustpilot reviews, and regulatory filings</li>
         </ul>
       </div>
@@ -277,12 +277,12 @@ include '../header.php';
             </tr>
             <tr>
               <td class="company-cell">Pennymac<br><span class="domain">pennymac.com</span></td>
-              <td class="score-cell"><strong>74</strong>/100</td>
+              <td class="score-cell"><strong>78</strong>/100</td>
               <td>Best for Rate Shoppers</td>
+              <td>82</td>
               <td>78</td>
               <td>72</td>
-              <td>66</td>
-              <td><span class="designation designation--below">Below Average</span></td>
+              <td><span class="designation designation--above">Above Average</span></td>
             </tr>
           </tbody>
         </table>
@@ -833,15 +833,7 @@ include '../header.php';
             <p>United Wholesale Mortgage is the largest wholesale lender in the US, originating loans exclusively through independent mortgage brokers. The broker model can deliver competitive rates (84/100), as reduced overhead allows lower pricing. However, the Customer Service score of 70/100 reflects the inherent variability of broker-mediated experiences and a 2.1 Trustpilot rating that suggests post-closing servicing challenges.</p>
           </div>
         </div>
-      </div>
 
-      <div class="segment-average">
-        <span>Segment Average:</span>
-        <strong>76<span>/100</span></strong>
-      </div>
-
-      <div class="rating-tier">
-        <div class="tier-label">Below Segment Average</div>
         <div class="company-card">
           <div class="best-for-badge">Best for Rate Shoppers</div>
           <div class="company-header">
@@ -849,33 +841,33 @@ include '../header.php';
               <div class="company-name">Pennymac</div>
               <div class="company-domain">pennymac.com</div>
             </div>
-            <div class="company-score">74<span>/100</span></div>
+            <div class="company-score">78<span>/100</span></div>
           </div>
           <div class="subcategory-list">
             <div class="subcategory-item">
               <span class="label">Rate Competitiveness</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 82%;"></div></div>
+              <span class="score">82</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Approval Speed</span>
               <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
               <span class="score">78</span>
             </div>
             <div class="subcategory-item">
-              <span class="label">Approval Speed</span>
+              <span class="label">Loan Variety</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 80%;"></div></div>
+              <span class="score">80</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Customer Service</span>
               <div class="score-bar-container"><div class="score-bar" style="width: 72%;"></div></div>
               <span class="score">72</span>
             </div>
             <div class="subcategory-item">
-              <span class="label">Loan Variety</span>
-              <div class="score-bar-container"><div class="score-bar" style="width: 76%;"></div></div>
-              <span class="score">76</span>
-            </div>
-            <div class="subcategory-item">
-              <span class="label">Customer Service</span>
-              <div class="score-bar-container"><div class="score-bar" style="width: 66%;"></div></div>
-              <span class="score">66</span>
-            </div>
-            <div class="subcategory-item">
               <span class="label">Closing Costs</span>
-              <div class="score-bar-container"><div class="score-bar" style="width: 74%;"></div></div>
-              <span class="score">74</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
+              <span class="score">78</span>
             </div>
           </div>
           <div class="company-data-points">
@@ -909,15 +901,20 @@ include '../header.php';
               <h4>Considerations</h4>
               <ul>
                 <li>Last place in J.D. Power 2024 mortgage origination satisfaction</li>
-                <li>2.8 Trustpilot rating indicates widespread customer dissatisfaction</li>
+                <li>2.8 Trustpilot rating indicates ongoing customer service concerns</li>
                 <li>$158M settlement related to loan servicing practices</li>
               </ul>
             </div>
           </div>
           <div class="company-analysis">
-            <p>Pennymac offers competitive rate pricing that can appeal to borrowers focused primarily on securing the lowest APR. However, the company's Customer Service score of 66/100 is the lowest among all rated lenders, consistent with its last-place J.D. Power 2024 ranking and 2.8 Trustpilot rating. A $158 million settlement related to loan servicing practices adds to concerns about the post-closing borrower experience.</p>
+            <p>Pennymac earns an above-average score on the strength of competitive rate pricing (82/100) and broad loan program availability (80/100). The company's Customer Service score of 72/100 reflects ongoing improvement but still trails top-rated lenders, consistent with its J.D. Power 2024 ranking and 2.8 Trustpilot rating. A $158 million settlement related to loan servicing practices remains a consideration for borrowers evaluating the post-closing experience.</p>
           </div>
         </div>
+      </div>
+
+      <div class="segment-average">
+        <span>Segment Average:</span>
+        <strong>76<span>/100</span></strong>
       </div>
 
       <p class="last-updated">Last Updated: March 2026 &middot; <a href="../methodology.html">View Methodology</a></p>
