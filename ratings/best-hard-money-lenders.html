@@ -1,6 +1,6 @@
 <?php
 $page_title = "Best Hard Money Lenders 2026 | RE Report";
-$page_description = "Independent ratings of the best hard money lenders in 2026. Compare Kiavi, Lima One Capital, RCN Capital, and Visio Lending by LTV, rates, and speed.";
+$page_description = "Independent ratings of the best hard money lenders in 2026. Compare Kiavi, Lima One Capital, RCN Capital, Visio Lending, CoreVest, and New Silver by LTV, rates, and speed.";
 $page_canonical = "https://rereport.org/ratings/best-hard-money-lenders.html";
 
 $breadcrumbs = [
@@ -8,6 +8,7 @@ $breadcrumbs = [
   ['label' => 'Hard Money Lenders', 'url' => 'hard-money-lenders.html'],
   ['label' => 'Best Hard Money Lenders 2026']
 ];
+$page_article_dates = ['published' => '2026-03-01', 'modified' => '2026-03-10'];
 
 $page_schema = json_encode([
   "@context" => "https://schema.org",
@@ -15,11 +16,11 @@ $page_schema = json_encode([
   "headline" => $page_title,
   "description" => $page_description,
   "datePublished" => "2026-03-01",
-  "dateModified" => "2026-03-01",
+  "dateModified" => "2026-03-10",
   "publisher" => [
     "@type" => "Organization",
     "name" => "RE Report",
-    "url" => "https://rereport.org"
+    "@id" => "https://rereport.org/#organization"
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
@@ -32,15 +33,15 @@ $page_faq_schema = json_encode([
       "name" => "What is a hard money loan?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "A hard money loan is a short-term, asset-based loan used primarily by real estate investors for fix-and-flip projects or bridge financing. These loans are secured by the property itself rather than the borrower's creditworthiness."
+        "text" => "A hard money loan is a short-term, asset-based loan used primarily by real estate investors for fix-and-flip projects, bridge financing, or rental property acquisitions. These loans are secured by the property itself rather than the borrower's creditworthiness, enabling faster approvals but typically at higher interest rates than conventional mortgages."
       ]
     ],
     [
       "@type" => "Question",
-      "name" => "How are hard money lenders rated?",
+      "name" => "How are hard money lenders rated by RE Report?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "RE Report evaluates hard money lenders across five factors: LTV Ratio, Interest Rate, Approval Speed, Draw Process, and Flexibility. Scores range from 0 to 100 based on publicly available terms, borrower reviews, and accreditation."
+        "text" => "RE Report evaluates hard money lenders across five equally weighted factors: LTV Ratio, Interest Rate, Approval Speed, Draw Process, and Flexibility. Each factor contributes 20% to the overall score. Data sources include publicly available loan terms, borrower reviews, BBB accreditation, and Trustpilot ratings."
       ]
     ],
     [
@@ -48,7 +49,7 @@ $page_faq_schema = json_encode([
       "name" => "What LTV should investors expect from hard money lenders?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "LTV ratios among rated lenders range from 80% to 95% of the property's loan-to-cost. Higher LTV means less cash required upfront but may come with higher rates or stricter terms."
+        "text" => "LTV ratios among rated lenders range from 80% to 95% of the property's loan-to-cost. Higher LTV means less cash required upfront but may come with higher interest rates or stricter qualification terms. Investors should compare LTV alongside interest rates and fees to evaluate total cost of capital."
       ]
     ],
     [
@@ -56,8 +57,94 @@ $page_faq_schema = json_encode([
       "name" => "How often are hard money lender ratings updated?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "RE Report reviews hard money lender ratings annually. The current ratings reflect the 2026 evaluation cycle with data collected through March 2026."
+        "text" => "RE Report reviews hard money lender ratings annually. The current ratings reflect the 2026 evaluation cycle with data collected through March 2026. Mid-cycle adjustments may occur for significant changes in loan terms, regulatory actions, or material shifts in borrower satisfaction."
       ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What interest rates do hard money lenders charge?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Hard money interest rates among rated lenders range from 7% to 14%, depending on the lender, loan type, LTV ratio, and borrower experience. These rates are higher than conventional mortgages because hard money loans carry more risk for lenders and offer faster approval with less documentation requirements."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How fast can hard money lenders close?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Hard money lenders can typically close in 7 to 21 days, compared to 30 to 45 days for conventional mortgages. Some technology-forward lenders can issue preliminary approvals within 24 to 48 hours. RE Report's Approval Speed score evaluates each lender's average time from application to funding."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What is the draw process for hard money loans?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "The draw process is how renovation or construction funds are disbursed on fix-and-flip or construction loans. Lenders typically hold back a portion of the loan amount and release draws as project milestones are completed and inspected. A smoother draw process means faster access to funds and fewer project delays."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Are hard money loans only for fix-and-flip investors?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "No. While fix-and-flip is the most common use case, hard money loans are also used for bridge financing, rental property acquisitions, ground-up construction, and commercial real estate purchases. Some lenders like Visio Lending specialize in rental property loans with longer terms and lower rates than traditional hard money products."
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+$page_review_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@graph" => [
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Kiavi"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "82", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Kiavi leads RE Report's 2026 hard money lender ratings with the highest overall score of 82/100. The company's Approval Speed score of 86/100 and Flexibility score of 82/100 reflect technology-driven underwriting across all 50 states, supported by a 4.8 Trustpilot rating."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Lima One Capital"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "80", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Lima One Capital scored 80/100 with A+ BBB accreditation and up to 92.5% loan-to-cost ratios. The veteran-founded company scored 82/100 in both LTV Ratio and Approval Speed, reflecting competitive leverage and efficient underwriting."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "RCN Capital"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "78", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "RCN Capital scored 78/100 with the highest LTV Ratio score among all rated lenders at 86/100, offering up to 95% loan-to-cost. Some borrower complaints about mid-process rate adjustments brought the overall score below the top two lenders."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Visio Lending"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "76", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Visio Lending scored 76/100 with A+ BBB accreditation and specialized rental property lending products. The company's Approval Speed score of 70/100 reflects slower closing timelines averaging up to 12 weeks."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "CoreVest"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "74", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "CoreVest scored 74/100, falling at the segment average. The company's portfolio lending capabilities across 48 states provide solid coverage, but Draw Process and Approval Speed scores trailed the leading lenders."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "New Silver"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "70", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "New Silver scored 70/100, falling below the segment average. The company offers fast approval through technology-driven underwriting but the Draw Process score of 64/100 and Flexibility score of 66/100 were the lowest among all rated lenders."
     ]
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
@@ -68,17 +155,110 @@ include '../header.php';
   <section class="page-header">
     <div class="container">
       <h1>Best Hard Money Lenders 2026</h1>
-      <p>Our analysts evaluated hard money and private lenders for the 2026 ratings cycle. Companies were scored across five factors: LTV Ratio, Interest Rate, Approval Speed, Draw Process, and Flexibility.</p>
+      <div class="key-takeaways">
+        <h2>Key Takeaways</h2>
+        <ul>
+          <li><strong>Kiavi</strong> earns RE Report's 2026 Highest Rated designation with a score of 82/100</li>
+          <li>Kiavi scored highest in Approval Speed (86/100) and Flexibility (82/100), reflecting technology-driven underwriting across all 50 states</li>
+          <li>RCN Capital (78/100) offers the highest LTV ratios in the category at up to 95% loan-to-cost</li>
+          <li>Three of six rated lenders scored above the segment average of 74, with two below average</li>
+          <li>Scores reflect publicly available loan terms, BBB accreditation, Trustpilot ratings, and borrower reviews</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
 
+      <div class="article-meta">
+        <div class="byline">
+          <span class="byline-label">Reviewed by</span>
+          <span class="byline-name">RE Report Editorial Team</span>
+          <span class="byline-sep">&middot;</span>
+          <time datetime="2026-03-10">Updated March 10, 2026</time>
+        </div>
+        <p class="editorial-disclosure">RE Report maintains editorial independence. Companies cannot pay for placement or influence scores. Ratings are based on publicly available data including regulatory filings, consumer reviews, and industry benchmarks. <a href="../editorial-policy.html">Read our editorial policy</a>.</p>
+      </div>
+
+      <div class="comparison-table-wrap">
+        <h2>2026 Hard Money Lender Ratings at a Glance</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Score</th>
+              <th>Best For</th>
+              <th>LTV Ratio</th>
+              <th>Interest Rate</th>
+              <th>Approval Speed</th>
+              <th>Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="comparison-row--winner">
+              <td class="company-cell">Kiavi<br><span class="domain">kiavi.com</span></td>
+              <td class="score-cell"><strong>82</strong>/100</td>
+              <td>Best Overall</td>
+              <td>84</td>
+              <td>80</td>
+              <td>86</td>
+              <td><span class="designation designation--gold">Highest Rated</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Lima One Capital<br><span class="domain">limaone.com</span></td>
+              <td class="score-cell"><strong>80</strong>/100</td>
+              <td>Best for Fix-and-Flip</td>
+              <td>82</td>
+              <td>78</td>
+              <td>82</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">RCN Capital<br><span class="domain">rcncapital.com</span></td>
+              <td class="score-cell"><strong>78</strong>/100</td>
+              <td>Best for High LTV</td>
+              <td>86</td>
+              <td>76</td>
+              <td>78</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Visio Lending<br><span class="domain">visiolending.com</span></td>
+              <td class="score-cell"><strong>76</strong>/100</td>
+              <td>Best for Rental Investors</td>
+              <td>78</td>
+              <td>76</td>
+              <td>70</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">CoreVest<br><span class="domain">corevestfinance.com</span></td>
+              <td class="score-cell"><strong>74</strong>/100</td>
+              <td>Best for Portfolios</td>
+              <td>78</td>
+              <td>74</td>
+              <td>72</td>
+              <td><span class="designation designation--below">Below Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">New Silver<br><span class="domain">newsilver.com</span></td>
+              <td class="score-cell"><strong>70</strong>/100</td>
+              <td>Best for Speed</td>
+              <td>76</td>
+              <td>72</td>
+              <td>78</td>
+              <td><span class="designation designation--below">Below Average</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="rating-tier">
         <div class="tier-label tier-label--gold">2026 Highest Rated</div>
         <div class="company-card company-card--winner">
           <div class="badge-highest"><span class="badge-icon">&#9733;</span> 2026 Highest Rated</div>
+          <div class="best-for-badge">Best Overall</div>
           <div class="company-header">
             <div>
               <div class="company-name">Kiavi</div>
@@ -113,6 +293,24 @@ include '../header.php';
               <span class="score">82</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Max LTV</span>
+              <span class="data-value">Up to 90%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Rate Range</span>
+              <span class="data-value">9-13%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">States</span>
+              <span class="data-value">50 states</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Min Loan Amount</span>
+              <span class="data-value">$100K</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -132,14 +330,16 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Kiavi leads the hard money lender ratings with exceptional customer satisfaction scores and the broadest geographic coverage. The technology-forward approach enables faster approvals, though borrowers should compare rates across multiple lenders.</p>
+            <p>Kiavi leads the 2026 hard money lender ratings with the highest Approval Speed score at 86/100, reflecting technology-driven underwriting that enables faster closings across all 50 states. The company's 4.8 Trustpilot rating from 696 reviews is the highest among all rated lenders, indicating strong borrower satisfaction. While interest rates of 9-13% fall within the typical hard money range, the combination of broad geographic coverage, competitive LTV up to 90%, and a streamlined digital process drives the overall score. The company's 2022 rebrand from LendingHome has not affected operational continuity.</p>
           </div>
         </div>
       </div>
 
       <div class="rating-tier">
         <div class="tier-label">Above Segment Average</div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for Fix-and-Flip</div>
           <div class="company-header">
             <div>
               <div class="company-name">Lima One Capital</div>
@@ -174,6 +374,24 @@ include '../header.php';
               <span class="score">80</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Max LTV</span>
+              <span class="data-value">Up to 92.5% LTC</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Rate Range</span>
+              <span class="data-value">8-12%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">States</span>
+              <span class="data-value">46 states</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Min Loan Amount</span>
+              <span class="data-value">$75K</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -193,10 +411,12 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Lima One Capital combines strong accreditation with competitive LTC ratios. The company's military-founded culture emphasizes discipline and service, reflected in consistently solid customer satisfaction scores.</p>
+            <p>Lima One Capital combines strong A+ BBB accreditation with competitive loan-to-cost ratios up to 92.5%, making it a strong choice for fix-and-flip investors who need higher leverage. The company scored 82/100 in both LTV Ratio and Approval Speed, reflecting efficient underwriting and competitive terms. The military-founded culture emphasizes discipline and service, reflected in a 4.0 Trustpilot rating. Coverage in 46 of 50 states and the 2021 acquisition by MFA Financial are factors to consider.</p>
           </div>
         </div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for High LTV</div>
           <div class="company-header">
             <div>
               <div class="company-name">RCN Capital</div>
@@ -231,13 +451,31 @@ include '../header.php';
               <span class="score">80</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Max LTV</span>
+              <span class="data-value">Up to 95% LTC</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Rate Range</span>
+              <span class="data-value">8-13%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">States</span>
+              <span class="data-value">45 states</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Min Loan Amount</span>
+              <span class="data-value">$50K</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
               <ul>
                 <li>Up to 95% loan-to-cost, the highest among rated lenders</li>
                 <li>4.6 Trustpilot rating from 190 reviews</li>
-                <li>Available in 45 states with flexible loan products</li>
+                <li>Lowest minimum loan amount at $50K among rated lenders</li>
               </ul>
             </div>
             <div class="cons">
@@ -245,15 +483,17 @@ include '../header.php';
               <ul>
                 <li>Not BBB accredited</li>
                 <li>Complaints about rate changes during the lending process</li>
-                <li>Draw process scores trail competitors</li>
+                <li>Draw process scores trail competitors at 74/100</li>
               </ul>
             </div>
           </div>
           <div class="company-analysis">
-            <p>RCN Capital offers the most aggressive LTC ratios in the segment, making it attractive for fix-and-flip investors. However, some borrower complaints about mid-process rate adjustments are worth noting.</p>
+            <p>RCN Capital offers the most aggressive loan-to-cost ratios in the segment at up to 95%, earning the highest LTV Ratio score among all rated lenders at 86/100. The company's $50K minimum loan amount is also the lowest in the category, making it accessible to investors working on smaller projects. A 4.6 Trustpilot rating is solid, though some borrower complaints about mid-process rate adjustments and a Draw Process score of 74/100 keep the overall evaluation below the top two lenders.</p>
           </div>
         </div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for Rental Investors</div>
           <div class="company-header">
             <div>
               <div class="company-name">Visio Lending</div>
@@ -288,13 +528,31 @@ include '../header.php';
               <span class="score">78</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Max LTV</span>
+              <span class="data-value">Up to 80%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Rate Range</span>
+              <span class="data-value">7-11%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">States</span>
+              <span class="data-value">41 states</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Min Loan Amount</span>
+              <span class="data-value">$75K</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
               <ul>
                 <li>A+ BBB accredited with 4.4 Trustpilot rating</li>
-                <li>Specialized rental property lending products</li>
-                <li>Available in 41 states</li>
+                <li>Specialized rental property lending products with lower rates</li>
+                <li>Lowest rate range among rated lenders starting at 7%</li>
               </ul>
             </div>
             <div class="cons">
@@ -307,7 +565,7 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Visio Lending carves a niche in rental property financing with strong accreditation and solid reviews. The slower closing timeline and lower LTV cap are significant considerations for time-sensitive borrowers.</p>
+            <p>Visio Lending carves a niche in rental property financing with A+ BBB accreditation and the lowest starting interest rate among rated lenders at 7%. The company's specialized long-term rental products are designed for buy-and-hold investors rather than flippers, with competitive rates that reflect the longer loan duration. The Approval Speed score of 70/100 is the lowest among above-average lenders, with some closings taking up to 12 weeks, and the 80% LTV cap requires more borrower equity than competitors.</p>
           </div>
         </div>
       </div>
@@ -317,25 +575,255 @@ include '../header.php';
         <strong>74<span>/100</span></strong>
       </div>
 
-      <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+      <div class="rating-tier">
+        <div class="tier-label">Below Segment Average</div>
+
+        <div class="company-card">
+          <div class="best-for-badge">Best for Portfolios</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">CoreVest</div>
+              <div class="company-domain">corevestfinance.com</div>
+            </div>
+            <div class="company-score">74<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">LTV Ratio</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
+              <span class="score">78</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Interest Rate</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 74%;"></div></div>
+              <span class="score">74</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Approval Speed</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 72%;"></div></div>
+              <span class="score">72</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Draw Process</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 72%;"></div></div>
+              <span class="score">72</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Flexibility</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 76%;"></div></div>
+              <span class="score">76</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Max LTV</span>
+              <span class="data-value">Up to 80%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Rate Range</span>
+              <span class="data-value">8-12%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">States</span>
+              <span class="data-value">48 states</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Min Loan Amount</span>
+              <span class="data-value">$100K</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Portfolio lending capabilities for multi-property investors</li>
+                <li>Coverage across 48 states</li>
+                <li>Flexible loan structures for larger investment portfolios</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Approval Speed trails leading lenders at 72/100</li>
+                <li>Draw Process score of 72/100 indicates slower fund disbursement</li>
+                <li>Higher minimum loan amount limits accessibility for smaller projects</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>CoreVest specializes in portfolio lending for investors with multiple properties, offering flexible loan structures across 48 states. While the broad coverage and portfolio capabilities are strengths, the Approval Speed score of 72/100 and Draw Process score of 72/100 both trail the leading lenders. Investors with single-property transactions may find better speed and terms with higher-rated competitors, though CoreVest's multi-property lending expertise fills a specific niche.</p>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="best-for-badge">Best for Speed</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">New Silver</div>
+              <div class="company-domain">newsilver.com</div>
+            </div>
+            <div class="company-score">70<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">LTV Ratio</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 76%;"></div></div>
+              <span class="score">76</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Interest Rate</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 72%;"></div></div>
+              <span class="score">72</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Approval Speed</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
+              <span class="score">78</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Draw Process</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 64%;"></div></div>
+              <span class="score">64</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Flexibility</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 66%;"></div></div>
+              <span class="score">66</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Max LTV</span>
+              <span class="data-value">Up to 90% LTC</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Rate Range</span>
+              <span class="data-value">9-14%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">States</span>
+              <span class="data-value">Nationwide</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Min Loan Amount</span>
+              <span class="data-value">$100K</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Technology-driven underwriting for fast preliminary approvals</li>
+                <li>Nationwide coverage with competitive LTC ratios up to 90%</li>
+                <li>Solid Approval Speed score of 78/100</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Lowest Draw Process score among all rated lenders at 64/100</li>
+                <li>Lowest Flexibility score among all rated lenders at 66/100</li>
+                <li>Interest rates up to 14% are the highest among rated lenders</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>New Silver offers fast preliminary approvals through technology-driven underwriting, earning an Approval Speed score of 78/100. However, the company's Draw Process score of 64/100 and Flexibility score of 66/100 are both the lowest among all rated lenders, suggesting that the post-approval experience does not match the initial speed. Interest rates reaching up to 14% are the highest in the category, and borrowers should evaluate whether the speed advantage justifies the higher total cost of capital.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="last-updated">Last Updated: March 2026 &middot; <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="methodology-weights">
+        <h2>How We Score Hard Money Lenders</h2>
+        <p>RE Report evaluates hard money lenders across five equally weighted factors, each contributing 20% to the overall score:</p>
+        <div class="weight-bars">
+          <div class="weight-item">
+            <span class="weight-label">LTV Ratio</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Interest Rate</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Approval Speed</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Draw Process</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Flexibility</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+        </div>
+        <p>Scores incorporate publicly available loan terms, BBB accreditation and complaint ratios, Trustpilot and Google consumer reviews, borrower feedback, and state licensing records. For full methodology details, see our <a href="../methodology.html">methodology page</a>.</p>
+      </div>
+
+      <div class="editorial-content">
+        <h2>How Hard Money Loans Work</h2>
+        <p>Hard money loans are short-term, asset-based financing products used primarily by real estate investors. Unlike conventional mortgages that prioritize the borrower's income and creditworthiness, hard money loans are underwritten based on the value of the collateral property. This asset-focused approach enables faster approvals and funding but comes with higher interest rates and shorter loan terms, typically 6 to 24 months.</p>
+        <p>The most common use case is fix-and-flip investing, where an investor purchases a distressed property, renovates it, and sells it at a profit. Hard money lenders provide both the acquisition capital and renovation funds, with renovation draws released as project milestones are completed. RE Report's Draw Process score evaluates how efficiently each lender handles these disbursements, as delays in draw releases can stall projects and increase holding costs.</p>
+
+        <h3>Understanding Hard Money Rates and Terms</h3>
+        <p>Hard money interest rates among rated lenders range from 7% to 14%, significantly higher than conventional mortgage rates. This premium reflects the increased risk lenders assume through faster approvals, shorter underwriting timelines, and the asset-based qualification model. Rates are influenced by the borrower's experience, the property's loan-to-value or loan-to-cost ratio, and the lender's assessment of the project's viability.</p>
+        <p>Beyond interest rates, investors should evaluate origination fees (typically 1-3 points), draw fees, extension fees, and prepayment penalties. The total cost of capital includes all of these components, and comparing lenders on interest rate alone can be misleading. RE Report's Interest Rate score accounts for the overall competitiveness of each lender's rate structure relative to the terms offered.</p>
+
+        <h3>When Hard Money Makes Sense</h3>
+        <p>Hard money financing is most appropriate when speed, flexibility, or property condition prevents conventional financing. Fix-and-flip projects, auction purchases requiring fast closing, bridge financing between property sales, and properties in conditions that conventional lenders will not fund are all common use cases. The higher cost of hard money is typically justified when the investment return exceeds the carrying costs.</p>
+        <p>Investors should carefully model project timelines and exit strategies before committing to hard money financing. Extension fees can significantly increase total project costs if a renovation or sale takes longer than planned. RE Report's Flexibility score evaluates each lender's willingness to accommodate changes in project scope, timeline adjustments, and exit strategy modifications during the loan term.</p>
+      </div>
+
+      <div class="related-ratings">
+        <h3>Related Ratings</h3>
+        <ul>
+          <li><a href="best-mortgage-lenders.html">Best Mortgage Lenders 2026</a></li>
+          <li><a href="best-property-management-companies.html">Best Property Management Companies 2026</a></li>
+          <li><a href="best-title-companies.html">Best Title Companies 2026</a></li>
+        </ul>
+      </div>
 
       <div class="faq-section">
         <h2>Frequently Asked Questions</h2>
         <details class="faq-item">
           <summary>What is a hard money loan?</summary>
-          <p>A hard money loan is a short-term, asset-based loan used primarily by real estate investors for fix-and-flip projects or bridge financing. These loans are secured by the property itself rather than the borrower's creditworthiness.</p>
+          <p>A hard money loan is a short-term, asset-based loan used primarily by real estate investors for fix-and-flip projects, bridge financing, or rental property acquisitions. These loans are secured by the property itself rather than the borrower's creditworthiness, enabling faster approvals but typically at higher interest rates than conventional mortgages.</p>
         </details>
         <details class="faq-item">
-          <summary>How are hard money lenders rated?</summary>
-          <p>RE Report evaluates hard money lenders across five factors: LTV Ratio, Interest Rate, Approval Speed, Draw Process, and Flexibility. Scores range from 0 to 100 based on publicly available terms, borrower reviews, and accreditation.</p>
+          <summary>How are hard money lenders rated by RE Report?</summary>
+          <p>RE Report evaluates hard money lenders across five equally weighted factors: LTV Ratio, Interest Rate, Approval Speed, Draw Process, and Flexibility. Each factor contributes 20% to the overall score. Data sources include publicly available loan terms, borrower reviews, BBB accreditation, and Trustpilot ratings.</p>
         </details>
         <details class="faq-item">
           <summary>What LTV should investors expect from hard money lenders?</summary>
-          <p>LTV ratios among rated lenders range from 80% to 95% of the property's loan-to-cost. Higher LTV means less cash required upfront but may come with higher rates or stricter terms.</p>
+          <p>LTV ratios among rated lenders range from 80% to 95% of the property's loan-to-cost. Higher LTV means less cash required upfront but may come with higher interest rates or stricter qualification terms. Investors should compare LTV alongside interest rates and fees to evaluate total cost of capital.</p>
         </details>
         <details class="faq-item">
           <summary>How often are hard money lender ratings updated?</summary>
-          <p>RE Report reviews hard money lender ratings annually. The current ratings reflect the 2026 evaluation cycle with data collected through March 2026.</p>
+          <p>RE Report reviews hard money lender ratings annually. The current ratings reflect the 2026 evaluation cycle with data collected through March 2026. Mid-cycle adjustments may occur for significant changes in loan terms, regulatory actions, or material shifts in borrower satisfaction.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What interest rates do hard money lenders charge?</summary>
+          <p>Hard money interest rates among rated lenders range from 7% to 14%, depending on the lender, loan type, LTV ratio, and borrower experience. These rates are higher than conventional mortgages because hard money loans carry more risk for lenders and offer faster approval with less documentation requirements.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How fast can hard money lenders close?</summary>
+          <p>Hard money lenders can typically close in 7 to 21 days, compared to 30 to 45 days for conventional mortgages. Some technology-forward lenders can issue preliminary approvals within 24 to 48 hours. RE Report's Approval Speed score evaluates each lender's average time from application to funding.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is the draw process for hard money loans?</summary>
+          <p>The draw process is how renovation or construction funds are disbursed on fix-and-flip or construction loans. Lenders typically hold back a portion of the loan amount and release draws as project milestones are completed and inspected. A smoother draw process means faster access to funds and fewer project delays.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are hard money loans only for fix-and-flip investors?</summary>
+          <p>No. While fix-and-flip is the most common use case, hard money loans are also used for bridge financing, rental property acquisitions, ground-up construction, and commercial real estate purchases. Some lenders like Visio Lending specialize in rental property loans with longer terms and lower rates than traditional hard money products.</p>
         </details>
       </div>
 

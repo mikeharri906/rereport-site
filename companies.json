@@ -905,6 +905,86 @@
       ]
     },
     {
+      "name": "Veterans United",
+      "website": "veteransunited.com",
+      "own_site": false,
+      "notes": "A+ BBB accredited. Founded 2002. 4.8 Trustpilot (60K+ reviews). J.D. Power #1 VA lender. Focuses on VA and military loans. Columbia MO HQ.",
+      "pages": [
+        {
+          "page": "/ratings/best-mortgage-lenders.html",
+          "overall": 82,
+          "tier": "above",
+          "subcategories": {
+            "Rate Competitiveness": 80,
+            "Approval Speed": 84,
+            "Loan Variety": 72,
+            "Customer Service": 92,
+            "Closing Costs": 80
+          }
+        }
+      ]
+    },
+    {
+      "name": "Navy Federal Credit Union",
+      "website": "navyfederal.org",
+      "own_site": false,
+      "notes": "Not BBB accredited (credit unions typically exempt). Founded 1933. 13M+ members. Largest credit union in US. Strong military member satisfaction. Low rates.",
+      "pages": [
+        {
+          "page": "/ratings/best-mortgage-lenders.html",
+          "overall": 81,
+          "tier": "above",
+          "subcategories": {
+            "Rate Competitiveness": 86,
+            "Approval Speed": 76,
+            "Loan Variety": 80,
+            "Customer Service": 84,
+            "Closing Costs": 82
+          }
+        }
+      ]
+    },
+    {
+      "name": "Guaranteed Rate",
+      "website": "rate.com",
+      "own_site": false,
+      "notes": "A+ BBB accredited. Founded 2000. 4.7 Trustpilot (6K+ reviews). Digital mortgage pioneer. 850+ branches. Named partner of Guaranteed Rate Field.",
+      "pages": [
+        {
+          "page": "/ratings/best-mortgage-lenders.html",
+          "overall": 78,
+          "tier": "above",
+          "subcategories": {
+            "Rate Competitiveness": 80,
+            "Approval Speed": 82,
+            "Loan Variety": 78,
+            "Customer Service": 76,
+            "Closing Costs": 74
+          }
+        }
+      ]
+    },
+    {
+      "name": "United Wholesale Mortgage",
+      "website": "uwm.com",
+      "own_site": false,
+      "notes": "Not directly BBB rated (wholesale model). Founded 1986. Largest wholesale lender. Publicly traded (UWMC). Broker-only model. 2.1 Trustpilot.",
+      "pages": [
+        {
+          "page": "/ratings/best-mortgage-lenders.html",
+          "overall": 77,
+          "tier": "above",
+          "subcategories": {
+            "Rate Competitiveness": 84,
+            "Approval Speed": 78,
+            "Loan Variety": 80,
+            "Customer Service": 70,
+            "Closing Costs": 76
+          }
+        }
+      ]
+    },
+    {
       "name": "First American Title",
       "website": "firstam.com",
       "own_site": false,
@@ -1200,6 +1280,286 @@
             "Approval Speed": 70,
             "Draw Process": 76,
             "Flexibility": 78
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sundae",
+      "website": "sundae.com",
+      "own_site": false,
+      "notes": "Founded 2018. A BBB accredited. Andreessen Horowitz backed. Marketplace model for as-is home sales. 3.5 Trustpilot. Ceased direct buying operations 2023.",
+      "pages": [
+        {
+          "page": "/ratings/best-cash-home-buyers-national.html",
+          "overall": 72,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 74,
+            "Offer Fairness": 76,
+            "Closing Timeline": 70,
+            "Transparency": 72,
+            "Accreditation": 68
+          }
+        }
+      ]
+    },
+    {
+      "name": "Express Homebuyers",
+      "website": "expresshomebuyers.com",
+      "own_site": false,
+      "notes": "Founded 2003. A+ BBB accredited. 4.5 Trustpilot (800+ reviews). Regional coverage East Coast. Virginia-based.",
+      "pages": [
+        {
+          "page": "/ratings/best-cash-home-buyers-national.html",
+          "overall": 76,
+          "tier": "above",
+          "subcategories": {
+            "Offer Speed": 80,
+            "Offer Fairness": 74,
+            "Closing Timeline": 78,
+            "Transparency": 74,
+            "Accreditation": 76
+          }
+        }
+      ]
+    },
+    {
+      "name": "Clever Offers",
+      "website": "listwithclever.com",
+      "own_site": false,
+      "notes": "Founded 2017. Not BBB accredited. Tech-forward platform. Cash offer matching service. Limited track record.",
+      "pages": [
+        {
+          "page": "/ratings/best-cash-home-buyers-national.html",
+          "overall": 70,
+          "tier": "below",
+          "subcategories": {
+            "Offer Speed": 72,
+            "Offer Fairness": 74,
+            "Closing Timeline": 68,
+            "Transparency": 70,
+            "Accreditation": 64
+          }
+        }
+      ]
+    },
+    {
+      "name": "Flyhomes",
+      "website": "flyhomes.com",
+      "own_site": false,
+      "notes": "Founded 2016. Not BBB accredited. Cash offer program for competitive markets. Seattle-based. Laid off 20% of staff 2022.",
+      "pages": [
+        {
+          "page": "/ratings/best-ibuyer-companies.html",
+          "overall": 76,
+          "tier": "above",
+          "subcategories": {
+            "Offer Algorithm Accuracy": 78,
+            "Service Fee": 74,
+            "Market Coverage": 68,
+            "Closing Flexibility": 82,
+            "Technology Experience": 80
+          }
+        }
+      ]
+    },
+    {
+      "name": "Knock",
+      "website": "knock.com",
+      "own_site": false,
+      "notes": "Founded 2015. A+ BBB accredited. Bridge loan model. Buy-before-you-sell program. 75+ markets.",
+      "pages": [
+        {
+          "page": "/ratings/best-ibuyer-companies.html",
+          "overall": 73,
+          "tier": "below",
+          "subcategories": {
+            "Offer Algorithm Accuracy": 74,
+            "Service Fee": 70,
+            "Market Coverage": 72,
+            "Closing Flexibility": 78,
+            "Technology Experience": 74
+          }
+        }
+      ]
+    },
+    {
+      "name": "Orchard",
+      "website": "orchard.com",
+      "own_site": false,
+      "notes": "Founded 2017. A+ BBB accredited. Move-first model. Guaranteed offer. Limited to TX, CO, GA, VA, MD, NC markets.",
+      "pages": [
+        {
+          "page": "/ratings/best-ibuyer-companies.html",
+          "overall": 71,
+          "tier": "below",
+          "subcategories": {
+            "Offer Algorithm Accuracy": 72,
+            "Service Fee": 68,
+            "Market Coverage": 64,
+            "Closing Flexibility": 76,
+            "Technology Experience": 78
+          }
+        }
+      ]
+    },
+    {
+      "name": "Stewart Title",
+      "website": "stewart.com",
+      "own_site": false,
+      "notes": "Founded 1893. A+ BBB accredited. AM Best A- rating. 4th largest US title insurer. Publicly traded (STC). 130+ years operation.",
+      "pages": [
+        {
+          "page": "/ratings/best-title-companies.html",
+          "overall": 77,
+          "tier": "above",
+          "subcategories": {
+            "Closing Speed": 76,
+            "Error Rate": 78,
+            "Fee Transparency": 76,
+            "Coverage Area": 80,
+            "Customer Service": 78
+          }
+        }
+      ]
+    },
+    {
+      "name": "Chicago Title",
+      "website": "chicagotitleinsurance.com",
+      "own_site": false,
+      "notes": "Founded 1847. Subsidiary of Fidelity National Financial. One of oldest title companies in US. Wide network but inherits parent company issues.",
+      "pages": [
+        {
+          "page": "/ratings/best-title-companies.html",
+          "overall": 74,
+          "tier": "below",
+          "subcategories": {
+            "Closing Speed": 76,
+            "Error Rate": 72,
+            "Fee Transparency": 72,
+            "Coverage Area": 82,
+            "Customer Service": 70
+          }
+        }
+      ]
+    },
+    {
+      "name": "Compass",
+      "website": "compass.com",
+      "own_site": false,
+      "notes": "Founded 2012. Not BBB accredited. Tech-driven brokerage. 30K+ agents. $12B peak valuation. Profitability challenges.",
+      "pages": [
+        {
+          "page": "/ratings/best-real-estate-agents.html",
+          "overall": 76,
+          "tier": "above",
+          "subcategories": {
+            "Days on Market": 78,
+            "Commission Structure": 72,
+            "Local Market Knowledge": 80,
+            "Communication": 78,
+            "Transaction Volume": 76
+          }
+        }
+      ]
+    },
+    {
+      "name": "Century 21",
+      "website": "century21.com",
+      "own_site": false,
+      "notes": "Founded 1971. Part of Anywhere Real Estate. 147K+ agents globally. Iconic brand. 14,000+ offices in 86 countries.",
+      "pages": [
+        {
+          "page": "/ratings/best-real-estate-agents.html",
+          "overall": 74,
+          "tier": "below",
+          "subcategories": {
+            "Days on Market": 76,
+            "Commission Structure": 74,
+            "Local Market Knowledge": 76,
+            "Communication": 72,
+            "Transaction Volume": 72
+          }
+        }
+      ]
+    },
+    {
+      "name": "JLL",
+      "website": "us.jll.com",
+      "own_site": false,
+      "notes": "Founded 1783. Fortune 500. 5B+ sq ft managed. 106K+ employees globally. Strong commercial focus. Less residential presence.",
+      "pages": [
+        {
+          "page": "/ratings/best-property-management-companies.html",
+          "overall": 77,
+          "tier": "above",
+          "subcategories": {
+            "Vacancy Rate": 80,
+            "Maintenance Response Time": 76,
+            "Fee Structure": 72,
+            "Tenant Screening": 80,
+            "Reporting": 80
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lincoln Property Company",
+      "website": "lincolnapts.com",
+      "own_site": false,
+      "notes": "Founded 1965. 200K+ units managed. Dallas-based. Private company. Strong multifamily focus. Limited online reviews.",
+      "pages": [
+        {
+          "page": "/ratings/best-property-management-companies.html",
+          "overall": 72,
+          "tier": "below",
+          "subcategories": {
+            "Vacancy Rate": 76,
+            "Maintenance Response Time": 70,
+            "Fee Structure": 68,
+            "Tenant Screening": 74,
+            "Reporting": 72
+          }
+        }
+      ]
+    },
+    {
+      "name": "CoreVest",
+      "website": "corevestfinance.com",
+      "own_site": false,
+      "notes": "Founded 2014. Acquired by Redwood Trust. Not BBB accredited. Focus on rental portfolios. Up to 80% LTV. 48 states.",
+      "pages": [
+        {
+          "page": "/ratings/best-hard-money-lenders.html",
+          "overall": 74,
+          "tier": "below",
+          "subcategories": {
+            "LTV Ratio": 78,
+            "Interest Rate": 74,
+            "Approval Speed": 72,
+            "Draw Process": 72,
+            "Flexibility": 76
+          }
+        }
+      ]
+    },
+    {
+      "name": "New Silver",
+      "website": "newsilver.com",
+      "own_site": false,
+      "notes": "Founded 2019. Not BBB accredited. AI-powered underwriting. Fast online process. Limited track record. Up to 90% LTC.",
+      "pages": [
+        {
+          "page": "/ratings/best-hard-money-lenders.html",
+          "overall": 70,
+          "tier": "below",
+          "subcategories": {
+            "LTV Ratio": 76,
+            "Interest Rate": 72,
+            "Approval Speed": 78,
+            "Draw Process": 64,
+            "Flexibility": 66
           }
         }
       ]

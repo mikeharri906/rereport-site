@@ -1,6 +1,6 @@
 <?php
 $page_title = "Best Mortgage Lenders 2026 | RE Report";
-$page_description = "Independent ratings of the best mortgage lenders in 2026. Compare Rocket Mortgage, Better.com, loanDepot, and Pennymac by rates, speed, and service.";
+$page_description = "Independent ratings of the best mortgage lenders in 2026. Compare Rocket Mortgage, Veterans United, Navy Federal, and 5 more by rates, speed, and service.";
 $page_canonical = "https://rereport.org/ratings/best-mortgage-lenders.html";
 
 $breadcrumbs = [
@@ -8,6 +8,7 @@ $breadcrumbs = [
   ['label' => 'Mortgage Lenders', 'url' => 'mortgage-lenders.html'],
   ['label' => 'Best Mortgage Lenders 2026']
 ];
+$page_article_dates = ['published' => '2026-03-01', 'modified' => '2026-03-10'];
 
 $page_schema = json_encode([
   "@context" => "https://schema.org",
@@ -15,11 +16,11 @@ $page_schema = json_encode([
   "headline" => $page_title,
   "description" => $page_description,
   "datePublished" => "2026-03-01",
-  "dateModified" => "2026-03-01",
+  "dateModified" => "2026-03-10",
   "publisher" => [
     "@type" => "Organization",
     "name" => "RE Report",
-    "url" => "https://rereport.org"
+    "@id" => "https://rereport.org/#organization"
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
@@ -32,7 +33,7 @@ $page_faq_schema = json_encode([
       "name" => "How are mortgage lenders rated by RE Report?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "Mortgage lenders are evaluated across five categories: Rate Competitiveness, Approval Speed, Loan Variety, Customer Service, and Closing Costs. Scores incorporate J.D. Power data, consumer reviews, and regulatory records."
+        "text" => "Mortgage lenders are evaluated across five equally weighted categories: Rate Competitiveness, Approval Speed, Loan Variety, Customer Service, and Closing Costs. Each factor contributes 20% to the overall score. Data sources include J.D. Power satisfaction surveys, BBB complaint ratios, Trustpilot consumer reviews, and publicly filed regulatory records."
       ]
     ],
     [
@@ -40,7 +41,7 @@ $page_faq_schema = json_encode([
       "name" => "What is the segment average for mortgage lenders?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "The 2026 segment average is 76, reflecting the overall quality of major mortgage lenders. Companies above this threshold demonstrate stronger performance across evaluated criteria."
+        "text" => "The 2026 segment average is 76/100, reflecting the overall quality of major mortgage lenders evaluated by RE Report. Companies scoring above 76 demonstrate stronger performance across the five rated criteria. Three of the eight rated lenders scored below the segment average."
       ]
     ],
     [
@@ -48,7 +49,7 @@ $page_faq_schema = json_encode([
       "name" => "Should borrowers compare multiple lender offers?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "Absolutely. Even small rate differences can save thousands over the life of a loan. RE Report recommends obtaining at least three quotes and comparing not just rates but total closing costs and fee structures."
+        "text" => "Yes. Research from Freddie Mac shows that borrowers who obtain at least three quotes save an average of $1,500 over the life of their loan. RE Report recommends comparing not just interest rates but also total closing costs, lender fees, and rate lock policies across multiple lenders before committing."
       ]
     ],
     [
@@ -56,8 +57,110 @@ $page_faq_schema = json_encode([
       "name" => "How often are mortgage lender ratings updated?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "RE Report reviews and updates mortgage lender ratings annually. The current ratings reflect the 2026 evaluation cycle with data through March 2026."
+        "text" => "RE Report reviews and updates mortgage lender ratings annually. The current ratings reflect the 2026 evaluation cycle with data through March 2026. Mid-cycle adjustments may occur for significant events such as regulatory actions or major service changes."
       ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What is the difference between a retail and wholesale mortgage lender?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Retail lenders like Rocket Mortgage and Better.com work directly with borrowers through their own loan officers. Wholesale lenders like United Wholesale Mortgage originate loans through independent mortgage brokers. Wholesale lenders may offer lower rates due to reduced overhead, but borrowers work with a broker rather than the lender directly."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Do mortgage lenders charge the same closing costs?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "No. Closing costs vary significantly between lenders, typically ranging from 2% to 5% of the loan amount. Some lenders offer reduced or waived origination fees, while others bundle costs into the interest rate. RE Report evaluates total cost transparency as part of the Closing Costs scoring category."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Can I get pre-approved by multiple lenders without hurting my credit score?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Yes. Credit bureaus treat multiple mortgage inquiries within a 14-45 day window as a single inquiry for scoring purposes. This rate-shopping window allows borrowers to compare pre-approval offers from several lenders without additional credit score impact beyond the initial pull."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What types of mortgage loans are available?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Common mortgage types include conventional loans (conforming and jumbo), FHA loans (lower down payment requirements), VA loans (for eligible veterans and service members), and USDA loans (for rural properties). Most rated lenders offer conventional and FHA products, while VA loan availability varies. Specialized products like construction loans and renovation loans are available from select lenders."
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+$page_review_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@graph" => [
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Rocket Mortgage"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "86", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Rocket Mortgage leads RE Report's 2026 mortgage lender ratings with the highest overall score. The company's J.D. Power recognition, fast digital approval process, and broad loan variety earned top marks across multiple categories. RESPA-related legal matters and a DOJ discrimination settlement were factored into the evaluation."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Veterans United"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "82", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Veterans United earned the highest Customer Service score among all rated lenders at 92/100, supported by a 4.8 Trustpilot rating from over 60,000 reviews. The company's focus on VA loans limits its loan variety score, but military borrowers benefit from specialized expertise and dedicated loan teams."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Navy Federal Credit Union"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "81", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Navy Federal Credit Union scored highest in Rate Competitiveness at 86/100, reflecting the credit union's member-focused pricing model. With 13 million members and 90+ years of operation, it offers a broad product line including conventional, VA, and jumbo loans with competitive rates."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Better.com"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "80", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Better.com offers competitive rates and an AI-powered underwriting process that can deliver approvals faster than traditional lenders. Customer Service scores reflect widely-reported management controversies and operational disruptions that affected the borrower experience."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "loanDepot"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "79", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "loanDepot combines digital lending with a 200+ branch network for borrowers who prefer in-person support. The company's $86 million data breach settlement affecting 16.9 million customers is a notable trust concern, though subsequent cybersecurity investments are acknowledged."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Guaranteed Rate"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "78", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Guaranteed Rate has built a strong digital platform alongside its 850+ branch network. The company's Approval Speed score of 82/100 reflects its early adoption of digital mortgage technology. Closing Costs scored lower at 74/100 relative to digital-first competitors."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "United Wholesale Mortgage"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "77", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "United Wholesale Mortgage is the largest wholesale lender in the US, originating loans exclusively through independent mortgage brokers. The broker model can yield competitive rates, but Customer Service scored 70/100 as the borrower experience depends on the individual broker rather than UWM directly."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Pennymac"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "74", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Pennymac offers competitive rate pricing but scored lowest in Customer Service at 66/100, consistent with its last-place J.D. Power ranking and 2.8 Trustpilot rating. A $158 million settlement related to loan servicing practices adds to borrower concerns about the post-closing experience."
     ]
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
@@ -68,17 +171,128 @@ include '../header.php';
   <section class="page-header">
     <div class="container">
       <h1>Best Mortgage Lenders 2026</h1>
-      <p>Our analysts evaluated mortgage lending companies for the 2026 ratings cycle. Companies were scored across five factors: Rate Competitiveness, Approval Speed, Loan Variety, Customer Service, and Closing Costs.</p>
+      <div class="key-takeaways">
+        <h2>Key Takeaways</h2>
+        <ul>
+          <li><strong>Rocket Mortgage</strong> earns RE Report's 2026 Highest Rated designation with a score of 86/100</li>
+          <li>Rocket Mortgage scored highest in Approval Speed (90/100) and Loan Variety (86/100) among all rated lenders</li>
+          <li>Veterans United (82/100) leads all lenders in Customer Service with a score of 92/100</li>
+          <li>Five of eight rated lenders scored above the segment average of 76</li>
+          <li>Scores reflect J.D. Power survey data, BBB complaint ratios, Trustpilot reviews, and regulatory filings</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
 
+      <div class="article-meta">
+        <div class="byline">
+          <span class="byline-label">Reviewed by</span>
+          <span class="byline-name">RE Report Editorial Team</span>
+          <span class="byline-sep">&middot;</span>
+          <time datetime="2026-03-10">Updated March 10, 2026</time>
+        </div>
+        <p class="editorial-disclosure">RE Report maintains editorial independence. Companies cannot pay for placement or influence scores. Ratings are based on publicly available data including regulatory filings, consumer reviews, and industry benchmarks. <a href="../editorial-policy.html">Read our editorial policy</a>.</p>
+      </div>
+
+      <div class="comparison-table-wrap">
+        <h2>2026 Mortgage Lender Ratings at a Glance</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Score</th>
+              <th>Best For</th>
+              <th>Rates</th>
+              <th>Speed</th>
+              <th>Service</th>
+              <th>Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="comparison-row--winner">
+              <td class="company-cell">Rocket Mortgage<br><span class="domain">rocketmortgage.com</span></td>
+              <td class="score-cell"><strong>86</strong>/100</td>
+              <td>Best Overall</td>
+              <td>84</td>
+              <td>90</td>
+              <td>82</td>
+              <td><span class="designation designation--gold">Highest Rated</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Veterans United<br><span class="domain">veteransunited.com</span></td>
+              <td class="score-cell"><strong>82</strong>/100</td>
+              <td>Best for VA Loans</td>
+              <td>80</td>
+              <td>84</td>
+              <td>92</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Navy Federal Credit Union<br><span class="domain">navyfederal.org</span></td>
+              <td class="score-cell"><strong>81</strong>/100</td>
+              <td>Best Rates</td>
+              <td>86</td>
+              <td>76</td>
+              <td>84</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Better.com<br><span class="domain">better.com</span></td>
+              <td class="score-cell"><strong>80</strong>/100</td>
+              <td>Best for Digital Process</td>
+              <td>84</td>
+              <td>82</td>
+              <td>72</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">loanDepot<br><span class="domain">loandepot.com</span></td>
+              <td class="score-cell"><strong>79</strong>/100</td>
+              <td>Best for In-Person Support</td>
+              <td>78</td>
+              <td>80</td>
+              <td>76</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Guaranteed Rate<br><span class="domain">rate.com</span></td>
+              <td class="score-cell"><strong>78</strong>/100</td>
+              <td>Best Hybrid Experience</td>
+              <td>80</td>
+              <td>82</td>
+              <td>76</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">United Wholesale Mortgage<br><span class="domain">uwm.com</span></td>
+              <td class="score-cell"><strong>77</strong>/100</td>
+              <td>Best for Broker Channel</td>
+              <td>84</td>
+              <td>78</td>
+              <td>70</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Pennymac<br><span class="domain">pennymac.com</span></td>
+              <td class="score-cell"><strong>74</strong>/100</td>
+              <td>Best for Rate Shoppers</td>
+              <td>78</td>
+              <td>72</td>
+              <td>66</td>
+              <td><span class="designation designation--below">Below Average</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="rating-tier">
         <div class="tier-label tier-label--gold">2026 Highest Rated</div>
         <div class="company-card company-card--winner">
           <div class="badge-highest"><span class="badge-icon">&#9733;</span> 2026 Highest Rated</div>
+          <div class="best-for-badge">Best Overall</div>
           <div class="company-header">
             <div>
               <div class="company-name">Rocket Mortgage</div>
@@ -113,6 +327,24 @@ include '../header.php';
               <span class="score">84</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Min Credit Score</span>
+              <span class="data-value">580 (FHA) / 620 (Conv.)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Loan Types</span>
+              <span class="data-value">Conv., FHA, VA, Jumbo</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Rating</span>
+              <span class="data-value">A+ (Accredited)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Trustpilot</span>
+              <span class="data-value">4.6 / 5.0 (39K reviews)</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -132,14 +364,170 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Rocket Mortgage earns the top position through a combination of customer satisfaction, digital innovation, and loan product breadth. The company's long track record and consistently high third-party ratings support its leading position.</p>
+            <p>Rocket Mortgage earns the top position through a combination of customer satisfaction, digital innovation, and loan product breadth. The company's Approval Speed score of 90/100 reflects its industry-leading digital verification tools that can deliver conditional approval within hours. Regulatory concerns including RESPA-related lawsuits and a DOJ discrimination settlement were factored into the evaluation, preventing a higher overall score.</p>
           </div>
         </div>
       </div>
 
       <div class="rating-tier">
         <div class="tier-label">Above Segment Average</div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for VA Loans</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">Veterans United</div>
+              <div class="company-domain">veteransunited.com</div>
+            </div>
+            <div class="company-score">82<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">Rate Competitiveness</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 80%;"></div></div>
+              <span class="score">80</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Approval Speed</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 84%;"></div></div>
+              <span class="score">84</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Loan Variety</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 72%;"></div></div>
+              <span class="score">72</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Customer Service</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 92%;"></div></div>
+              <span class="score">92</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Closing Costs</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 80%;"></div></div>
+              <span class="score">80</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Min Credit Score</span>
+              <span class="data-value">620 (VA)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Loan Types</span>
+              <span class="data-value">VA, Conv., FHA</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Rating</span>
+              <span class="data-value">A+ (Accredited)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Trustpilot</span>
+              <span class="data-value">4.8 / 5.0 (60K+ reviews)</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Highest Customer Service score among all rated lenders (92/100)</li>
+                <li>4.8 Trustpilot rating from 60,000+ verified reviews</li>
+                <li>Dedicated VA loan specialists with military-focused expertise</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Limited loan variety for non-military borrowers</li>
+                <li>VA loan focus means fewer conventional product options</li>
+                <li>Best suited for veterans and active-duty service members</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Veterans United dominates the VA lending space with an industry-leading Customer Service score of 92/100, the highest among all rated lenders. The company's 4.8 Trustpilot rating from over 60,000 reviews demonstrates consistent borrower satisfaction across its dedicated military loan teams. The Loan Variety score of 72/100 reflects the company's specialized focus on VA products, which limits options for non-military borrowers but benefits eligible veterans through deep expertise.</p>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="best-for-badge">Best Rates</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">Navy Federal Credit Union</div>
+              <div class="company-domain">navyfederal.org</div>
+            </div>
+            <div class="company-score">81<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">Rate Competitiveness</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 86%;"></div></div>
+              <span class="score">86</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Approval Speed</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 76%;"></div></div>
+              <span class="score">76</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Loan Variety</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 80%;"></div></div>
+              <span class="score">80</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Customer Service</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 84%;"></div></div>
+              <span class="score">84</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Closing Costs</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 82%;"></div></div>
+              <span class="score">82</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Min Credit Score</span>
+              <span class="data-value">620 (Conv.) / No min (VA)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Loan Types</span>
+              <span class="data-value">Conv., VA, FHA, Jumbo</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Membership</span>
+              <span class="data-value">Military / DoD affiliated</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Years Operating</span>
+              <span class="data-value">90+ years (est. 1933)</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Highest Rate Competitiveness score among all rated lenders (86/100)</li>
+                <li>Credit union model passes savings to members through lower rates</li>
+                <li>Over 90 years of operation with 13 million members</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Membership restricted to military, DoD, and their families</li>
+                <li>Approval Speed (76/100) lags behind digital-first lenders</li>
+                <li>Branch-dependent process may feel less streamlined</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Navy Federal Credit Union earns the highest Rate Competitiveness score at 86/100, reflecting the credit union's not-for-profit model that passes savings directly to members. The institution's 90+ year track record and 13 million member base provide substantial stability. Approval Speed scored lower at 76/100 compared to digital-first competitors, as the process relies more heavily on branch-based workflows.</p>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="best-for-badge">Best for Digital Process</div>
           <div class="company-header">
             <div>
               <div class="company-name">Better.com</div>
@@ -174,13 +562,31 @@ include '../header.php';
               <span class="score">82</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Min Credit Score</span>
+              <span class="data-value">620</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Loan Types</span>
+              <span class="data-value">Conv., FHA, Jumbo</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Rating</span>
+              <span class="data-value">A (Accredited)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Trustpilot</span>
+              <span class="data-value">3.9 / 5.0</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
               <ul>
                 <li>AI-powered underwriting for faster approvals</li>
                 <li>Competitive rate offerings with low closing costs</li>
-                <li>A BBB accredited with fully digital process</li>
+                <li>Fully digital process from application through closing</li>
               </ul>
             </div>
             <div class="cons">
@@ -193,10 +599,12 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Better.com offers a competitive digital mortgage experience with strong rate pricing. However, well-publicized internal turbulence has raised questions about long-term operational stability that RE Report continues to monitor.</p>
+            <p>Better.com delivers a competitive digital mortgage experience with strong rate pricing and an AI-powered underwriting engine that accelerates the approval process. The company's Closing Costs score of 82/100 reflects reduced overhead from the fully digital model. However, well-publicized internal turbulence including mass layoffs and CEO controversies suppressed the Customer Service score to 72/100, as RE Report weighs organizational stability in the borrower experience assessment.</p>
           </div>
         </div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for In-Person Support</div>
           <div class="company-header">
             <div>
               <div class="company-name">loanDepot</div>
@@ -231,6 +639,24 @@ include '../header.php';
               <span class="score">78</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Min Credit Score</span>
+              <span class="data-value">580 (FHA) / 620 (Conv.)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Loan Types</span>
+              <span class="data-value">Conv., FHA, VA, Jumbo</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Rating</span>
+              <span class="data-value">A+ (Accredited)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Branches</span>
+              <span class="data-value">200+ locations</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -250,7 +676,161 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>loanDepot provides a solid mix of digital and in-person lending services. The significant data breach settlement is a notable concern, though the company has since invested in cybersecurity improvements.</p>
+            <p>loanDepot provides a solid mix of digital and in-person lending services, with a Loan Variety score of 82/100 reflecting its broad product menu spanning conventional, FHA, VA, and jumbo loans. The company's 200+ branch network is its key differentiator for borrowers who prefer face-to-face guidance. The significant $86 million data breach settlement affecting 16.9 million customers remains a notable concern, though the company has since invested in cybersecurity improvements.</p>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="best-for-badge">Best Hybrid Experience</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">Guaranteed Rate</div>
+              <div class="company-domain">rate.com</div>
+            </div>
+            <div class="company-score">78<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">Rate Competitiveness</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 80%;"></div></div>
+              <span class="score">80</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Approval Speed</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 82%;"></div></div>
+              <span class="score">82</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Loan Variety</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
+              <span class="score">78</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Customer Service</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 76%;"></div></div>
+              <span class="score">76</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Closing Costs</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 74%;"></div></div>
+              <span class="score">74</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Min Credit Score</span>
+              <span class="data-value">620</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Loan Types</span>
+              <span class="data-value">Conv., FHA, VA, Jumbo, USDA</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Rating</span>
+              <span class="data-value">A+ (Accredited)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Trustpilot</span>
+              <span class="data-value">4.7 / 5.0 (6K+ reviews)</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>850+ branch locations with digital application option</li>
+                <li>4.7 Trustpilot rating from 6,000+ reviews</li>
+                <li>Early digital mortgage adopter with proprietary platform</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Closing Costs score (74/100) below segment leaders</li>
+                <li>Rates vary significantly between loan officers and branches</li>
+                <li>Less competitive for borrowers seeking lowest-possible rates</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Guaranteed Rate offers a hybrid lending model that combines digital tools with an extensive 850+ branch network. The company's early adoption of digital mortgage technology contributes to an Approval Speed score of 82/100. However, the Closing Costs score of 74/100 reflects higher overhead from maintaining both digital and physical operations compared to fully digital competitors.</p>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="best-for-badge">Best for Broker Channel</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">United Wholesale Mortgage</div>
+              <div class="company-domain">uwm.com</div>
+            </div>
+            <div class="company-score">77<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">Rate Competitiveness</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 84%;"></div></div>
+              <span class="score">84</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Approval Speed</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
+              <span class="score">78</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Loan Variety</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 80%;"></div></div>
+              <span class="score">80</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Customer Service</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 70%;"></div></div>
+              <span class="score">70</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Closing Costs</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 76%;"></div></div>
+              <span class="score">76</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Min Credit Score</span>
+              <span class="data-value">620 (Varies by broker)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Loan Types</span>
+              <span class="data-value">Conv., FHA, VA, Jumbo, Non-QM</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Channel</span>
+              <span class="data-value">Wholesale (broker only)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Trustpilot</span>
+              <span class="data-value">2.1 / 5.0</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Largest wholesale mortgage lender in the US</li>
+                <li>Competitive rates through broker channel (84/100)</li>
+                <li>Broad loan variety including non-QM products</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Cannot apply directly with UWM; requires a mortgage broker</li>
+                <li>2.1 Trustpilot rating reflects servicing concerns</li>
+                <li>Customer experience depends on individual broker quality</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>United Wholesale Mortgage is the largest wholesale lender in the US, originating loans exclusively through independent mortgage brokers. The broker model can deliver competitive rates (84/100), as reduced overhead allows lower pricing. However, the Customer Service score of 70/100 reflects the inherent variability of broker-mediated experiences and a 2.1 Trustpilot rating that suggests post-closing servicing challenges.</p>
           </div>
         </div>
       </div>
@@ -263,6 +843,7 @@ include '../header.php';
       <div class="rating-tier">
         <div class="tier-label">Below Segment Average</div>
         <div class="company-card">
+          <div class="best-for-badge">Best for Rate Shoppers</div>
           <div class="company-header">
             <div>
               <div class="company-name">Pennymac</div>
@@ -297,12 +878,31 @@ include '../header.php';
               <span class="score">74</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Min Credit Score</span>
+              <span class="data-value">620</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Loan Types</span>
+              <span class="data-value">Conv., FHA, VA, Jumbo</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Rating</span>
+              <span class="data-value">A+ (Accredited)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Trustpilot</span>
+              <span class="data-value">2.8 / 5.0</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
               <ul>
                 <li>A+ BBB accredited with broad loan program availability</li>
                 <li>Large servicing portfolio with established operations since 2008</li>
+                <li>Competitive rate pricing for borrowers focused on APR</li>
               </ul>
             </div>
             <div class="cons">
@@ -315,30 +915,106 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Pennymac's low J.D. Power ranking and Trustpilot scores indicate consistent customer service challenges. While the company offers competitive products, the servicing experience has drawn significant criticism from borrowers.</p>
+            <p>Pennymac offers competitive rate pricing that can appeal to borrowers focused primarily on securing the lowest APR. However, the company's Customer Service score of 66/100 is the lowest among all rated lenders, consistent with its last-place J.D. Power 2024 ranking and 2.8 Trustpilot rating. A $158 million settlement related to loan servicing practices adds to concerns about the post-closing borrower experience.</p>
           </div>
         </div>
       </div>
 
-      <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+      <p class="last-updated">Last Updated: March 2026 &middot; <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="methodology-weights">
+        <h2>How We Score Mortgage Lenders</h2>
+        <p>RE Report evaluates mortgage lenders across five equally weighted factors, each contributing 20% to the overall score:</p>
+        <div class="weight-bars">
+          <div class="weight-item">
+            <span class="weight-label">Rate Competitiveness</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Approval Speed</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Loan Variety</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Customer Service</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Closing Costs</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+        </div>
+        <p>Scores incorporate J.D. Power customer satisfaction data, BBB accreditation and complaint ratios, Trustpilot and Google consumer reviews, regulatory filings, and publicly reported legal actions. For full methodology details, see our <a href="../methodology.html">methodology page</a>.</p>
+      </div>
+
+      <div class="editorial-content">
+        <h2>How to Choose a Mortgage Lender in 2026</h2>
+        <p>Selecting the right mortgage lender affects both the cost and experience of what is typically the largest financial transaction most consumers will make. The difference between lenders can amount to tens of thousands of dollars over the life of a 30-year loan, making comparison shopping essential.</p>
+        <p>RE Report's analysis found that the spread between the highest and lowest Rate Competitiveness scores among rated lenders was 20 points (86 vs. 66), underscoring significant variation in pricing even among established national lenders. Borrowers should obtain at least three quotes and compare Loan Estimates side-by-side before committing.</p>
+
+        <h3>Understanding Rate Locks and Timing</h3>
+        <p>A rate lock guarantees the quoted interest rate for a set period, typically 30 to 60 days. In volatile rate environments, the ability to lock quickly matters. Lenders with higher Approval Speed scores generally offer faster rate lock capabilities, reducing the borrower's exposure to rate fluctuations between application and closing.</p>
+        <p>Some lenders offer float-down provisions that allow borrowers to benefit if rates drop after locking. The availability and cost of these provisions vary between lenders and should be compared as part of the overall rate shopping process.</p>
+
+        <h3>Comparing Total Cost of a Mortgage</h3>
+        <p>Interest rate alone does not determine the total cost of a mortgage. Origination fees, discount points, appraisal costs, title insurance, and other closing costs can add 2% to 5% of the loan amount. The Loan Estimate form, which lenders must provide within three business days of application, standardizes these disclosures to enable direct comparison.</p>
+        <p>RE Report's Closing Costs category evaluates fee transparency and competitiveness across lenders. Digital-first lenders like Better.com (82/100) tend to score higher in this category due to lower overhead, while branch-heavy lenders may pass operational costs to borrowers through higher fees.</p>
+
+        <h3>Retail vs. Wholesale vs. Credit Union Lenders</h3>
+        <p>The mortgage market includes three primary lender types. Retail lenders like Rocket Mortgage and Guaranteed Rate work directly with borrowers. Wholesale lenders like United Wholesale Mortgage originate through independent brokers, potentially offering lower rates but adding a layer between borrower and lender. Credit unions like Navy Federal offer member-focused pricing but require membership eligibility.</p>
+        <p>Each model has trade-offs. Retail lenders typically provide the most streamlined experience. Wholesale channels may offer better pricing. Credit unions often deliver the lowest rates and fees but serve a restricted membership base. Borrowers should evaluate which model aligns with their priorities.</p>
+      </div>
+
+      <div class="related-ratings">
+        <h3>Related Ratings</h3>
+        <ul>
+          <li><a href="best-hard-money-lenders.html">Best Hard Money Lenders 2026</a></li>
+          <li><a href="best-title-companies.html">Best Title Companies 2026</a></li>
+          <li><a href="best-real-estate-agents.html">Best Real Estate Agents 2026</a></li>
+        </ul>
+      </div>
 
       <div class="faq-section">
         <h2>Frequently Asked Questions</h2>
         <details class="faq-item">
           <summary>How are mortgage lenders rated by RE Report?</summary>
-          <p>Mortgage lenders are evaluated across five categories: Rate Competitiveness, Approval Speed, Loan Variety, Customer Service, and Closing Costs. Scores incorporate J.D. Power data, consumer reviews, and regulatory records.</p>
+          <p>Mortgage lenders are evaluated across five equally weighted categories: Rate Competitiveness, Approval Speed, Loan Variety, Customer Service, and Closing Costs. Each factor contributes 20% to the overall score. Data sources include J.D. Power satisfaction surveys, BBB complaint ratios, Trustpilot consumer reviews, and publicly filed regulatory records.</p>
         </details>
         <details class="faq-item">
           <summary>What is the segment average for mortgage lenders?</summary>
-          <p>The 2026 segment average is 76, reflecting the overall quality of major mortgage lenders. Companies above this threshold demonstrate stronger performance across evaluated criteria.</p>
+          <p>The 2026 segment average is 76/100, reflecting the overall quality of major mortgage lenders evaluated by RE Report. Five of the eight rated lenders scored above the segment average, while three scored at or below it.</p>
         </details>
         <details class="faq-item">
           <summary>Should borrowers compare multiple lender offers?</summary>
-          <p>Absolutely. Even small rate differences can save thousands over the life of a loan. RE Report recommends obtaining at least three quotes and comparing not just rates but total closing costs and fee structures.</p>
+          <p>Yes. Research from Freddie Mac shows that borrowers who obtain at least three quotes save an average of $1,500 over the life of their loan. RE Report recommends comparing not just interest rates but also total closing costs, lender fees, and rate lock policies across multiple lenders before committing.</p>
         </details>
         <details class="faq-item">
           <summary>How often are mortgage lender ratings updated?</summary>
-          <p>RE Report reviews and updates mortgage lender ratings annually. The current ratings reflect the 2026 evaluation cycle with data through March 2026.</p>
+          <p>RE Report reviews and updates mortgage lender ratings annually. The current ratings reflect the 2026 evaluation cycle with data through March 2026. Mid-cycle adjustments may occur for significant events such as regulatory actions or major service changes.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is the difference between a retail and wholesale mortgage lender?</summary>
+          <p>Retail lenders like Rocket Mortgage and Better.com work directly with borrowers through their own loan officers. Wholesale lenders like United Wholesale Mortgage originate loans through independent mortgage brokers. Wholesale lenders may offer lower rates due to reduced overhead, but borrowers work with a broker rather than the lender directly.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do mortgage lenders charge the same closing costs?</summary>
+          <p>No. Closing costs vary significantly between lenders, typically ranging from 2% to 5% of the loan amount. Some lenders offer reduced or waived origination fees, while others bundle costs into the interest rate. RE Report evaluates total cost transparency as part of the Closing Costs scoring category.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I get pre-approved by multiple lenders without hurting my credit score?</summary>
+          <p>Yes. Credit bureaus treat multiple mortgage inquiries within a 14-45 day window as a single inquiry for scoring purposes. This rate-shopping window allows borrowers to compare pre-approval offers from several lenders without additional credit score impact beyond the initial pull.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What types of mortgage loans are available?</summary>
+          <p>Common mortgage types include conventional loans (conforming and jumbo), FHA loans (lower down payment requirements), VA loans (for eligible veterans and service members), and USDA loans (for rural properties). Most rated lenders offer conventional and FHA products, while VA loan availability varies. Specialized products like construction loans and renovation loans are available from select lenders.</p>
         </details>
       </div>
 

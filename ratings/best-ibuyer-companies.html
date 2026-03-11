@@ -1,6 +1,6 @@
 <?php
 $page_title = "Best iBuyer Companies 2026 | RE Report";
-$page_description = "Independent ratings of the best iBuyer companies in 2026. Compare Opendoor, Offerpad, and Redfin Now by algorithm accuracy, fees, and technology.";
+$page_description = "Independent ratings of the best iBuyer companies in 2026. Compare Opendoor, Offerpad, Flyhomes, Knock, Orchard, and Redfin Now by algorithm accuracy, fees, and technology.";
 $page_canonical = "https://rereport.org/ratings/best-ibuyer-companies.html";
 
 $breadcrumbs = [
@@ -8,6 +8,7 @@ $breadcrumbs = [
   ['label' => 'iBuyers', 'url' => 'ibuyers.html'],
   ['label' => 'Best iBuyer Companies 2026']
 ];
+$page_article_dates = ['published' => '2026-03-01', 'modified' => '2026-03-10'];
 
 $page_schema = json_encode([
   "@context" => "https://schema.org",
@@ -15,11 +16,11 @@ $page_schema = json_encode([
   "headline" => $page_title,
   "description" => $page_description,
   "datePublished" => "2026-03-01",
-  "dateModified" => "2026-03-01",
+  "dateModified" => "2026-03-10",
   "publisher" => [
     "@type" => "Organization",
     "name" => "RE Report",
-    "url" => "https://rereport.org"
+    "@id" => "https://rereport.org/#organization"
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
@@ -32,15 +33,15 @@ $page_faq_schema = json_encode([
       "name" => "What is an iBuyer?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "An iBuyer is a company that uses automated valuation models to make near-instant offers on homes, typically closing within days or weeks. The model trades a service fee for speed and convenience compared to a traditional sale."
+        "text" => "An iBuyer is a company that uses automated valuation models to make near-instant offers on homes, typically closing within days or weeks. The model trades a service fee for speed and convenience compared to a traditional sale. iBuyers generally target homes in good condition within specific metropolitan markets."
       ]
     ],
     [
       "@type" => "Question",
-      "name" => "How are iBuyer companies rated?",
+      "name" => "How are iBuyer companies rated by RE Report?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "RE Report scores iBuyers across five factors: Offer Algorithm Accuracy, Service Fee, Market Coverage, Closing Flexibility, and Technology Experience. Scores range from 0 to 100."
+        "text" => "RE Report scores iBuyers across five equally weighted factors: Offer Algorithm Accuracy, Service Fee, Market Coverage, Closing Flexibility, and Technology Experience. Each factor contributes 20% to the overall score. Data sources include public financial filings, app store ratings, BBB records, consumer reviews, and FTC enforcement actions."
       ]
     ],
     [
@@ -48,7 +49,7 @@ $page_faq_schema = json_encode([
       "name" => "Are iBuyer offers competitive with traditional sales?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "iBuyer offers typically include a service fee that reduces the net proceeds compared to a traditional sale. However, sellers benefit from speed, certainty, and the ability to avoid showings and repairs."
+        "text" => "iBuyer offers typically include a service fee ranging from 5% to 13% that reduces net proceeds compared to a traditional sale. However, sellers benefit from speed, certainty, and the ability to avoid showings and repairs. RE Report's Offer Algorithm Accuracy score measures how closely each iBuyer's initial offer aligns with fair market value."
       ]
     ],
     [
@@ -56,8 +57,94 @@ $page_faq_schema = json_encode([
       "name" => "Is the iBuyer market still active in 2026?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "The iBuyer market has consolidated significantly. Some major players like Redfin Now have exited, while Opendoor and Offerpad continue to operate in select markets."
+        "text" => "The iBuyer market has consolidated significantly since its peak. Redfin Now ceased operations in November 2022, and Zillow Offers shut down in late 2021 after reporting $881 million in losses. Opendoor and Offerpad continue to operate as the primary dedicated iBuyers, while companies like Flyhomes and Knock offer hybrid models."
       ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What service fees do iBuyers charge?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "iBuyer service fees have varied widely. Opendoor currently charges approximately 5% to 6%, while Offerpad has reported fees around 6% to 8%. Redfin Now charged up to 13% before ceasing operations. These fees are separate from any repair credits or closing costs that may be deducted from the offer. RE Report's Service Fee score evaluates both the fee amount and how transparently it is disclosed."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How accurate are iBuyer home valuations?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "iBuyer automated valuation models (AVMs) have improved significantly but still carry error margins. Independent analyses have shown median AVM errors ranging from 2% to 7% depending on the market and property type. RE Report's Offer Algorithm Accuracy score reflects how closely each company's initial offers align with subsequent appraisals and comparable sales data."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Can I sell any home to an iBuyer?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "No. iBuyers have specific property criteria that typically include single-family homes built after 1960, valued within a certain price range (often $100,000 to $600,000), and located in supported metropolitan markets. Properties with significant structural issues, unusual features, or those in rural areas are generally ineligible. Market Coverage scores in RE Report's ratings reflect each company's geographic reach and property type flexibility."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What happened to Zillow Offers and Redfin Now?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Zillow Offers shut down in November 2021 after Zillow reported $881 million in losses from home purchases where its algorithm overpaid. Redfin Now ceased iBuyer operations in November 2022 as part of broader cost-cutting measures. These exits underscored the financial risks inherent in the iBuyer model and contributed to market consolidation around Opendoor and Offerpad."
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+$page_review_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@graph" => [
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Opendoor"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "84", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Opendoor leads RE Report's 2026 iBuyer ratings with the strongest technology platform and widest market coverage across 50+ metropolitan areas. The company's 4.78 App Store rating and streamlined digital process earned top marks in Technology Experience at 88/100."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Offerpad"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "78", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Offerpad provides competitive closing flexibility and strong technology experience but has reduced its market coverage from 30 to 17 markets. A+ BBB accreditation and 3.9 consumer star rating support a solid above-average score."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Flyhomes"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "76", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Flyhomes earns an above-average score through its cash-backed offer program that helps buyers compete in hot markets. The company's Closing Flexibility score of 82/100 reflects its ability to accommodate various seller timelines through its trade-up program."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Knock"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "73", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Knock's buy-before-you-sell model provides bridge financing that allows homeowners to purchase a new home before listing their current one. Strong Closing Flexibility but limited market coverage contribute to a below-average overall score."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Orchard"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "71", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Orchard's move-first program enables sellers to buy a new home before their current one sells. Technology Experience scores well at 78/100, but limited market coverage and higher-than-average service fees lower the overall rating."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Redfin Now"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "68", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Redfin Now ceased iBuyer operations in November 2022. This rating reflects the program's historical performance before shutdown. The parent company Redfin carries an F BBB rating, and service fees were reported as high as 13% of sale price."
     ]
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
@@ -68,17 +155,110 @@ include '../header.php';
   <section class="page-header">
     <div class="container">
       <h1>Best iBuyer Companies 2026</h1>
-      <p>Our analysts evaluated iBuyer companies for the 2026 ratings cycle. Companies were scored across five factors: Offer Algorithm Accuracy, Service Fee, Market Coverage, Closing Flexibility, and Technology Experience.</p>
+      <div class="key-takeaways">
+        <h2>Key Takeaways</h2>
+        <ul>
+          <li><strong>Opendoor</strong> earns RE Report's 2026 Highest Rated designation with a score of 84/100</li>
+          <li>Opendoor scored highest in Technology Experience (88/100) and Market Coverage (86/100) among all rated iBuyers</li>
+          <li>Offerpad (78/100) leads in Closing Flexibility with a score of 80/100 and holds A+ BBB accreditation</li>
+          <li>Two of six rated companies scored above the segment average of 74; four scored at or below</li>
+          <li>Scores reflect public financial filings, app store ratings, BBB records, consumer reviews, and FTC enforcement actions</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
 
+      <div class="article-meta">
+        <div class="byline">
+          <span class="byline-label">Reviewed by</span>
+          <span class="byline-name">RE Report Editorial Team</span>
+          <span class="byline-sep">&middot;</span>
+          <time datetime="2026-03-10">Updated March 10, 2026</time>
+        </div>
+        <p class="editorial-disclosure">RE Report maintains editorial independence. Companies cannot pay for placement or influence scores. Ratings are based on publicly available data including regulatory filings, consumer reviews, and industry benchmarks. <a href="../editorial-policy.html">Read our editorial policy</a>.</p>
+      </div>
+
+      <div class="comparison-table-wrap">
+        <h2>2026 iBuyer Ratings at a Glance</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Score</th>
+              <th>Best For</th>
+              <th>Algorithm</th>
+              <th>Fee Score</th>
+              <th>Tech</th>
+              <th>Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="comparison-row--winner">
+              <td class="company-cell">Opendoor<br><span class="domain">opendoor.com</span></td>
+              <td class="score-cell"><strong>84</strong>/100</td>
+              <td>Best Overall</td>
+              <td>82</td>
+              <td>80</td>
+              <td>88</td>
+              <td><span class="designation designation--gold">Highest Rated</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Offerpad<br><span class="domain">offerpad.com</span></td>
+              <td class="score-cell"><strong>78</strong>/100</td>
+              <td>Best for Closing Flexibility</td>
+              <td>76</td>
+              <td>72</td>
+              <td>82</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Flyhomes<br><span class="domain">flyhomes.com</span></td>
+              <td class="score-cell"><strong>76</strong>/100</td>
+              <td>Best for Competitive Markets</td>
+              <td>78</td>
+              <td>74</td>
+              <td>80</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Knock<br><span class="domain">knock.com</span></td>
+              <td class="score-cell"><strong>73</strong>/100</td>
+              <td>Best for Buy-Before-You-Sell</td>
+              <td>74</td>
+              <td>70</td>
+              <td>74</td>
+              <td><span class="designation designation--below">Below Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Orchard<br><span class="domain">orchard.com</span></td>
+              <td class="score-cell"><strong>71</strong>/100</td>
+              <td>Best for Move-First Programs</td>
+              <td>72</td>
+              <td>68</td>
+              <td>78</td>
+              <td><span class="designation designation--below">Below Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Redfin Now <em>(defunct)</em><br><span class="domain">redfin.com</span></td>
+              <td class="score-cell"><strong>68</strong>/100</td>
+              <td>Best for Redfin Users</td>
+              <td>72</td>
+              <td>62</td>
+              <td>76</td>
+              <td><span class="designation designation--below">Below Average</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="rating-tier">
         <div class="tier-label tier-label--gold">2026 Highest Rated</div>
         <div class="company-card company-card--winner">
           <div class="badge-highest"><span class="badge-icon">&#9733;</span> 2026 Highest Rated</div>
+          <div class="best-for-badge">Best Overall</div>
           <div class="company-header">
             <div>
               <div class="company-name">Opendoor</div>
@@ -113,6 +293,24 @@ include '../header.php';
               <span class="score">88</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Service Fee</span>
+              <span class="data-value">~5%–6%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">50+ metro areas</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">App Rating</span>
+              <span class="data-value">4.78 / 5.0 (App Store)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">A+ (Accredited)</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -125,21 +323,23 @@ include '../header.php';
             <div class="cons">
               <h4>Considerations</h4>
               <ul>
+                <li>$62M FTC settlement over pricing practices in 2022</li>
                 <li>Service fees can be significant for sellers</li>
-                <li>$62M FTC settlement over pricing practices</li>
                 <li>Algorithm-based offers may not capture unique property features</li>
               </ul>
             </div>
           </div>
           <div class="company-analysis">
-            <p>Opendoor continues to lead the iBuyer segment with the broadest market coverage and strongest technology experience scores. Despite regulatory challenges, the company's platform provides a benchmark for the instant offer category.</p>
+            <p>Opendoor earns the 2026 Highest Rated designation through a combination of market-leading technology, the widest geographic coverage among iBuyers, and competitive service fees. The company's Technology Experience score of 88/100 reflects its 4.78 App Store rating and a fully digital process that allows sellers to receive an offer, schedule an inspection, and close entirely through the platform. Market Coverage scored 86/100, the highest among all rated iBuyers, with operations spanning over 50 metropolitan areas. RE Report analysts noted that the $62 million FTC settlement related to pricing practices was factored into the evaluation, preventing a higher Offer Algorithm Accuracy score, but subsequent operational adjustments and fee reductions have strengthened the company's position.</p>
           </div>
         </div>
       </div>
 
       <div class="rating-tier">
         <div class="tier-label">Above Segment Average</div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for Closing Flexibility</div>
           <div class="company-header">
             <div>
               <div class="company-name">Offerpad</div>
@@ -174,26 +374,121 @@ include '../header.php';
               <span class="score">82</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Service Fee</span>
+              <span class="data-value">~6%–8%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">17 metro areas</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">App Rating</span>
+              <span class="data-value">4.5 / 5.0 (App Store)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">A+ (Accredited) / 3.9 stars</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
               <ul>
                 <li>A+ BBB accredited with 3.9 consumer star rating</li>
                 <li>Flexible closing dates that accommodate seller timelines</li>
-                <li>Competitive technology platform</li>
+                <li>Competitive technology platform with 4.5 App Store rating</li>
               </ul>
             </div>
             <div class="cons">
               <h4>Considerations</h4>
               <ul>
                 <li>Market coverage has contracted from 30 to 17 markets</li>
-                <li>Service fees reported around 8%</li>
+                <li>Service fees reported around 6% to 8%</li>
                 <li>Smaller operational footprint than the market leader</li>
               </ul>
             </div>
           </div>
           <div class="company-analysis">
-            <p>Offerpad scores well on closing flexibility and technology experience but trails in market coverage. The company's shrinking geographic footprint is a consideration for sellers in fringe markets.</p>
+            <p>Offerpad earns an above-average score on the strength of its closing flexibility and solid technology experience. The company's Closing Flexibility score of 80/100 reflects its ability to accommodate seller timelines with adjustable closing dates, an important differentiator for sellers coordinating a simultaneous purchase. RE Report analysts noted that while Offerpad's A+ BBB accreditation and 3.9 consumer star rating indicate reliable service, the contraction from 30 to 17 metropolitan markets reduces accessibility for sellers in smaller metros. Service fees of approximately 6% to 8% are higher than Opendoor's current range.</p>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="best-for-badge">Best for Competitive Markets</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">Flyhomes</div>
+              <div class="company-domain">flyhomes.com</div>
+            </div>
+            <div class="company-score">76<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">Offer Algorithm Accuracy</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
+              <span class="score">78</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Service Fee</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 74%;"></div></div>
+              <span class="score">74</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Market Coverage</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 68%;"></div></div>
+              <span class="score">68</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Closing Flexibility</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 82%;"></div></div>
+              <span class="score">82</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Technology Experience</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 80%;"></div></div>
+              <span class="score">80</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Service Fee</span>
+              <span class="data-value">Varies by program</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">Select metros (WA, CA, MA, TX)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">App Rating</span>
+              <span class="data-value">4.6 / 5.0 (App Store)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">A (Accredited)</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Cash-backed offer program helps buyers win in competitive markets</li>
+                <li>Trade-up program allows sellers to buy before selling</li>
+                <li>Strong Closing Flexibility score of 82/100</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Limited to select metropolitan markets in 4 states</li>
+                <li>Fee structure varies by program and can be complex</li>
+                <li>Layoffs and operational restructuring reported in 2022-2023</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Flyhomes takes a hybrid approach to the iBuyer model by offering cash-backed purchasing that allows buyers to make competitive all-cash offers on homes, even when using mortgage financing. This model earned a Closing Flexibility score of 82/100, the second-highest among rated companies. RE Report analysts noted that Flyhomes' trade-up program provides an attractive option for sellers in competitive markets like Seattle and the San Francisco Bay Area, though the company's limited geographic coverage and reported operational restructuring in 2022-2023 are factors to consider.</p>
           </div>
         </div>
       </div>
@@ -205,7 +500,163 @@ include '../header.php';
 
       <div class="rating-tier">
         <div class="tier-label">Below Segment Average</div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for Buy-Before-You-Sell</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">Knock</div>
+              <div class="company-domain">knock.com</div>
+            </div>
+            <div class="company-score">73<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">Offer Algorithm Accuracy</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 74%;"></div></div>
+              <span class="score">74</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Service Fee</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 70%;"></div></div>
+              <span class="score">70</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Market Coverage</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 72%;"></div></div>
+              <span class="score">72</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Closing Flexibility</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
+              <span class="score">78</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Technology Experience</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 74%;"></div></div>
+              <span class="score">74</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Service Fee</span>
+              <span class="data-value">~1.25%–1.5% bridge loan fee</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">75+ metro areas</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">App Rating</span>
+              <span class="data-value">3.8 / 5.0 (App Store)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">B+ (Not accredited)</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Buy-before-you-sell model eliminates bridge timing risk</li>
+                <li>Broader market coverage than most iBuyer alternatives (75+ metros)</li>
+                <li>Strong Closing Flexibility score of 78/100</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Not BBB accredited with B+ rating</li>
+                <li>Bridge loan fees add to total transaction cost</li>
+                <li>Requires working with Knock's preferred lender in some markets</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Knock operates a buy-before-you-sell model that provides bridge financing, allowing homeowners to purchase a new home before listing and selling their current property. This approach earned a Closing Flexibility score of 78/100, reflecting its ability to eliminate the timing risk that forces many sellers to accept lower offers or carry two mortgages. RE Report analysts noted that Knock's bridge loan fee of approximately 1.25% to 1.5% adds to total transaction costs, and the company's B+ BBB rating without accreditation is a factor in the overall assessment.</p>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="best-for-badge">Best for Move-First Programs</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">Orchard</div>
+              <div class="company-domain">orchard.com</div>
+            </div>
+            <div class="company-score">71<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">Offer Algorithm Accuracy</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 72%;"></div></div>
+              <span class="score">72</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Service Fee</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 68%;"></div></div>
+              <span class="score">68</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Market Coverage</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 64%;"></div></div>
+              <span class="score">64</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Closing Flexibility</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 76%;"></div></div>
+              <span class="score">76</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Technology Experience</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
+              <span class="score">78</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Service Fee</span>
+              <span class="data-value">~6% + listing commission</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">8 metro areas (TX, CO, GA, MD)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">App Rating</span>
+              <span class="data-value">4.2 / 5.0 (App Store)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">A (Accredited)</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Move-first program lets sellers relocate before their home sells</li>
+                <li>BBB accredited with A rating</li>
+                <li>Competitive Technology Experience score of 78/100</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Available in only 8 metropolitan areas</li>
+                <li>Combined fees (service fee plus listing commission) add up</li>
+                <li>Smaller company with less operational track record</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Orchard's move-first program allows sellers to purchase a new home before listing their current one, with Orchard providing a guaranteed offer as a backup if the home does not sell on the open market. This model appeals to sellers who want the certainty of an iBuyer offer with the opportunity to achieve a higher price through market listing. RE Report analysts noted that Orchard's combined fee structure, which includes a service fee plus listing commission, can total more than direct iBuyer alternatives, and the company's limited availability in just 8 metropolitan markets restricts access for most sellers.</p>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="best-for-badge">Best for Redfin Users</div>
           <div class="company-header">
             <div>
               <div class="company-name">Redfin Now</div>
@@ -240,6 +691,24 @@ include '../header.php';
               <span class="score">76</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Service Fee</span>
+              <span class="data-value">Up to 13% (historical)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">Discontinued (Nov 2022)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">App Rating</span>
+              <span class="data-value">N/A (program ended)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">F (Redfin parent company)</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -258,30 +727,102 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Redfin Now is no longer accepting new offers, having shut down its iBuyer program in late 2022. The rating reflects its historical performance. Sellers should note this program is no longer operational.</p>
+            <p>Redfin Now is no longer accepting new offers, having shut down its iBuyer program in November 2022 as part of broader cost-cutting measures by the parent company. This rating reflects the program's historical performance before shutdown. RE Report analysts included Redfin Now in the 2026 evaluation for context, as its exit from the market contributed to the consolidation of the iBuyer sector. The program's Service Fee score of 62/100 was the lowest among all rated companies, reflecting fees that reportedly reached up to 13% of the sale price. The parent company Redfin carries an F rating from the BBB.</p>
           </div>
         </div>
       </div>
 
-      <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+      <p class="last-updated">Last Updated: March 2026 &middot; <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="methodology-weights">
+        <h2>How We Score iBuyer Companies</h2>
+        <p>RE Report evaluates iBuyer companies across five equally weighted factors, each contributing 20% to the overall score:</p>
+        <div class="weight-bars">
+          <div class="weight-item">
+            <span class="weight-label">Offer Algorithm Accuracy</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Service Fee</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Market Coverage</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Closing Flexibility</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Technology Experience</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+        </div>
+        <p>Scores incorporate public financial filings (SEC 10-K and 10-Q reports), app store ratings and user reviews, BBB accreditation and complaint records, FTC enforcement actions, and consumer review data from Trustpilot and Google. For full methodology details, see our <a href="../methodology.html">methodology page</a>.</p>
+      </div>
+
+      <div class="editorial-content">
+        <h2>How iBuyers Work</h2>
+        <p>iBuyers use automated valuation models (AVMs) to generate near-instant purchase offers on residential properties. The process typically begins when a homeowner submits property details through the iBuyer's website or app. The company's algorithm analyzes comparable sales data, property characteristics, and local market conditions to produce an offer, usually within 24 to 48 hours. If the seller accepts, a brief inspection follows to confirm property condition, after which closing can occur in as few as 14 days.</p>
+        <p>The iBuyer model emerged in the mid-2010s as a technology-driven alternative to traditional home sales. At its peak, the sector included Opendoor, Offerpad, Zillow Offers, and Redfin Now. However, significant losses at Zillow Offers (which reported $881 million in write-downs before shutting down in 2021) and the exit of Redfin Now in 2022 have consolidated the market. Opendoor remains the largest dedicated iBuyer, while companies like Flyhomes and Knock have evolved the model with hybrid approaches that combine cash-backed offers with traditional listing options.</p>
+
+        <h3>Understanding iBuyer Service Fees</h3>
+        <p>iBuyer service fees are the primary cost that sellers pay for the speed and convenience of an instant offer. These fees typically range from 5% to 8% of the sale price, though historical rates have reached as high as 13% at Redfin Now. The service fee covers the iBuyer's operating costs, profit margin, and risk premium for holding the property. In addition to the service fee, sellers may face repair credits deducted after the home inspection, which can reduce the net proceeds further.</p>
+        <p>When comparing iBuyer fees to a traditional sale, sellers should consider total costs on both sides. A traditional sale typically involves 5% to 6% in real estate agent commissions, plus potential repair costs, staging expenses, and mortgage payments during the listing period. Some sellers find that the total cost of an iBuyer transaction, including a lower offer price, is comparable to or even less than the all-in cost of a traditional sale when carrying costs and price reductions are factored in. RE Report's Service Fee scores evaluate both the fee percentage and how transparently each company discloses all costs before commitment.</p>
+
+        <h3>When an iBuyer Makes Sense</h3>
+        <p>iBuyers are most advantageous for sellers who prioritize speed and certainty over maximizing sale price. Common scenarios include job relocations with tight timelines, divorce proceedings requiring quick asset division, inherited properties that need to be liquidated, and homeowners who need to purchase a new home before selling their current one. The ability to select a closing date provides flexibility that traditional sales rarely offer.</p>
+        <p>Sellers with homes in good condition, located in active metropolitan markets, and priced within the iBuyer's target range are the best candidates for an iBuyer transaction. Properties requiring significant repairs, located in rural areas, or priced above the iBuyer's maximum threshold are typically ineligible. Homeowners in strong seller's markets with homes in excellent condition will generally achieve a higher net outcome through a traditional agent-listed sale, where competitive bidding can drive the price above listing.</p>
+      </div>
+
+      <div class="related-ratings">
+        <h3>Related Ratings</h3>
+        <ul>
+          <li><a href="best-cash-home-buyers-national.html">Best Cash Home Buyers 2026</a></li>
+          <li><a href="best-mortgage-lenders.html">Best Mortgage Lenders 2026</a></li>
+          <li><a href="best-real-estate-agents.html">Best Real Estate Agents 2026</a></li>
+        </ul>
+      </div>
 
       <div class="faq-section">
         <h2>Frequently Asked Questions</h2>
         <details class="faq-item">
           <summary>What is an iBuyer?</summary>
-          <p>An iBuyer is a company that uses automated valuation models to make near-instant offers on homes, typically closing within days or weeks. The model trades a service fee for speed and convenience compared to a traditional sale.</p>
+          <p>An iBuyer is a company that uses automated valuation models to make near-instant offers on homes, typically closing within days or weeks. The model trades a service fee for speed and convenience compared to a traditional sale. iBuyers generally target homes in good condition within specific metropolitan markets.</p>
         </details>
         <details class="faq-item">
-          <summary>How are iBuyer companies rated?</summary>
-          <p>RE Report scores iBuyers across five factors: Offer Algorithm Accuracy, Service Fee, Market Coverage, Closing Flexibility, and Technology Experience. Scores range from 0 to 100.</p>
+          <summary>How are iBuyer companies rated by RE Report?</summary>
+          <p>RE Report scores iBuyers across five equally weighted factors: Offer Algorithm Accuracy, Service Fee, Market Coverage, Closing Flexibility, and Technology Experience. Each factor contributes 20% to the overall score. Data sources include public financial filings, app store ratings, BBB records, consumer reviews, and FTC enforcement actions.</p>
         </details>
         <details class="faq-item">
           <summary>Are iBuyer offers competitive with traditional sales?</summary>
-          <p>iBuyer offers typically include a service fee that reduces the net proceeds compared to a traditional sale. However, sellers benefit from speed, certainty, and the ability to avoid showings and repairs.</p>
+          <p>iBuyer offers typically include a service fee ranging from 5% to 13% that reduces net proceeds compared to a traditional sale. However, sellers benefit from speed, certainty, and the ability to avoid showings and repairs. RE Report's Offer Algorithm Accuracy score measures how closely each iBuyer's initial offer aligns with fair market value.</p>
         </details>
         <details class="faq-item">
           <summary>Is the iBuyer market still active in 2026?</summary>
-          <p>The iBuyer market has consolidated significantly. Some major players like Redfin Now have exited, while Opendoor and Offerpad continue to operate in select markets.</p>
+          <p>The iBuyer market has consolidated significantly since its peak. Redfin Now ceased operations in November 2022, and Zillow Offers shut down in late 2021 after reporting $881 million in losses. Opendoor and Offerpad continue to operate as the primary dedicated iBuyers, while companies like Flyhomes and Knock offer hybrid models.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What service fees do iBuyers charge?</summary>
+          <p>iBuyer service fees have varied widely. Opendoor currently charges approximately 5% to 6%, while Offerpad has reported fees around 6% to 8%. Redfin Now charged up to 13% before ceasing operations. These fees are separate from any repair credits or closing costs that may be deducted from the offer. RE Report's Service Fee score evaluates both the fee amount and how transparently it is disclosed.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How accurate are iBuyer home valuations?</summary>
+          <p>iBuyer automated valuation models (AVMs) have improved significantly but still carry error margins. Independent analyses have shown median AVM errors ranging from 2% to 7% depending on the market and property type. RE Report's Offer Algorithm Accuracy score reflects how closely each company's initial offers align with subsequent appraisals and comparable sales data.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I sell any home to an iBuyer?</summary>
+          <p>No. iBuyers have specific property criteria that typically include single-family homes built after 1960, valued within a certain price range (often $100,000 to $600,000), and located in supported metropolitan markets. Properties with significant structural issues, unusual features, or those in rural areas are generally ineligible. Market Coverage scores in RE Report's ratings reflect each company's geographic reach and property type flexibility.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happened to Zillow Offers and Redfin Now?</summary>
+          <p>Zillow Offers shut down in November 2021 after Zillow reported $881 million in losses from home purchases where its algorithm overpaid. Redfin Now ceased iBuyer operations in November 2022 as part of broader cost-cutting measures. These exits underscored the financial risks inherent in the iBuyer model and contributed to market consolidation around Opendoor and Offerpad.</p>
         </details>
       </div>
 

@@ -5,14 +5,15 @@ $page_canonical = "https://rereport.org/ratings/real-estate-agents.html";
 $breadcrumbs = [
   ['label' => 'Real Estate Agents']
 ];
+$page_article_dates = ['published' => '2026-03-01', 'modified' => '2026-03-10'];
 $page_schema = json_encode([
   "@context" => "https://schema.org",
   "@type" => "Article",
   "headline" => $page_title,
   "description" => $page_description,
   "datePublished" => "2026-03-01",
-  "dateModified" => "2026-03-01",
-  "publisher" => ["@type" => "Organization", "name" => "RE Report", "url" => "https://rereport.org"]
+  "dateModified" => "2026-03-10",
+  "publisher" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 include '../header.php';
 ?>

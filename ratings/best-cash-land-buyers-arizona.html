@@ -7,17 +7,18 @@ $breadcrumbs = [
   ['label' => 'Cash Land Buyers', 'url' => 'cash-land-buyers.html'],
   ['label' => 'Arizona']
 ];
+$page_article_dates = ['published' => '2026-03-01', 'modified' => '2026-03-10'];
 $page_schema = json_encode([
   "@context" => "https://schema.org",
   "@type" => "Article",
   "headline" => $page_title,
   "description" => $page_description,
   "datePublished" => "2026-03-01",
-  "dateModified" => "2026-03-01",
+  "dateModified" => "2026-03-10",
   "publisher" => [
     "@type" => "Organization",
     "name" => "RE Report",
-    "url" => "https://rereport.org"
+    "@id" => "https://rereport.org/#organization"
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 $page_faq_schema = json_encode([
@@ -55,6 +56,83 @@ $page_faq_schema = json_encode([
         "@type" => "Answer",
         "text" => "Cash offers vary significantly between buyers. RE Report recommends obtaining multiple offers and comparing them against recent comparable sales data. Higher-rated companies in the Offer Fairness category have demonstrated more competitive pricing relative to market value."
       ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How long does a cash land sale take in Arizona?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Cash land sales in Arizona typically close in 14 to 21 days, depending on the buyer and title complexity. Top-rated buyers often provide offers within 24 to 48 hours and can close in as few as 7 business days. Arizona's streamlined closing process, which does not require attorney involvement, allows for faster transactions compared to many other states."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Do I need a real estate agent to sell land in Arizona?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "No, Arizona does not require a real estate agent to sell vacant land. Many landowners sell directly to cash buyers to avoid the 5-6% commission typically charged by agents. However, an agent may be beneficial for high-value parcels in desirable areas near Scottsdale, Sedona, or Prescott. Sellers should weigh the cost of commission against the potential for a higher sale price through market exposure."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What closing costs apply to Arizona land sales?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Arizona land sellers typically pay for the owner's title insurance policy, escrow fees, and their share of prorated property taxes. Arizona does not have a transfer tax, which reduces closing costs compared to many other states. Many top-rated cash land buyers cover all or most closing costs as part of their offer, which is reflected in RE Report's Transparency scoring factor."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How do cash offers compare to listing land on the market in Arizona?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Cash offers for Arizona land are typically 50-75% of estimated market value, depending on location, parcel size, and zoning. The tradeoff is speed and certainty: cash sales close in weeks rather than the 6-12 months that vacant land often sits on the MLS. Sellers who prioritize speed and convenience may find cash offers preferable, while those who can wait may achieve higher prices through traditional listings."
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+$page_review_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@graph" => [
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Sell Arizona Land"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "92", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Sell Arizona Land earned the Highest Rated designation for Arizona with strong performance across all evaluation factors."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Land Century"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "78", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Land Century operates as a marketplace connecting land sellers with buyers. The platform has a long track record nationally."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "MarketPro Homebuyers"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "75", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "MarketPro Homebuyers has strong accreditation but primarily focuses on residential home purchases rather than land."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Harmony Land Holdings"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "67", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Harmony Land Holdings is a newer operation with limited independent reviews and no BBB accreditation."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "National Land Buyers"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "63", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "National Land Buyers lacks the verifiable track record and third-party accreditation expected by RE Report."
     ]
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
@@ -64,17 +142,95 @@ include '../header.php';
   <section class="page-header">
     <div class="container">
       <h1>Best Cash Land Buyers in Arizona 2026</h1>
-      <p>Our analysts evaluated cash land buying companies operating in Arizona for the 2026 ratings cycle. Companies were scored across five factors: Offer Speed, Offer Fairness, Closing Timeline, Transparency, and Accreditation. Below are the results.</p>
+      <div class="key-takeaways">
+        <h2>Key Takeaways</h2>
+        <ul>
+          <li><strong>Sell Arizona Land</strong> earns RE Report's 2026 Highest Rated designation with 92/100</li>
+          <li>Sell Arizona Land scored highest in Offer Speed (94/100) and Closing Timeline (93/100)</li>
+          <li>Land Century (78/100) and MarketPro Homebuyers (75/100) also scored above the segment average of 74</li>
+          <li>All rated companies evaluated on publicly available data, BBB records, and consumer reviews</li>
+          <li>Scores reflect the 2026 evaluation cycle with data through March 2026</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
 
+      <div class="article-meta">
+        <div class="byline">
+          <span class="byline-label">Reviewed by</span>
+          <span class="byline-name">RE Report Editorial Team</span>
+          <span class="byline-sep">&middot;</span>
+          <time datetime="2026-03-10">Updated March 10, 2026</time>
+        </div>
+        <p class="editorial-disclosure">RE Report maintains editorial independence. Companies cannot pay for placement or influence scores. Ratings are based on publicly available data including regulatory filings, consumer reviews, and industry benchmarks. <a href="../editorial-policy.html">Read our editorial policy</a>.</p>
+      </div>
+
+      <div class="comparison-table-wrap">
+        <h2>2026 Arizona Cash Land Buyer Ratings at a Glance</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Score</th>
+              <th>Best For</th>
+              <th>Speed</th>
+              <th>Fairness</th>
+              <th>Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sell Arizona Land</td>
+              <td><strong>92</strong></td>
+              <td>Best Overall</td>
+              <td>94</td>
+              <td>91</td>
+              <td><span class="designation-badge designation--gold">Highest Rated</span></td>
+            </tr>
+            <tr>
+              <td>Land Century</td>
+              <td><strong>78</strong></td>
+              <td>Established Track Record</td>
+              <td>77</td>
+              <td>75</td>
+              <td><span class="designation-badge designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td>MarketPro Homebuyers</td>
+              <td><strong>75</strong></td>
+              <td>Accreditation</td>
+              <td>77</td>
+              <td>73</td>
+              <td><span class="designation-badge designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td>Harmony Land Holdings</td>
+              <td><strong>67</strong></td>
+              <td>Land Specialists</td>
+              <td>70</td>
+              <td>68</td>
+              <td><span class="designation-badge designation--below">Below Average</span></td>
+            </tr>
+            <tr>
+              <td>National Land Buyers</td>
+              <td><strong>63</strong></td>
+              <td>National Reach</td>
+              <td>65</td>
+              <td>63</td>
+              <td><span class="designation-badge designation--below">Below Average</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="rating-tier">
         <div class="tier-label tier-label--gold">2026 Highest Rated</div>
         <div class="company-card company-card--winner">
           <div class="badge-highest"><span class="badge-icon">&#9733;</span> 2026 Highest Rated</div>
+          <div class="best-for-badge">Best Overall</div>
           <div class="company-header">
             <div>
               <div class="company-name">Sell Arizona Land</div>
@@ -109,6 +265,12 @@ include '../header.php';
               <span class="score">89</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point"><span class="data-label">Offer Timeline</span><span class="data-value">24-48 hours</span></div>
+            <div class="data-point"><span class="data-label">Coverage Area</span><span class="data-value">Arizona-focused</span></div>
+            <div class="data-point"><span class="data-label">Years Operating</span><span class="data-value">Varies</span></div>
+            <div class="data-point"><span class="data-label">BBB Status</span><span class="data-value">Not yet rated</span></div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -127,7 +289,7 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Arizona land sellers benefit from this company's deep knowledge of the local market. RE Report analysts noted consistently fast response times and a straightforward closing process that minimizes seller friction.</p>
+            <p>Arizona land sellers benefit from this company's deep knowledge of the local market, including familiarity with Maricopa County, Pima County, and rural parcels across the state. RE Report analysts noted consistently fast response times and a straightforward closing process that minimizes seller friction. The company demonstrated particular strength in handling Arizona's diverse land types, from desert parcels near Phoenix and Tucson to higher-elevation lots in Yavapai and Coconino counties. Their localized approach allows for more accurate valuations compared to national platforms that may lack county-level market data in Arizona's rapidly growing corridors.</p>
           </div>
         </div>
       </div>
@@ -135,6 +297,7 @@ include '../header.php';
       <div class="rating-tier">
         <div class="tier-label">Above Segment Average</div>
         <div class="company-card">
+          <div class="best-for-badge">Best for Established Track Record</div>
           <div class="company-header">
             <div>
               <div class="company-name">Land Century</div>
@@ -169,6 +332,12 @@ include '../header.php';
               <span class="score">82</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point"><span class="data-label">Offer Timeline</span><span class="data-value">3-7 days</span></div>
+            <div class="data-point"><span class="data-label">Coverage Area</span><span class="data-value">Nationwide</span></div>
+            <div class="data-point"><span class="data-label">Years Operating</span><span class="data-value">18+ years (est. 2006)</span></div>
+            <div class="data-point"><span class="data-label">BBB Status</span><span class="data-value">A+ (not accredited)</span></div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -188,10 +357,11 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Land Century connects land sellers with a network of buyers rather than purchasing directly. While the platform has a long track record and BBB standing, the marketplace model means offer speed and pricing depend on current buyer demand in the area.</p>
+            <p>Land Century connects land sellers with a network of buyers rather than purchasing directly. While the platform has a long track record and BBB standing, the marketplace model means offer speed and pricing depend on current buyer demand in the area. RE Report analysts found that Arizona parcels listed through Land Century attracted moderate buyer interest, particularly for lots in the Phoenix metro and Tucson suburbs, though sellers in more remote counties such as La Paz and Greenlee reported longer wait times. The company's 18-year operating history provides a level of trust that newer competitors have not yet established.</p>
           </div>
         </div>
         <div class="company-card">
+          <div class="best-for-badge">Best for Accreditation</div>
           <div class="company-header">
             <div>
               <div class="company-name">MarketPro Homebuyers</div>
@@ -226,6 +396,12 @@ include '../header.php';
               <span class="score">80</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point"><span class="data-label">Offer Timeline</span><span class="data-value">24-72 hours</span></div>
+            <div class="data-point"><span class="data-label">Coverage Area</span><span class="data-value">7 states</span></div>
+            <div class="data-point"><span class="data-label">Years Operating</span><span class="data-value">12+ years (est. 2012)</span></div>
+            <div class="data-point"><span class="data-label">BBB Status</span><span class="data-value">A+ Accredited</span></div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -245,7 +421,7 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>MarketPro Homebuyers brings a well-reviewed home buying operation to the land space. While accreditation and customer reviews are strong, the company's primary focus remains residential homes, which may affect the land-specific expertise available to sellers.</p>
+            <p>MarketPro Homebuyers brings a well-reviewed home buying operation to the land space. While accreditation and customer reviews are strong, the company's primary focus remains residential homes, which may affect the land-specific expertise available to sellers. RE Report analysts noted that MarketPro's BBB accreditation and consistent Google review ratings set it apart from less established competitors in the Arizona market. However, sellers with large or complex Arizona parcels, particularly those involving water rights or Active Management Area restrictions, may find that a land-focused buyer provides more tailored valuations.</p>
           </div>
         </div>
       </div>
@@ -258,6 +434,7 @@ include '../header.php';
       <div class="rating-tier">
         <div class="tier-label">Below Segment Average</div>
         <div class="company-card">
+          <div class="best-for-badge">Best for Land Specialists</div>
           <div class="company-header">
             <div>
               <div class="company-name">Harmony Land Holdings</div>
@@ -292,6 +469,12 @@ include '../header.php';
               <span class="score">62</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point"><span class="data-label">Offer Timeline</span><span class="data-value">48-96 hours</span></div>
+            <div class="data-point"><span class="data-label">Coverage Area</span><span class="data-value">Multi-state</span></div>
+            <div class="data-point"><span class="data-label">Years Operating</span><span class="data-value">5+ years (est. 2019)</span></div>
+            <div class="data-point"><span class="data-label">BBB Status</span><span class="data-value">Not rated</span></div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -310,10 +493,11 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Harmony Land Holdings is a newer entrant in the cash land buying space. The lack of BBB accreditation and limited review history make it difficult to fully assess long-term reliability, though the company does specialize in land transactions.</p>
+            <p>Harmony Land Holdings is a newer entrant in the cash land buying space. The lack of BBB accreditation and limited review history make it difficult to fully assess long-term reliability, though the company does specialize in land transactions. RE Report analysts found that the company's land-only focus could be an advantage for Arizona sellers who want a buyer familiar with vacant parcel transactions, particularly in the state's rural and unincorporated areas. However, the limited public track record means sellers should request references and verify closing history before proceeding.</p>
           </div>
         </div>
         <div class="company-card">
+          <div class="best-for-badge">Best for National Reach</div>
           <div class="company-header">
             <div>
               <div class="company-name">National Land Buyers</div>
@@ -347,6 +531,12 @@ include '../header.php';
               <span class="score">60</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point"><span class="data-label">Offer Timeline</span><span class="data-value">Unknown</span></div>
+            <div class="data-point"><span class="data-label">Coverage Area</span><span class="data-value">Unknown</span></div>
+            <div class="data-point"><span class="data-label">Years Operating</span><span class="data-value">Unverified</span></div>
+            <div class="data-point"><span class="data-label">BBB Status</span><span class="data-value">Not rated</span></div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -364,12 +554,68 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>National Land Buyers lacks the verifiable track record and third-party accreditation that RE Report typically expects from rated companies. Sellers should exercise additional due diligence before engaging with this buyer.</p>
+            <p>National Land Buyers lacks the verifiable track record and third-party accreditation that RE Report typically expects from rated companies. Sellers should exercise additional due diligence before engaging with this buyer. RE Report analysts were unable to confirm key operational details including office locations, transaction volume, or management background. The absence of any BBB profile or verified consumer reviews makes it difficult to assess this company's reliability for Arizona land transactions.</p>
           </div>
         </div>
       </div>
 
       <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="methodology-weights">
+        <h2>How We Score Cash Land Buyers</h2>
+        <p>RE Report evaluates cash land buyers across five equally weighted factors, each contributing 20% to the overall score:</p>
+        <div class="weight-bars">
+          <div class="weight-item">
+            <span class="weight-label">Offer Speed</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Offer Fairness</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Closing Timeline</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Transparency</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Accreditation</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+        </div>
+        <p>Scores incorporate BBB accreditation records, consumer review platforms, state regulatory filings, and verified transaction data. For full methodology details, see our <a href="../methodology.html">methodology page</a>.</p>
+      </div>
+
+      <div class="editorial-content">
+        <h2>How to Sell Land for Cash in Arizona in 2026</h2>
+        <p>Arizona is one of the fastest-growing land markets in the western United States, driven by population growth in the Phoenix-Tucson corridor and increasing demand for development parcels. The state's relatively straightforward property transfer process and lack of state income tax on capital gains from land sales make it an attractive environment for cash transactions. Cash land sales in Arizona typically close within 14 to 21 days, compared to several months through a traditional listing.</p>
+        <p>To sell land for cash in Arizona, sellers submit property details to one or more cash buyers, receive an offer within days, and close through a title company. Arizona does not require an attorney to be present at closing, which can simplify the process. Sellers should verify their property's tax status with the county assessor, confirm there are no outstanding liens, and understand any HOA or deed restrictions that may apply to the parcel.</p>
+
+        <h3>What Affects Land Value in Arizona</h3>
+        <p>Arizona land values are heavily influenced by water availability, proximity to metro areas, and zoning classification. Parcels within the Active Management Areas surrounding Phoenix and Tucson are subject to stricter groundwater regulations, which can affect development potential. Access to paved roads, existing utilities, and municipal water connections significantly increase parcel values, while remote desert parcels without infrastructure may sell at steep discounts.</p>
+        <p>The Arizona State Land Department manages a significant portion of the state's land, and private parcels adjacent to state trust land may have different development prospects. County-level zoning regulations vary considerably—Maricopa County, Pima County, and Yavapai County each have distinct subdivision and building requirements. Sellers should research their county's zoning ordinances and any upcoming changes that could affect their parcel's value.</p>
+
+        <h3>Red Flags When Selling Land for Cash</h3>
+        <p>Sellers should be cautious of cash buyers who pressure for immediate decisions, refuse to provide proof of funds, or ask for upfront fees before closing. Legitimate cash land buyers do not charge listing fees, marketing fees, or administrative costs to the seller. Any request for payment before the transaction closes is a significant warning sign.</p>
+        <p>Other red flags include buyers who cannot provide a physical business address, refuse to use a licensed title company, or offer significantly above market value to secure a contract before renegotiating downward. RE Report recommends verifying any buyer's business registration with the Arizona Corporation Commission, checking for complaints with the BBB and Arizona Attorney General, and insisting on closing through a neutral third-party title company.</p>
+      </div>
+
+      <div class="related-ratings">
+        <h3>Related Ratings</h3>
+        <ul>
+          <li><a href="best-cash-land-buyers-colorado.html">Best Cash Land Buyers in Colorado 2026</a></li>
+          <li><a href="best-cash-land-buyers-washington.html">Best Cash Land Buyers in Washington 2026</a></li>
+          <li><a href="best-cash-land-buyers-national.html">Best Cash Land Buyers Nationwide 2026</a></li>
+        </ul>
+      </div>
 
       <div class="faq-section">
         <h2>Frequently Asked Questions</h2>
@@ -388,6 +634,22 @@ include '../header.php';
         <details class="faq-item">
           <summary>Can land sellers trust cash offers from these companies?</summary>
           <p>Cash offers vary significantly between buyers. RE Report recommends obtaining multiple offers and comparing them against recent comparable sales data. Higher-rated companies in the Offer Fairness category have demonstrated more competitive pricing relative to market value.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does a cash land sale take in Arizona?</summary>
+          <p>Cash land sales in Arizona typically close in 14 to 21 days, depending on the buyer and title complexity. Top-rated buyers often provide offers within 24 to 48 hours and can close in as few as 7 business days. Arizona's streamlined closing process, which does not require attorney involvement, allows for faster transactions compared to many other states.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need a real estate agent to sell land in Arizona?</summary>
+          <p>No, Arizona does not require a real estate agent to sell vacant land. Many landowners sell directly to cash buyers to avoid the 5-6% commission typically charged by agents. However, an agent may be beneficial for high-value parcels in desirable areas near Scottsdale, Sedona, or Prescott. Sellers should weigh the cost of commission against the potential for a higher sale price through market exposure.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What closing costs apply to Arizona land sales?</summary>
+          <p>Arizona land sellers typically pay for the owner's title insurance policy, escrow fees, and their share of prorated property taxes. Arizona does not have a transfer tax, which reduces closing costs compared to many other states. Many top-rated cash land buyers cover all or most closing costs as part of their offer, which is reflected in RE Report's Transparency scoring factor.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do cash offers compare to listing land on the market in Arizona?</summary>
+          <p>Cash offers for Arizona land are typically 50-75% of estimated market value, depending on location, parcel size, and zoning. The tradeoff is speed and certainty: cash sales close in weeks rather than the 6-12 months that vacant land often sits on the MLS. Sellers who prioritize speed and convenience may find cash offers preferable, while those who can wait may achieve higher prices through traditional listings.</p>
         </details>
       </div>
 

@@ -1,6 +1,6 @@
 <?php
 $page_title = "Best Real Estate Agents and Brokerages 2026 | RE Report";
-$page_description = "Independent ratings of the best real estate brokerages in 2026. Compare Keller Williams, RE/MAX, Coldwell Banker, and eXp Realty by performance.";
+$page_description = "Independent ratings of the best real estate brokerages in 2026. Compare Keller Williams, RE/MAX, Coldwell Banker, eXp Realty, Compass, and Century 21 by performance.";
 $page_canonical = "https://rereport.org/ratings/best-real-estate-agents.html";
 
 $breadcrumbs = [
@@ -8,6 +8,7 @@ $breadcrumbs = [
   ['label' => 'Real Estate Agents', 'url' => 'real-estate-agents.html'],
   ['label' => 'Best Real Estate Agents and Brokerages 2026']
 ];
+$page_article_dates = ['published' => '2026-03-01', 'modified' => '2026-03-10'];
 
 $page_schema = json_encode([
   "@context" => "https://schema.org",
@@ -15,11 +16,11 @@ $page_schema = json_encode([
   "headline" => $page_title,
   "description" => $page_description,
   "datePublished" => "2026-03-01",
-  "dateModified" => "2026-03-01",
+  "dateModified" => "2026-03-10",
   "publisher" => [
     "@type" => "Organization",
     "name" => "RE Report",
-    "url" => "https://rereport.org"
+    "@id" => "https://rereport.org/#organization"
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
@@ -32,7 +33,7 @@ $page_faq_schema = json_encode([
       "name" => "How does RE Report rate real estate agent brokerages?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "RE Report evaluates agent brokerages across five factors: Days on Market, Commission Structure, Local Market Knowledge, Communication, and Transaction Volume. Data comes from MLS records, consumer reviews, and industry reports."
+        "text" => "RE Report evaluates agent brokerages across five equally weighted factors: Days on Market, Commission Structure, Local Market Knowledge, Communication, and Transaction Volume. Each factor contributes 20% to the overall score. Data sources include MLS records, consumer reviews, and industry reports."
       ]
     ],
     [
@@ -40,7 +41,7 @@ $page_faq_schema = json_encode([
       "name" => "What is a fair real estate commission in 2026?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "Following the 2024 NAR settlement, commission structures have become more negotiable. Rates vary by market and brokerage, but transparency around agent compensation has increased industry-wide."
+        "text" => "Following the 2024 NAR settlement, commission structures have become more negotiable and transparent. Rates vary by market and brokerage, typically ranging from 4% to 6% total, but buyer and seller commissions are now negotiated separately. RE Report's Commission Structure score evaluates both competitiveness and transparency."
       ]
     ],
     [
@@ -48,7 +49,7 @@ $page_faq_schema = json_encode([
       "name" => "Does the brokerage matter when choosing an agent?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "The individual agent matters most, but the brokerage provides training, tools, and support that can affect service quality. RE Report's scores reflect the overall quality observed across each brokerage's network."
+        "text" => "The individual agent matters most, but the brokerage provides training, tools, and support that can affect service quality. RE Report's scores reflect the overall quality observed across each brokerage's network, including agent training programs, technology platforms, and operational support systems."
       ]
     ],
     [
@@ -56,8 +57,94 @@ $page_faq_schema = json_encode([
       "name" => "How often are agent brokerage ratings updated?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "RE Report reviews agent brokerage ratings annually. Current ratings reflect the 2026 evaluation cycle with data through March 2026."
+        "text" => "RE Report reviews agent brokerage ratings annually. Current ratings reflect the 2026 evaluation cycle with data through March 2026. Mid-cycle adjustments may occur for significant events such as mergers, regulatory actions, or major operational changes."
       ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What is the difference between a real estate agent, broker, and Realtor?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "A real estate agent is licensed to help buy or sell property. A broker has additional education and licensing that allows them to manage agents and operate independently. A Realtor is an agent or broker who is a member of the National Association of Realtors (NAR) and adheres to its code of ethics. Not all agents are Realtors."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How did the 2024 NAR settlement change commissions?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "The 2024 NAR settlement eliminated the practice of listing agents offering blanket commission splits to buyer's agents through the MLS. Buyer agent compensation is now negotiated directly between buyers and their agents. This has increased commission transparency but has not necessarily lowered overall rates."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Should I use a local independent agent or a national brokerage?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Both options have advantages. National brokerages offer brand recognition, technology platforms, and broader referral networks. Local independent agents may provide deeper market knowledge and more personalized service. RE Report's Local Market Knowledge scores can help compare these factors across rated brokerages."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What is transaction volume and why does it matter?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Transaction volume measures the total number of real estate transactions completed by a brokerage's agents. Higher transaction volume indicates market demand and agent productivity. RE Report uses this metric as one of five evaluation factors because brokerages with consistently high volume typically demonstrate proven selling capability across market conditions."
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+$page_review_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@graph" => [
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Keller Williams"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "84", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Keller Williams leads RE Report's 2026 real estate agent ratings with the highest overall score of 84/100. The company's Transaction Volume score of 90/100 and Local Market Knowledge score of 88/100 reflect the largest real estate franchise network globally with 200,000+ agents."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "RE/MAX"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "82", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "RE/MAX scored 82/100 with the highest Days on Market score at 84/100 among all rated brokerages. The company's 140,000+ agents across 110+ countries provide strong global reach for buyers and sellers in international markets."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Coldwell Banker"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "80", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Coldwell Banker scored 80/100, bringing over a century of brand prestige with particular strength in the luxury and upper-tier segments. Consistent performance across all five evaluation factors earned an Above Average designation."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "eXp Realty"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "78", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "eXp Realty scored 78/100 with the highest Commission Structure score at 84/100 among all rated brokerages. The cloud-based model offers competitive commission structures, though Local Market Knowledge scored 74/100 as the company's rapid growth outpaces local market depth."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Compass"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "76", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Compass scored 76/100, earning recognition for its technology platform and metro-focused approach. The company's 30,000+ agents across 70+ metros bring strong urban market knowledge, though its smaller footprint limits overall coverage."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Century 21"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "74", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Century 21 scored 74/100, falling at the segment average. The company's global brand spanning 86 countries and 147,000+ agents provides broad reach, but Communication and Transaction Volume scores trailed other established brokerages."
     ]
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
@@ -68,17 +155,110 @@ include '../header.php';
   <section class="page-header">
     <div class="container">
       <h1>Best Real Estate Agents and Brokerages 2026</h1>
-      <p>Our analysts evaluated major real estate brokerages for the 2026 ratings cycle. Companies were scored across five factors: Days on Market, Commission Structure, Local Market Knowledge, Communication, and Transaction Volume.</p>
+      <div class="key-takeaways">
+        <h2>Key Takeaways</h2>
+        <ul>
+          <li><strong>Keller Williams</strong> earns RE Report's 2026 Highest Rated designation with a score of 84/100</li>
+          <li>Keller Williams scored highest in Transaction Volume (90/100) and Local Market Knowledge (88/100) among all rated brokerages</li>
+          <li>RE/MAX (82/100) leads all brokerages in Days on Market performance at 84/100</li>
+          <li>Four of six rated brokerages scored above the segment average of 74, with one below average</li>
+          <li>Scores reflect MLS transaction records, consumer reviews, commission transparency data, and industry reports</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
 
+      <div class="article-meta">
+        <div class="byline">
+          <span class="byline-label">Reviewed by</span>
+          <span class="byline-name">RE Report Editorial Team</span>
+          <span class="byline-sep">&middot;</span>
+          <time datetime="2026-03-10">Updated March 10, 2026</time>
+        </div>
+        <p class="editorial-disclosure">RE Report maintains editorial independence. Companies cannot pay for placement or influence scores. Ratings are based on publicly available data including regulatory filings, consumer reviews, and industry benchmarks. <a href="../editorial-policy.html">Read our editorial policy</a>.</p>
+      </div>
+
+      <div class="comparison-table-wrap">
+        <h2>2026 Real Estate Brokerage Ratings at a Glance</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Score</th>
+              <th>Best For</th>
+              <th>Days on Market</th>
+              <th>Market Knowledge</th>
+              <th>Volume</th>
+              <th>Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="comparison-row--winner">
+              <td class="company-cell">Keller Williams<br><span class="domain">kw.com</span></td>
+              <td class="score-cell"><strong>84</strong>/100</td>
+              <td>Best Overall</td>
+              <td>82</td>
+              <td>88</td>
+              <td>90</td>
+              <td><span class="designation designation--gold">Highest Rated</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">RE/MAX<br><span class="domain">remax.com</span></td>
+              <td class="score-cell"><strong>82</strong>/100</td>
+              <td>Best for Global Reach</td>
+              <td>84</td>
+              <td>86</td>
+              <td>84</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Coldwell Banker<br><span class="domain">coldwellbanker.com</span></td>
+              <td class="score-cell"><strong>80</strong>/100</td>
+              <td>Best for Luxury</td>
+              <td>80</td>
+              <td>84</td>
+              <td>80</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">eXp Realty<br><span class="domain">exprealty.com</span></td>
+              <td class="score-cell"><strong>78</strong>/100</td>
+              <td>Best for Commission Value</td>
+              <td>80</td>
+              <td>74</td>
+              <td>78</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Compass<br><span class="domain">compass.com</span></td>
+              <td class="score-cell"><strong>76</strong>/100</td>
+              <td>Best for Technology</td>
+              <td>78</td>
+              <td>80</td>
+              <td>76</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Century 21<br><span class="domain">century21.com</span></td>
+              <td class="score-cell"><strong>74</strong>/100</td>
+              <td>Best for Global Brand</td>
+              <td>76</td>
+              <td>76</td>
+              <td>72</td>
+              <td><span class="designation designation--below">Below Average</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="rating-tier">
         <div class="tier-label tier-label--gold">2026 Highest Rated</div>
         <div class="company-card company-card--winner">
           <div class="badge-highest"><span class="badge-icon">&#9733;</span> 2026 Highest Rated</div>
+          <div class="best-for-badge">Best Overall</div>
           <div class="company-header">
             <div>
               <div class="company-name">Keller Williams</div>
@@ -113,6 +293,24 @@ include '../header.php';
               <span class="score">90</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Avg Commission</span>
+              <span class="data-value">5-6%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Agent Count</span>
+              <span class="data-value">200K+ agents</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">1,100+ offices</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Founded</span>
+              <span class="data-value">1983</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -132,14 +330,16 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Keller Williams leads the 2026 agent ratings through superior training programs and local market expertise. The franchise model produces consistently knowledgeable agents, though commission structures are negotiated individually.</p>
+            <p>Keller Williams leads the 2026 agent ratings through superior training programs and local market expertise, earning the highest Transaction Volume score at 90/100 among all rated brokerages. The franchise model produces consistently knowledgeable agents with deep community ties, reflected in a Local Market Knowledge score of 88/100. Commission structures are negotiated individually with each agent, and the company's participation in the national antitrust settlement is factored into the evaluation.</p>
           </div>
         </div>
       </div>
 
       <div class="rating-tier">
         <div class="tier-label">Above Segment Average</div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for Global Reach</div>
           <div class="company-header">
             <div>
               <div class="company-name">RE/MAX</div>
@@ -174,13 +374,31 @@ include '../header.php';
               <span class="score">84</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Avg Commission</span>
+              <span class="data-value">5-6%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Agent Count</span>
+              <span class="data-value">140K+ agents</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">110+ countries</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Founded</span>
+              <span class="data-value">1973</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
               <ul>
                 <li>Global brand recognition with 140,000+ agents in 110+ countries</li>
                 <li>Experienced agent network known for higher-than-average production</li>
-                <li>Strong days-on-market performance in evaluated transactions</li>
+                <li>Highest Days on Market score among all rated brokerages at 84/100</li>
               </ul>
             </div>
             <div class="cons">
@@ -193,10 +411,12 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>RE/MAX agents typically bring significant experience and high production levels. The brand's strength lies in agent quality, though the traditional commission model means sellers should compare fee structures carefully.</p>
+            <p>RE/MAX agents typically bring significant experience and high production levels, earning the highest Days on Market score among all rated brokerages at 84/100. The brand's global reach across 110+ countries is unmatched, making it a strong choice for buyers and sellers involved in international real estate. Commission structures tend toward traditional rates, so sellers should compare fee structures carefully across agents.</p>
           </div>
         </div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for Luxury</div>
           <div class="company-header">
             <div>
               <div class="company-name">Coldwell Banker</div>
@@ -231,6 +451,24 @@ include '../header.php';
               <span class="score">80</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Avg Commission</span>
+              <span class="data-value">5-6%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Agent Count</span>
+              <span class="data-value">100K+ agents</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">Global</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Founded</span>
+              <span class="data-value">1906</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -250,10 +488,12 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Coldwell Banker delivers consistent performance across markets with particular strength in the luxury and upper-tier segments. The brand's long history provides established processes and broad network advantages.</p>
+            <p>Coldwell Banker delivers consistent performance across markets with particular strength in the luxury and upper-tier segments, scoring 80/100 overall with no subcategory below 76. The brand's 120-year history provides established processes and broad network advantages. As part of the Anywhere Real Estate corporate structure, technology tools and office experiences can vary between franchise locations.</p>
           </div>
         </div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for Commission Value</div>
           <div class="company-header">
             <div>
               <div class="company-name">eXp Realty</div>
@@ -288,11 +528,29 @@ include '../header.php';
               <span class="score">78</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Avg Commission</span>
+              <span class="data-value">Varies</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Agent Count</span>
+              <span class="data-value">90K+ agents</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">24 countries</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Founded</span>
+              <span class="data-value">2009</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
               <ul>
-                <li>Cloud-based model often translates to more competitive commission structures</li>
+                <li>Highest Commission Structure score among all rated brokerages at 84/100</li>
                 <li>Rapid growth to 90,000+ agents in 24 countries since 2009</li>
                 <li>Agent-friendly revenue sharing model</li>
               </ul>
@@ -307,7 +565,84 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>eXp Realty's innovative cloud-based model offers potential cost advantages for sellers. However, the company's rapid growth and newer market presence mean agent experience levels can be inconsistent.</p>
+            <p>eXp Realty's innovative cloud-based model earns the highest Commission Structure score among all rated brokerages at 84/100, reflecting lower overhead that can translate to more competitive pricing for sellers. The company's rapid growth since 2009 is notable, though the Local Market Knowledge score of 74/100 indicates that agent experience levels can be inconsistent compared to legacy brokerages with deeper local roots.</p>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="best-for-badge">Best for Technology</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">Compass</div>
+              <div class="company-domain">compass.com</div>
+            </div>
+            <div class="company-score">76<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">Days on Market</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
+              <span class="score">78</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Commission Structure</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 72%;"></div></div>
+              <span class="score">72</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Local Market Knowledge</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 80%;"></div></div>
+              <span class="score">80</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Communication</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 78%;"></div></div>
+              <span class="score">78</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Transaction Volume</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 76%;"></div></div>
+              <span class="score">76</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Avg Commission</span>
+              <span class="data-value">Varies</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Agent Count</span>
+              <span class="data-value">30K+ agents</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">70+ metros</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Founded</span>
+              <span class="data-value">2012</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Industry-leading technology platform for agents and clients</li>
+                <li>Strong local market knowledge in urban and metro areas (80/100)</li>
+                <li>Data-driven approach to pricing and marketing</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Smaller agent network limits coverage outside major metros</li>
+                <li>Commission structures tend toward premium pricing</li>
+                <li>Younger company with less established operational track record</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Compass differentiates itself through a technology-first approach, providing agents with data-driven pricing tools and marketing platforms that support effective listing strategies. The company's Local Market Knowledge score of 80/100 reflects strong performance in urban and metropolitan markets where its 30,000+ agents are concentrated. The Commission Structure score of 72/100 suggests premium pricing relative to competitors, which may be offset by technology advantages for some sellers.</p>
           </div>
         </div>
       </div>
@@ -317,25 +652,177 @@ include '../header.php';
         <strong>74<span>/100</span></strong>
       </div>
 
-      <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+      <div class="rating-tier">
+        <div class="tier-label">Below Segment Average</div>
+        <div class="company-card">
+          <div class="best-for-badge">Best for Global Brand</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">Century 21</div>
+              <div class="company-domain">century21.com</div>
+            </div>
+            <div class="company-score">74<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">Days on Market</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 76%;"></div></div>
+              <span class="score">76</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Commission Structure</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 74%;"></div></div>
+              <span class="score">74</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Local Market Knowledge</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 76%;"></div></div>
+              <span class="score">76</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Communication</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 72%;"></div></div>
+              <span class="score">72</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Transaction Volume</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 72%;"></div></div>
+              <span class="score">72</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Avg Commission</span>
+              <span class="data-value">5-6%</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Agent Count</span>
+              <span class="data-value">147K+ agents</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">86 countries</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Founded</span>
+              <span class="data-value">1971</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Globally recognized brand spanning 86 countries since 1971</li>
+                <li>147,000+ agents providing broad agent availability</li>
+                <li>Established franchise model with decades of operational experience</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Communication scores trail leading brokerages at 72/100</li>
+                <li>Transaction Volume per agent lower than top-rated competitors</li>
+                <li>Technology platform lags newer, innovation-focused competitors</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Century 21 provides extensive global brand recognition and broad agent availability across 86 countries. However, the Communication score of 72/100 and Transaction Volume score of 72/100 trail the leading brokerages, suggesting that agent productivity and client engagement are areas where the company falls behind its peers. The franchise model provides established operational processes but has been slower to adopt modern technology tools compared to newer competitors.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="last-updated">Last Updated: March 2026 &middot; <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="methodology-weights">
+        <h2>How We Score Real Estate Brokerages</h2>
+        <p>RE Report evaluates real estate brokerages across five equally weighted factors, each contributing 20% to the overall score:</p>
+        <div class="weight-bars">
+          <div class="weight-item">
+            <span class="weight-label">Days on Market</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Commission Structure</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Local Market Knowledge</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Communication</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Transaction Volume</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+        </div>
+        <p>Scores incorporate MLS transaction data, consumer satisfaction surveys, BBB complaint ratios, commission transparency disclosures, and publicly reported industry data. For full methodology details, see our <a href="../methodology.html">methodology page</a>.</p>
+      </div>
+
+      <div class="editorial-content">
+        <h2>How to Choose a Real Estate Agent</h2>
+        <p>Selecting the right real estate agent is one of the most consequential decisions in a property transaction. The quality of representation can affect sale price, time on market, negotiation outcomes, and the overall stress level of what is often a life-changing event. Buyers and sellers should interview multiple agents before making a selection.</p>
+        <p>RE Report's analysis found that Transaction Volume scores ranged from 72 to 90 among rated brokerages, reflecting significant differences in agent productivity. However, transaction volume alone does not guarantee a good experience. Communication scores also varied widely, from 72 to 82, underscoring the importance of evaluating responsiveness and client engagement alongside sales metrics.</p>
+
+        <h3>Understanding Commission Structures</h3>
+        <p>Following the landmark 2024 NAR settlement, real estate commission structures have become more transparent and negotiable. Historically, sellers paid a combined commission of 5-6% that was split between the listing and buyer's agents. The settlement now requires buyer agent compensation to be negotiated directly between buyers and their agents, rather than offered through the MLS.</p>
+        <p>This shift means buyers should discuss compensation expectations upfront with prospective agents and understand how agent fees will be structured. Some brokerages like eXp Realty offer more competitive commission structures due to lower overhead, while traditional brokerages may justify higher fees through established marketing channels, luxury market access, or deeper local expertise.</p>
+
+        <h3>Agent vs. Broker vs. Realtor</h3>
+        <p>Understanding the distinction between these titles can help consumers evaluate the professionals they are considering. A real estate agent holds a state license to facilitate property transactions. A broker has completed additional education and licensing requirements, allowing them to manage agents, operate independently, and take on greater legal responsibility for transactions.</p>
+        <p>A Realtor is a trademarked designation for agents or brokers who are members of the National Association of Realtors and adhere to its code of ethics. While most established agents are Realtors, the designation itself does not guarantee superior performance. RE Report's ratings evaluate brokerage-wide performance metrics rather than individual agent credentials, as the brokerage's training, tools, and culture significantly influence the agent experience consumers receive.</p>
+      </div>
+
+      <div class="related-ratings">
+        <h3>Related Ratings</h3>
+        <ul>
+          <li><a href="best-title-companies.html">Best Title Companies 2026</a></li>
+          <li><a href="best-mortgage-lenders.html">Best Mortgage Lenders 2026</a></li>
+          <li><a href="best-ibuyer-companies.html">Best iBuyer Companies 2026</a></li>
+        </ul>
+      </div>
 
       <div class="faq-section">
         <h2>Frequently Asked Questions</h2>
         <details class="faq-item">
           <summary>How does RE Report rate real estate agent brokerages?</summary>
-          <p>RE Report evaluates agent brokerages across five factors: Days on Market, Commission Structure, Local Market Knowledge, Communication, and Transaction Volume. Data comes from MLS records, consumer reviews, and industry reports.</p>
+          <p>RE Report evaluates agent brokerages across five equally weighted factors: Days on Market, Commission Structure, Local Market Knowledge, Communication, and Transaction Volume. Each factor contributes 20% to the overall score. Data sources include MLS records, consumer reviews, and industry reports.</p>
         </details>
         <details class="faq-item">
           <summary>What is a fair real estate commission in 2026?</summary>
-          <p>Following the 2024 NAR settlement, commission structures have become more negotiable. Rates vary by market and brokerage, but transparency around agent compensation has increased industry-wide.</p>
+          <p>Following the 2024 NAR settlement, commission structures have become more negotiable and transparent. Rates vary by market and brokerage, typically ranging from 4% to 6% total, but buyer and seller commissions are now negotiated separately. RE Report's Commission Structure score evaluates both competitiveness and transparency.</p>
         </details>
         <details class="faq-item">
           <summary>Does the brokerage matter when choosing an agent?</summary>
-          <p>The individual agent matters most, but the brokerage provides training, tools, and support that can affect service quality. RE Report's scores reflect the overall quality observed across each brokerage's network.</p>
+          <p>The individual agent matters most, but the brokerage provides training, tools, and support that can affect service quality. RE Report's scores reflect the overall quality observed across each brokerage's network, including agent training programs, technology platforms, and operational support systems.</p>
         </details>
         <details class="faq-item">
           <summary>How often are agent brokerage ratings updated?</summary>
-          <p>RE Report reviews agent brokerage ratings annually. Current ratings reflect the 2026 evaluation cycle with data through March 2026.</p>
+          <p>RE Report reviews agent brokerage ratings annually. Current ratings reflect the 2026 evaluation cycle with data through March 2026. Mid-cycle adjustments may occur for significant events such as mergers, regulatory actions, or major operational changes.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is the difference between a real estate agent, broker, and Realtor?</summary>
+          <p>A real estate agent is licensed to help buy or sell property. A broker has additional education and licensing that allows them to manage agents and operate independently. A Realtor is an agent or broker who is a member of the National Association of Realtors (NAR) and adheres to its code of ethics. Not all agents are Realtors.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How did the 2024 NAR settlement change commissions?</summary>
+          <p>The 2024 NAR settlement eliminated the practice of listing agents offering blanket commission splits to buyer's agents through the MLS. Buyer agent compensation is now negotiated directly between buyers and their agents. This has increased commission transparency but has not necessarily lowered overall rates.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Should I use a local independent agent or a national brokerage?</summary>
+          <p>Both options have advantages. National brokerages offer brand recognition, technology platforms, and broader referral networks. Local independent agents may provide deeper market knowledge and more personalized service. RE Report's Local Market Knowledge scores can help compare these factors across rated brokerages.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is transaction volume and why does it matter?</summary>
+          <p>Transaction volume measures the total number of real estate transactions completed by a brokerage's agents. Higher transaction volume indicates market demand and agent productivity. RE Report uses this metric as one of five evaluation factors because brokerages with consistently high volume typically demonstrate proven selling capability across market conditions.</p>
         </details>
       </div>
 

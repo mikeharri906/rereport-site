@@ -7,17 +7,63 @@ $breadcrumbs = [
   ['label' => 'Cash Land Buyers', 'url' => 'cash-land-buyers.html'],
   ['label' => 'Washington']
 ];
+$page_article_dates = ['published' => '2026-03-01', 'modified' => '2026-03-10'];
 $page_schema = json_encode([
   "@context" => "https://schema.org",
   "@type" => "Article",
   "headline" => $page_title,
   "description" => $page_description,
   "datePublished" => "2026-03-01",
-  "dateModified" => "2026-03-01",
+  "dateModified" => "2026-03-10",
   "publisher" => [
     "@type" => "Organization",
     "name" => "RE Report",
-    "url" => "https://rereport.org"
+    "@id" => "https://rereport.org/#organization"
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+$page_review_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@graph" => [
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Sell Washington Land"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "93", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Sell Washington Land earned the Highest Rated designation for Washington state with strong scores across all five evaluation factors."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Land Century"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "78", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Land Century operates as a marketplace connecting land sellers with buyers. The platform has a long track record but the marketplace model means results vary by location."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "MarketPro Homebuyers"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "75", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "MarketPro Homebuyers has strong accreditation but primarily focuses on residential homes rather than land transactions."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Harmony Land Holdings"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "66", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Harmony Land Holdings is a newer operation with limited independent reviews and no BBB accreditation."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "National Land Buyers"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "63", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "National Land Buyers lacks verifiable track record and third-party accreditation expected by RE Report."
+    ]
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 $page_faq_schema = json_encode([
@@ -55,6 +101,38 @@ $page_faq_schema = json_encode([
         "@type" => "Answer",
         "text" => "Cash offers vary significantly between buyers. RE Report recommends obtaining multiple offers and comparing them against recent comparable sales data. Higher-rated companies in the Offer Fairness category have demonstrated more competitive pricing relative to market value."
       ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How long does a cash land sale take in Washington?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Cash land sales in Washington typically close in 14 to 30 days, depending on the buyer and title complexity. Top-rated buyers often provide offers within 24 to 48 hours and can close in as few as 10 business days. Washington uses escrow companies for closings, and county recording timelines vary by region."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Do I need a real estate agent to sell land in Washington?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "No, Washington state does not require a real estate agent to sell vacant land. Many landowners sell directly to cash buyers to avoid the 5-6% commission. However, an agent may be helpful for parcels with high value, timber rights, or complex zoning. Sellers should weigh commission costs against the potential for a higher sale price through market exposure."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What closing costs apply to Washington land sales?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Washington land sellers typically pay excise tax (ranging from 1.1% to 3% depending on sale price), title insurance, escrow fees, and recording fees. The state's Real Estate Excise Tax (REET) is the most significant cost for sellers. Many top-rated cash land buyers cover all closing costs as part of their offer."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How do cash offers compare to listing land on the market?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Cash offers for Washington land are typically 50-80% of estimated market value, depending on location, parcel size, and zoning. The tradeoff is speed and certainty: cash sales close in weeks rather than the 6-12 months that vacant land commonly sits on the MLS. Sellers who need to liquidate quickly often find cash offers more practical, while those with time may benefit from listing on the open market."
+      ]
     ]
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
@@ -64,17 +142,95 @@ include '../header.php';
   <section class="page-header">
     <div class="container">
       <h1>Best Cash Land Buyers in Washington 2026</h1>
-      <p>Our analysts evaluated cash land buying companies operating in Washington for the 2026 ratings cycle. Companies were scored across five factors: Offer Speed, Offer Fairness, Closing Timeline, Transparency, and Accreditation. Below are the results.</p>
+      <div class="key-takeaways">
+        <h2>Key Takeaways</h2>
+        <ul>
+          <li><strong>Sell Washington Land</strong> earns RE Report's 2026 Highest Rated designation with 93/100</li>
+          <li>Sell Washington Land scored highest in Offer Speed (95/100) and Closing Timeline (94/100)</li>
+          <li>Land Century (78/100) and MarketPro Homebuyers (75/100) also scored above the segment average of 74</li>
+          <li>All rated companies evaluated on publicly available data, BBB records, and consumer reviews</li>
+          <li>Scores reflect the 2026 evaluation cycle with data through March 2026</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
 
+      <div class="article-meta">
+        <div class="byline">
+          <span class="byline-label">Reviewed by</span>
+          <span class="byline-name">RE Report Editorial Team</span>
+          <span class="byline-sep">&middot;</span>
+          <time datetime="2026-03-10">Updated March 10, 2026</time>
+        </div>
+        <p class="editorial-disclosure">RE Report maintains editorial independence. Companies cannot pay for placement or influence scores. Ratings are based on publicly available data including regulatory filings, consumer reviews, and industry benchmarks. <a href="../editorial-policy.html">Read our editorial policy</a>.</p>
+      </div>
+
+      <div class="comparison-table-wrap">
+        <h2>2026 Washington Cash Land Buyer Ratings at a Glance</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Score</th>
+              <th>Best For</th>
+              <th>Speed</th>
+              <th>Fairness</th>
+              <th>Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sell Washington Land</td>
+              <td><strong>93</strong></td>
+              <td>Best Overall</td>
+              <td>95</td>
+              <td>92</td>
+              <td><span class="designation-badge designation--gold">Highest Rated</span></td>
+            </tr>
+            <tr>
+              <td>Land Century</td>
+              <td><strong>78</strong></td>
+              <td>Established Track Record</td>
+              <td>77</td>
+              <td>76</td>
+              <td><span class="designation-badge designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td>MarketPro Homebuyers</td>
+              <td><strong>75</strong></td>
+              <td>Accreditation</td>
+              <td>77</td>
+              <td>73</td>
+              <td><span class="designation-badge designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td>Harmony Land Holdings</td>
+              <td><strong>66</strong></td>
+              <td>Land Specialists</td>
+              <td>69</td>
+              <td>67</td>
+              <td><span class="designation-badge designation--below">Below Average</span></td>
+            </tr>
+            <tr>
+              <td>National Land Buyers</td>
+              <td><strong>63</strong></td>
+              <td>National Reach</td>
+              <td>65</td>
+              <td>63</td>
+              <td><span class="designation-badge designation--below">Below Average</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="rating-tier">
         <div class="tier-label tier-label--gold">2026 Highest Rated</div>
         <div class="company-card company-card--winner">
           <div class="badge-highest"><span class="badge-icon">&#9733;</span> 2026 Highest Rated</div>
+          <div class="best-for-badge">Best Overall</div>
           <div class="company-header">
             <div>
               <div class="company-name">Sell Washington Land</div>
@@ -109,6 +265,24 @@ include '../header.php';
               <span class="score">90</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Offer Timeline</span>
+              <span class="data-value">24-48 hours</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Coverage Area</span>
+              <span class="data-value">Washington-focused</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Years Operating</span>
+              <span class="data-value">Varies</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">Not yet rated</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -127,7 +301,7 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Washington land sellers benefit from this company's deep knowledge of the local market. RE Report analysts noted consistently fast response times and a straightforward closing process that minimizes seller friction.</p>
+            <p>Washington land sellers benefit from this company's deep knowledge of the local market. RE Report analysts noted consistently fast response times and a straightforward closing process that minimizes seller friction. The company demonstrated strong familiarity with both Eastern Washington agricultural parcels and Western Washington rural acreage near the expanding Seattle metro area. Their localized expertise allows for valuations that account for Washington-specific factors like timber value and wetland designations.</p>
           </div>
         </div>
       </div>
@@ -135,6 +309,7 @@ include '../header.php';
       <div class="rating-tier">
         <div class="tier-label">Above Segment Average</div>
         <div class="company-card">
+          <div class="best-for-badge">Best for Established Track Record</div>
           <div class="company-header">
             <div>
               <div class="company-name">Land Century</div>
@@ -169,6 +344,24 @@ include '../header.php';
               <span class="score">82</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Offer Timeline</span>
+              <span class="data-value">3-7 days</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Coverage Area</span>
+              <span class="data-value">Nationwide</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Years Operating</span>
+              <span class="data-value">18+ years (est. 2006)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">A+ (not accredited)</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -188,10 +381,11 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Land Century connects land sellers with a network of buyers rather than purchasing directly. While the platform has a long track record and BBB standing, the marketplace model means offer speed and pricing depend on current buyer demand in the area.</p>
+            <p>Land Century connects land sellers with a network of buyers rather than purchasing directly. While the platform has a long track record and BBB standing, the marketplace model means offer speed and pricing depend on current buyer demand in the area. RE Report analysts found that Washington parcels in high-growth counties near the Puget Sound region attracted faster responses through the platform. However, sellers with rural Eastern Washington parcels may experience longer wait times due to lower buyer density in those areas.</p>
           </div>
         </div>
         <div class="company-card">
+          <div class="best-for-badge">Best for Accreditation</div>
           <div class="company-header">
             <div>
               <div class="company-name">MarketPro Homebuyers</div>
@@ -226,6 +420,24 @@ include '../header.php';
               <span class="score">80</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Offer Timeline</span>
+              <span class="data-value">24-72 hours</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Coverage Area</span>
+              <span class="data-value">7 states</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Years Operating</span>
+              <span class="data-value">12+ years (est. 2012)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">A+ Accredited</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -245,7 +457,7 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>MarketPro Homebuyers brings a well-reviewed home buying operation to the land space. While accreditation and customer reviews are strong, the company's primary focus remains residential homes, which may affect the land-specific expertise available to sellers.</p>
+            <p>MarketPro Homebuyers brings a well-reviewed home buying operation to the land space. While accreditation and customer reviews are strong, the company's primary focus remains residential homes, which may affect the land-specific expertise available to sellers. RE Report analysts noted that MarketPro's BBB accreditation and consistent Google review ratings set it apart from less established competitors. However, sellers with timber parcels or land with complex wetland restrictions may find that a land-focused buyer offers more appropriate valuations.</p>
           </div>
         </div>
       </div>
@@ -258,6 +470,7 @@ include '../header.php';
       <div class="rating-tier">
         <div class="tier-label">Below Segment Average</div>
         <div class="company-card">
+          <div class="best-for-badge">Best for Land Specialists</div>
           <div class="company-header">
             <div>
               <div class="company-name">Harmony Land Holdings</div>
@@ -292,6 +505,24 @@ include '../header.php';
               <span class="score">62</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Offer Timeline</span>
+              <span class="data-value">48-96 hours</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Coverage Area</span>
+              <span class="data-value">Multi-state</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Years Operating</span>
+              <span class="data-value">5+ years (est. 2019)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">Not rated</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -310,10 +541,11 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Harmony Land Holdings is a newer entrant in the cash land buying space. The lack of BBB accreditation and limited review history make it difficult to fully assess long-term reliability, though the company does specialize in land transactions.</p>
+            <p>Harmony Land Holdings is a newer entrant in the cash land buying space. The lack of BBB accreditation and limited review history make it difficult to fully assess long-term reliability, though the company does specialize in land transactions. RE Report analysts found that the company's land-only focus could be an advantage for sellers who want a buyer familiar with vacant parcel transactions. However, the limited public track record means sellers should request references and verify closing history before proceeding.</p>
           </div>
         </div>
         <div class="company-card">
+          <div class="best-for-badge">Best for National Reach</div>
           <div class="company-header">
             <div>
               <div class="company-name">National Land Buyers</div>
@@ -347,6 +579,24 @@ include '../header.php';
               <span class="score">60</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Offer Timeline</span>
+              <span class="data-value">Unknown</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Coverage Area</span>
+              <span class="data-value">Unknown</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Years Operating</span>
+              <span class="data-value">Unverified</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">Not rated</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -364,12 +614,68 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>National Land Buyers lacks the verifiable track record and third-party accreditation that RE Report typically expects from rated companies. Sellers should exercise additional due diligence before engaging with this buyer.</p>
+            <p>National Land Buyers lacks the verifiable track record and third-party accreditation that RE Report typically expects from rated companies. Sellers should exercise additional due diligence before engaging with this buyer. RE Report analysts were unable to confirm key operational details including office locations, transaction volume, or management background. The absence of any BBB profile or verified consumer reviews makes it difficult to assess this company's reliability for Washington land transactions.</p>
           </div>
         </div>
       </div>
 
       <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="methodology-weights">
+        <h2>How We Score Cash Land Buyers</h2>
+        <p>RE Report evaluates cash land buyers across five equally weighted factors, each contributing 20% to the overall score:</p>
+        <div class="weight-bars">
+          <div class="weight-item">
+            <span class="weight-label">Offer Speed</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Offer Fairness</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Closing Timeline</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Transparency</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Accreditation</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+        </div>
+        <p>Scores incorporate BBB accreditation records, consumer review platforms, state regulatory filings, and verified transaction data. For full methodology details, see our <a href="../methodology.html">methodology page</a>.</p>
+      </div>
+
+      <div class="editorial-content">
+        <h2>How to Sell Land for Cash in Washington in 2026</h2>
+        <p>Washington state offers a diverse land market that includes timber-rich parcels in the Cascades, agricultural acreage in the Columbia Basin, and rural residential lots in the rapidly expanding Puget Sound corridor. The state's Growth Management Act and critical areas ordinances create a regulatory environment that can affect land use and development potential, making local market knowledge essential for accurate land valuations. Cash sales provide an alternative to the traditional listing process, which for vacant land in Washington can take 6 to 12 months or longer.</p>
+        <p>To sell land for cash in Washington, sellers typically submit their parcel information to one or more cash buyers, receive an offer within days, and close through a licensed escrow company. The process bypasses buyer financing contingencies, appraisals, and extended marketing periods. Sellers should ensure they have clear title, verify their property tax status with the county treasurer, and understand any easements, timber rights, or wetland restrictions that could affect the sale.</p>
+
+        <h3>What Affects Land Value in Washington</h3>
+        <p>Washington land values are shaped by location, zoning, access to infrastructure, and natural resources. Parcels near the Seattle-Tacoma metro area or growing cities like Spokane and Tri-Cities command premium prices, while remote rural acreage may sell for significantly less. Timber value is a major factor for forested parcels, and sellers with merchantable timber should obtain an independent timber cruise before accepting a cash offer.</p>
+        <p>Wetland designations under the state's critical areas regulations can significantly limit development potential and reduce land value. Water rights, particularly east of the Cascades where irrigation access drives agricultural value, also play a critical role in pricing. Sellers should review their county's comprehensive plan and shoreline management designations, as these determine what development is permitted and directly impact the offers they receive from cash buyers.</p>
+
+        <h3>Red Flags When Selling Land for Cash</h3>
+        <p>Sellers should be cautious of cash buyers who pressure for immediate decisions, refuse to provide proof of funds, or ask sellers to pay upfront fees before closing. Legitimate cash land buyers do not charge listing fees, marketing fees, or administrative costs to the seller. Any request for payment before the transaction closes is a significant warning sign that the buyer may not be operating in good faith.</p>
+        <p>Other red flags include buyers who cannot provide a physical business address, refuse to use a licensed title company or escrow service, or offer significantly above market value to secure a contract before renegotiating downward. RE Report recommends verifying any buyer's business registration with the Washington Secretary of State, checking for complaints with the BBB and state attorney general, and insisting on closing through a neutral third-party escrow company.</p>
+      </div>
+
+      <div class="related-ratings">
+        <h3>Related Ratings</h3>
+        <ul>
+          <li><a href="best-cash-land-buyers-colorado.html">Best Cash Land Buyers in Colorado 2026</a></li>
+          <li><a href="best-cash-land-buyers-arizona.html">Best Cash Land Buyers in Arizona 2026</a></li>
+          <li><a href="best-cash-land-buyers-national.html">Best Cash Land Buyers Nationwide 2026</a></li>
+        </ul>
+      </div>
 
       <div class="faq-section">
         <h2>Frequently Asked Questions</h2>
@@ -388,6 +694,22 @@ include '../header.php';
         <details class="faq-item">
           <summary>Can land sellers trust cash offers from these companies?</summary>
           <p>Cash offers vary significantly between buyers. RE Report recommends obtaining multiple offers and comparing them against recent comparable sales data. Higher-rated companies in the Offer Fairness category have demonstrated more competitive pricing relative to market value.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does a cash land sale take in Washington?</summary>
+          <p>Cash land sales in Washington typically close in 14 to 30 days, depending on the buyer and title complexity. Top-rated buyers often provide offers within 24 to 48 hours and can close in as few as 10 business days. Washington uses escrow companies for closings, and county recording timelines vary by region.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need a real estate agent to sell land in Washington?</summary>
+          <p>No, Washington state does not require a real estate agent to sell vacant land. Many landowners sell directly to cash buyers to avoid the 5-6% commission. However, an agent may be helpful for parcels with high value, timber rights, or complex zoning. Sellers should weigh commission costs against the potential for a higher sale price through market exposure.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What closing costs apply to Washington land sales?</summary>
+          <p>Washington land sellers typically pay excise tax (ranging from 1.1% to 3% depending on sale price), title insurance, escrow fees, and recording fees. The state's Real Estate Excise Tax (REET) is the most significant cost for sellers. Many top-rated cash land buyers cover all closing costs as part of their offer.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do cash offers compare to listing land on the market?</summary>
+          <p>Cash offers for Washington land are typically 50-80% of estimated market value, depending on location, parcel size, and zoning. The tradeoff is speed and certainty: cash sales close in weeks rather than the 6-12 months that vacant land commonly sits on the MLS. Sellers who need to liquidate quickly often find cash offers more practical, while those with time may benefit from listing on the open market.</p>
         </details>
       </div>
 

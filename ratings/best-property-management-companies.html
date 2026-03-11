@@ -1,6 +1,6 @@
 <?php
 $page_title = "Best Property Management Companies 2026 | RE Report";
-$page_description = "Independent ratings of the best property management companies in 2026. Compare CBRE, Greystar, Invitation Homes, and Cushman and Wakefield.";
+$page_description = "Independent ratings of the best property management companies in 2026. Compare CBRE, Greystar, JLL, Invitation Homes, Cushman and Wakefield, and Lincoln Property.";
 $page_canonical = "https://rereport.org/ratings/best-property-management-companies.html";
 
 $breadcrumbs = [
@@ -8,6 +8,7 @@ $breadcrumbs = [
   ['label' => 'Property Management', 'url' => 'property-management.html'],
   ['label' => 'Best Property Management Companies 2026']
 ];
+$page_article_dates = ['published' => '2026-03-01', 'modified' => '2026-03-10'];
 
 $page_schema = json_encode([
   "@context" => "https://schema.org",
@@ -15,11 +16,11 @@ $page_schema = json_encode([
   "headline" => $page_title,
   "description" => $page_description,
   "datePublished" => "2026-03-01",
-  "dateModified" => "2026-03-01",
+  "dateModified" => "2026-03-10",
   "publisher" => [
     "@type" => "Organization",
     "name" => "RE Report",
-    "url" => "https://rereport.org"
+    "@id" => "https://rereport.org/#organization"
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
@@ -29,18 +30,18 @@ $page_faq_schema = json_encode([
   "mainEntity" => [
     [
       "@type" => "Question",
-      "name" => "How are property management companies rated?",
+      "name" => "How are property management companies rated by RE Report?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "RE Report evaluates property management companies across five factors: Vacancy Rate, Maintenance Response Time, Fee Structure, Tenant Screening, and Reporting. Scores are based on operational data, consumer reviews, and regulatory records."
+        "text" => "RE Report evaluates property management companies across five equally weighted factors: Vacancy Rate, Maintenance Response Time, Fee Structure, Tenant Screening, and Reporting. Each factor contributes 20% to the overall score. Data sources include operational records, consumer reviews, and regulatory filings."
       ]
     ],
     [
       "@type" => "Question",
-      "name" => "What fees should property owners expect?",
+      "name" => "What fees should property owners expect from management companies?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "Management fees typically range from 8-12% of monthly rent for residential properties, with additional charges for leasing, maintenance coordination, and evictions. RE Report's Fee Structure score evaluates transparency and competitiveness."
+        "text" => "Management fees typically range from 8-12% of monthly rent for residential properties, with additional charges for leasing, maintenance coordination, and evictions. Commercial property management fees vary by asset type and size. RE Report's Fee Structure score evaluates transparency and competitiveness of each company's pricing model."
       ]
     ],
     [
@@ -48,7 +49,7 @@ $page_faq_schema = json_encode([
       "name" => "What is the difference between commercial and residential property management?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "Commercial managers like CBRE and Cushman & Wakefield focus on office, retail, and industrial properties. Residential specialists like Invitation Homes focus on single-family rentals. Greystar spans multifamily apartments."
+        "text" => "Commercial managers like CBRE and Cushman & Wakefield focus on office, retail, and industrial properties. Residential specialists like Invitation Homes focus on single-family rentals. Greystar spans the multifamily apartment segment. Each type requires different expertise, regulatory knowledge, and operational capabilities."
       ]
     ],
     [
@@ -56,8 +57,94 @@ $page_faq_schema = json_encode([
       "name" => "How often are property management ratings updated?",
       "acceptedAnswer" => [
         "@type" => "Answer",
-        "text" => "Ratings are reviewed annually during the RE Report evaluation cycle. Current ratings reflect data collected through March 2026."
+        "text" => "Ratings are reviewed annually during the RE Report evaluation cycle. Current ratings reflect data collected through March 2026. Mid-cycle adjustments may occur for significant events such as regulatory actions, major acquisitions, or material changes in service quality."
       ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What should property owners look for in a property manager?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Key factors include vacancy rate management, maintenance responsiveness, fee transparency, tenant screening thoroughness, and financial reporting quality. Property owners should also verify licensing, insurance coverage, and the manager's track record with similar property types in the local market."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Is it worth hiring a property management company?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Professional property management can be worthwhile for owners who lack the time, expertise, or proximity to manage properties themselves. The cost of management fees is often offset by lower vacancy rates, better tenant screening, faster maintenance resolution, and reduced legal exposure. Owners with multiple properties or out-of-state investments typically benefit most."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What is a good vacancy rate for rental property?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "A good vacancy rate depends on the market and property type, but generally 5-8% is considered healthy for residential properties. Professional management companies often achieve lower vacancy rates through better marketing, pricing strategies, and tenant retention programs. RE Report's Vacancy Rate score evaluates each company's ability to minimize vacancy across its portfolio."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How do property management fees compare between companies?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Fees vary significantly between property management companies and property types. Residential management typically costs 8-12% of monthly rent, while commercial management may be calculated as a percentage of gross revenue or a fixed fee per square foot. RE Report's Fee Structure score evaluates not just the rate itself but the transparency and predictability of the overall fee model."
+      ]
+    ]
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+
+$page_review_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@graph" => [
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "CBRE"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "80", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "CBRE leads RE Report's 2026 property management ratings with the highest overall score of 80/100. The company's Vacancy Rate score of 84/100 and Reporting score of 82/100 reflect 120 years of commercial real estate expertise managing 7 billion square feet globally."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Greystar"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "78", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Greystar scored 78/100 as the largest apartment operator in the United States with 946,000+ units. Strong vacancy rate management and tenant screening offset regulatory settlements that affected the overall score."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "JLL"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "77", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "JLL scored 77/100 with strong performance in vacancy management and reporting. The company manages over 5 billion square feet globally and brings over 240 years of institutional real estate expertise to commercial property management."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Invitation Homes"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "76", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Invitation Homes scored 76/100 as the largest single-family rental operator with 86,000 homes. Strong vacancy management earned an 82/100, though FTC settlement and low consumer review scores reflect tenant experience concerns."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Cushman & Wakefield"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "74", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Cushman & Wakefield scored 74/100, falling below the segment average. The company manages 700 million square feet across the Americas but DOJ RealPage lawsuit participation and poor BBB ratings lowered the overall evaluation."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Lincoln Property Company"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "72", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Lincoln Property Company scored 72/100, falling below the segment average. The company manages over 200,000 apartment units nationwide but trails competitors in maintenance response time and fee structure transparency."
     ]
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
@@ -68,17 +155,110 @@ include '../header.php';
   <section class="page-header">
     <div class="container">
       <h1>Best Property Management Companies 2026</h1>
-      <p>Our analysts evaluated property management companies for the 2026 ratings cycle. Companies were scored across five factors: Vacancy Rate, Maintenance Response Time, Fee Structure, Tenant Screening, and Reporting.</p>
+      <div class="key-takeaways">
+        <h2>Key Takeaways</h2>
+        <ul>
+          <li><strong>CBRE</strong> earns RE Report's 2026 Highest Rated designation with a score of 80/100</li>
+          <li>CBRE scored highest in Vacancy Rate (84/100) and tied for highest in Tenant Screening (82/100) and Reporting (82/100)</li>
+          <li>Greystar (78/100) leads the multifamily segment as the largest U.S. apartment manager with 946,000+ units</li>
+          <li>Three of six rated companies scored above the segment average of 74, with two below average</li>
+          <li>Scores reflect operational data, consumer reviews, BBB records, regulatory filings, and industry benchmarks</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
 
+      <div class="article-meta">
+        <div class="byline">
+          <span class="byline-label">Reviewed by</span>
+          <span class="byline-name">RE Report Editorial Team</span>
+          <span class="byline-sep">&middot;</span>
+          <time datetime="2026-03-10">Updated March 10, 2026</time>
+        </div>
+        <p class="editorial-disclosure">RE Report maintains editorial independence. Companies cannot pay for placement or influence scores. Ratings are based on publicly available data including regulatory filings, consumer reviews, and industry benchmarks. <a href="../editorial-policy.html">Read our editorial policy</a>.</p>
+      </div>
+
+      <div class="comparison-table-wrap">
+        <h2>2026 Property Management Ratings at a Glance</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Score</th>
+              <th>Best For</th>
+              <th>Vacancy Rate</th>
+              <th>Tenant Screening</th>
+              <th>Reporting</th>
+              <th>Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="comparison-row--winner">
+              <td class="company-cell">CBRE<br><span class="domain">cbre.com</span></td>
+              <td class="score-cell"><strong>80</strong>/100</td>
+              <td>Best Overall</td>
+              <td>84</td>
+              <td>82</td>
+              <td>82</td>
+              <td><span class="designation designation--gold">Highest Rated</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Greystar<br><span class="domain">greystar.com</span></td>
+              <td class="score-cell"><strong>78</strong>/100</td>
+              <td>Best for Multifamily</td>
+              <td>84</td>
+              <td>84</td>
+              <td>80</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">JLL<br><span class="domain">jll.com</span></td>
+              <td class="score-cell"><strong>77</strong>/100</td>
+              <td>Best for Commercial</td>
+              <td>80</td>
+              <td>80</td>
+              <td>80</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Invitation Homes<br><span class="domain">invitationhomes.com</span></td>
+              <td class="score-cell"><strong>76</strong>/100</td>
+              <td>Best for Single-Family Rentals</td>
+              <td>82</td>
+              <td>80</td>
+              <td>78</td>
+              <td><span class="designation designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Cushman &amp; Wakefield<br><span class="domain">cushmanwakefield.com</span></td>
+              <td class="score-cell"><strong>74</strong>/100</td>
+              <td>Best for Office Properties</td>
+              <td>78</td>
+              <td>76</td>
+              <td>74</td>
+              <td><span class="designation designation--below">Below Average</span></td>
+            </tr>
+            <tr>
+              <td class="company-cell">Lincoln Property<br><span class="domain">lpc.com</span></td>
+              <td class="score-cell"><strong>72</strong>/100</td>
+              <td>Best for Apartment Communities</td>
+              <td>76</td>
+              <td>74</td>
+              <td>72</td>
+              <td><span class="designation designation--below">Below Average</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="rating-tier">
         <div class="tier-label tier-label--gold">2026 Highest Rated</div>
         <div class="company-card company-card--winner">
           <div class="badge-highest"><span class="badge-icon">&#9733;</span> 2026 Highest Rated</div>
+          <div class="best-for-badge">Best Overall</div>
           <div class="company-header">
             <div>
               <div class="company-name">CBRE</div>
@@ -113,6 +293,24 @@ include '../header.php';
               <span class="score">82</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Mgmt Fee</span>
+              <span class="data-value">Varies</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Units Managed</span>
+              <span class="data-value">7B sq ft</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">Global</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Founded</span>
+              <span class="data-value">1906</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -132,14 +330,16 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>CBRE's scale and operational breadth earn it the top property management position. The company excels in vacancy management and reporting but commercial focus means residential property owners should verify local service capabilities.</p>
+            <p>CBRE's scale and operational breadth earn it the top property management position with the highest overall score of 80/100. The company excels in vacancy management (84/100), tenant screening (82/100), and reporting (82/100), reflecting 120 years of institutional real estate expertise across 7 billion square feet of managed property. An SEC whistleblower penalty and low Trustpilot rating are notable concerns, and the company's primarily commercial focus means residential property owners should verify local service capabilities before engaging.</p>
           </div>
         </div>
       </div>
 
       <div class="rating-tier">
         <div class="tier-label">Above Segment Average</div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for Multifamily</div>
           <div class="company-header">
             <div>
               <div class="company-name">Greystar</div>
@@ -174,12 +374,30 @@ include '../header.php';
               <span class="score">80</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Mgmt Fee</span>
+              <span class="data-value">Varies</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Units Managed</span>
+              <span class="data-value">946K+ units</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">Nationwide</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Founded</span>
+              <span class="data-value">1993</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
               <ul>
                 <li>946,000+ units managed making it the largest U.S. apartment manager</li>
-                <li>Strong vacancy rate and tenant screening performance</li>
+                <li>Highest Tenant Screening score tied at 84/100</li>
                 <li>Established operations since 1993</li>
               </ul>
             </div>
@@ -188,15 +406,94 @@ include '../header.php';
               <ul>
                 <li>$24M FTC settlement and DOJ antitrust settlement</li>
                 <li>$198M in class action settlements</li>
-                <li>Fee structures scored below segment average</li>
+                <li>Fee structures scored below segment average at 70/100</li>
               </ul>
             </div>
           </div>
           <div class="company-analysis">
-            <p>Greystar's massive scale brings operational expertise to property management, particularly for multifamily assets. Regulatory settlements are notable but the company maintains strong operational metrics across vacancy and tenant screening.</p>
+            <p>Greystar's massive scale brings operational expertise to multifamily property management, particularly in vacancy management (84/100) and tenant screening (84/100). The company manages over 946,000 apartment units, making it the largest apartment operator in the United States. Significant regulatory settlements totaling over $220 million are factored into the evaluation, and the Fee Structure score of 70/100 reflects below-average transparency in pricing for property owners.</p>
           </div>
         </div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for Commercial</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">JLL</div>
+              <div class="company-domain">jll.com</div>
+            </div>
+            <div class="company-score">77<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">Vacancy Rate</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 80%;"></div></div>
+              <span class="score">80</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Maintenance Response Time</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 76%;"></div></div>
+              <span class="score">76</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Fee Structure</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 72%;"></div></div>
+              <span class="score">72</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Tenant Screening</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 80%;"></div></div>
+              <span class="score">80</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Reporting</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 80%;"></div></div>
+              <span class="score">80</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Mgmt Fee</span>
+              <span class="data-value">Varies</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Units Managed</span>
+              <span class="data-value">5B+ sq ft</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">Global</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Founded</span>
+              <span class="data-value">1783</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Over 5 billion square feet managed globally</li>
+                <li>Over 240 years of institutional real estate expertise since 1783</li>
+                <li>Strong and consistent scores across vacancy, screening, and reporting</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Primarily commercial focus may not suit residential investors</li>
+                <li>Fee Structure score of 72/100 reflects complex commercial pricing</li>
+                <li>Service availability varies significantly by local market</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>JLL brings over 240 years of institutional real estate expertise to commercial property management, managing more than 5 billion square feet globally. The company scored consistently across Vacancy Rate (80/100), Tenant Screening (80/100), and Reporting (80/100), reflecting a stable and reliable management approach. Like CBRE, the company's commercial focus means residential property owners should verify local service availability and suitability for their asset type.</p>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="best-for-badge">Best for Single-Family Rentals</div>
           <div class="company-header">
             <div>
               <div class="company-name">Invitation Homes</div>
@@ -231,13 +528,31 @@ include '../header.php';
               <span class="score">78</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Mgmt Fee</span>
+              <span class="data-value">Varies</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Units Managed</span>
+              <span class="data-value">86K homes</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">Nationwide</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Founded</span>
+              <span class="data-value">2012</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
               <ul>
                 <li>A+ BBB accredited with largest single-family rental portfolio</li>
                 <li>86,000 homes managed with specialized SFR expertise</li>
-                <li>Strong vacancy rate performance</li>
+                <li>Strong vacancy rate performance at 82/100</li>
               </ul>
             </div>
             <div class="cons">
@@ -250,7 +565,7 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Invitation Homes specializes in single-family rental management at an unmatched scale. However, the combination of regulatory actions and low consumer ratings indicates significant tenant experience challenges that property owners should weigh.</p>
+            <p>Invitation Homes specializes in single-family rental management at an unmatched scale, managing 86,000 homes nationwide. The company earned an A+ BBB accreditation and strong Vacancy Rate score of 82/100 through specialized SFR expertise. However, a $48 million FTC settlement for unfair practices and a 1.3 Trustpilot rating across over 9,000 reviews indicate significant tenant experience challenges that property owners should weigh alongside the operational metrics.</p>
           </div>
         </div>
       </div>
@@ -262,7 +577,9 @@ include '../header.php';
 
       <div class="rating-tier">
         <div class="tier-label">Below Segment Average</div>
+
         <div class="company-card">
+          <div class="best-for-badge">Best for Office Properties</div>
           <div class="company-header">
             <div>
               <div class="company-name">Cushman &amp; Wakefield</div>
@@ -297,6 +614,24 @@ include '../header.php';
               <span class="score">74</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Mgmt Fee</span>
+              <span class="data-value">Varies</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Units Managed</span>
+              <span class="data-value">700M sq ft Americas</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">Global</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Founded</span>
+              <span class="data-value">1917</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -316,30 +651,179 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Cushman and Wakefield brings institutional-grade management capabilities but trails in consumer-facing metrics. The company's involvement in the RealPage pricing lawsuit and poor BBB standing lower the overall score.</p>
+            <p>Cushman and Wakefield brings institutional-grade management capabilities with 700 million square feet managed across the Americas and over 100 years of operation. However, the company trails in consumer-facing metrics, with no subcategory score above 78/100. The company's involvement in the DOJ RealPage algorithmic pricing lawsuit, D-/F BBB ratings at multiple locations, and a 401k class action settlement collectively lower the overall evaluation below the segment average.</p>
+          </div>
+        </div>
+
+        <div class="company-card">
+          <div class="best-for-badge">Best for Apartment Communities</div>
+          <div class="company-header">
+            <div>
+              <div class="company-name">Lincoln Property Company</div>
+              <div class="company-domain">lpc.com</div>
+            </div>
+            <div class="company-score">72<span>/100</span></div>
+          </div>
+          <div class="subcategory-list">
+            <div class="subcategory-item">
+              <span class="label">Vacancy Rate</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 76%;"></div></div>
+              <span class="score">76</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Maintenance Response Time</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 70%;"></div></div>
+              <span class="score">70</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Fee Structure</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 68%;"></div></div>
+              <span class="score">68</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Tenant Screening</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 74%;"></div></div>
+              <span class="score">74</span>
+            </div>
+            <div class="subcategory-item">
+              <span class="label">Reporting</span>
+              <div class="score-bar-container"><div class="score-bar" style="width: 72%;"></div></div>
+              <span class="score">72</span>
+            </div>
+          </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Mgmt Fee</span>
+              <span class="data-value">Varies</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Units Managed</span>
+              <span class="data-value">200K+ units</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Markets</span>
+              <span class="data-value">Nationwide</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Founded</span>
+              <span class="data-value">1965</span>
+            </div>
+          </div>
+          <div class="pros-cons">
+            <div class="pros">
+              <h4>Strengths</h4>
+              <ul>
+                <li>Over 200,000 apartment units managed nationwide</li>
+                <li>Nearly 60 years of operation since 1965</li>
+                <li>Diversified portfolio across apartment and commercial properties</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Considerations</h4>
+              <ul>
+                <li>Lowest Fee Structure score among rated companies at 68/100</li>
+                <li>Maintenance Response Time trails competitors at 70/100</li>
+                <li>Reporting capabilities lag industry leaders</li>
+              </ul>
+            </div>
+          </div>
+          <div class="company-analysis">
+            <p>Lincoln Property Company manages over 200,000 apartment units nationwide with nearly 60 years of operational experience. The company's diversified portfolio spans both residential apartment communities and commercial properties. However, the Fee Structure score of 68/100 is the lowest among all rated companies, and Maintenance Response Time at 70/100 suggests slower service delivery compared to competitors, placing the company below the segment average.</p>
           </div>
         </div>
       </div>
 
-      <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+      <p class="last-updated">Last Updated: March 2026 &middot; <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="methodology-weights">
+        <h2>How We Score Property Management Companies</h2>
+        <p>RE Report evaluates property management companies across five equally weighted factors, each contributing 20% to the overall score:</p>
+        <div class="weight-bars">
+          <div class="weight-item">
+            <span class="weight-label">Vacancy Rate</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Maintenance Response Time</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Fee Structure</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Tenant Screening</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Reporting</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+        </div>
+        <p>Scores incorporate operational performance data, BBB accreditation and complaint ratios, consumer reviews, regulatory filings, and publicly reported legal actions. For full methodology details, see our <a href="../methodology.html">methodology page</a>.</p>
+      </div>
+
+      <div class="editorial-content">
+        <h2>How to Choose a Property Manager</h2>
+        <p>Selecting the right property management company is a critical decision that directly affects rental income, property condition, and owner peace of mind. The right manager can reduce vacancy, maintain property value, and handle the day-to-day demands of landlording, while the wrong choice can lead to lost income, deferred maintenance, and tenant disputes.</p>
+        <p>RE Report's analysis found that Fee Structure scores varied more widely than any other category among rated companies, from 68/100 to 76/100, indicating significant differences in pricing transparency and competitiveness. Property owners should request detailed fee breakdowns from multiple managers and compare not just the headline management rate but also leasing fees, maintenance markups, and termination penalties.</p>
+
+        <h3>Understanding Management Fees</h3>
+        <p>Property management fees typically fall into three categories: the management fee (usually 8-12% of monthly rent for residential properties), leasing fees (often 50-100% of one month's rent for finding new tenants), and maintenance coordination fees (markups on contractor invoices or flat dispatch fees). Some companies charge additional fees for lease renewals, evictions, inspections, or financial reporting.</p>
+        <p>Commercial property management fees are structured differently, often calculated as a percentage of gross revenue or a fixed rate per square foot. The complexity of commercial leases, building systems, and tenant improvement allowances means fee comparisons require careful apples-to-apples analysis. RE Report's Fee Structure score accounts for both the competitiveness and the transparency of each company's overall pricing model.</p>
+
+        <h3>When to Hire a Property Manager</h3>
+        <p>Property management makes the most financial sense for owners who own multiple rental units, live far from their rental properties, lack the time or expertise for hands-on management, or own commercial properties with complex operational requirements. The management fee should be weighed against the value of reduced vacancy, professional tenant screening, and proper maintenance coordination.</p>
+        <p>Owners with a single rental property in their local market may find self-management feasible, particularly with modern property management software tools. However, as portfolios grow or owners acquire properties in distant markets, professional management becomes increasingly cost-effective. RE Report's ratings can help owners compare management companies suited to their specific property type and geographic market.</p>
+      </div>
+
+      <div class="related-ratings">
+        <h3>Related Ratings</h3>
+        <ul>
+          <li><a href="best-real-estate-agents.html">Best Real Estate Agents 2026</a></li>
+          <li><a href="best-hard-money-lenders.html">Best Hard Money Lenders 2026</a></li>
+          <li><a href="best-mortgage-lenders.html">Best Mortgage Lenders 2026</a></li>
+        </ul>
+      </div>
 
       <div class="faq-section">
         <h2>Frequently Asked Questions</h2>
         <details class="faq-item">
-          <summary>How are property management companies rated?</summary>
-          <p>RE Report evaluates property management companies across five factors: Vacancy Rate, Maintenance Response Time, Fee Structure, Tenant Screening, and Reporting. Scores are based on operational data, consumer reviews, and regulatory records.</p>
+          <summary>How are property management companies rated by RE Report?</summary>
+          <p>RE Report evaluates property management companies across five equally weighted factors: Vacancy Rate, Maintenance Response Time, Fee Structure, Tenant Screening, and Reporting. Each factor contributes 20% to the overall score. Data sources include operational records, consumer reviews, and regulatory filings.</p>
         </details>
         <details class="faq-item">
-          <summary>What fees should property owners expect?</summary>
-          <p>Management fees typically range from 8-12% of monthly rent for residential properties, with additional charges for leasing, maintenance coordination, and evictions. RE Report's Fee Structure score evaluates transparency and competitiveness.</p>
+          <summary>What fees should property owners expect from management companies?</summary>
+          <p>Management fees typically range from 8-12% of monthly rent for residential properties, with additional charges for leasing, maintenance coordination, and evictions. Commercial property management fees vary by asset type and size. RE Report's Fee Structure score evaluates transparency and competitiveness of each company's pricing model.</p>
         </details>
         <details class="faq-item">
           <summary>What is the difference between commercial and residential property management?</summary>
-          <p>Commercial managers like CBRE and Cushman &amp; Wakefield focus on office, retail, and industrial properties. Residential specialists like Invitation Homes focus on single-family rentals. Greystar spans multifamily apartments.</p>
+          <p>Commercial managers like CBRE and Cushman &amp; Wakefield focus on office, retail, and industrial properties. Residential specialists like Invitation Homes focus on single-family rentals. Greystar spans the multifamily apartment segment. Each type requires different expertise, regulatory knowledge, and operational capabilities.</p>
         </details>
         <details class="faq-item">
           <summary>How often are property management ratings updated?</summary>
-          <p>Ratings are reviewed annually during the RE Report evaluation cycle. Current ratings reflect data collected through March 2026.</p>
+          <p>Ratings are reviewed annually during the RE Report evaluation cycle. Current ratings reflect data collected through March 2026. Mid-cycle adjustments may occur for significant events such as regulatory actions, major acquisitions, or material changes in service quality.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What should property owners look for in a property manager?</summary>
+          <p>Key factors include vacancy rate management, maintenance responsiveness, fee transparency, tenant screening thoroughness, and financial reporting quality. Property owners should also verify licensing, insurance coverage, and the manager's track record with similar property types in the local market.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is it worth hiring a property management company?</summary>
+          <p>Professional property management can be worthwhile for owners who lack the time, expertise, or proximity to manage properties themselves. The cost of management fees is often offset by lower vacancy rates, better tenant screening, faster maintenance resolution, and reduced legal exposure. Owners with multiple properties or out-of-state investments typically benefit most.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What is a good vacancy rate for rental property?</summary>
+          <p>A good vacancy rate depends on the market and property type, but generally 5-8% is considered healthy for residential properties. Professional management companies often achieve lower vacancy rates through better marketing, pricing strategies, and tenant retention programs. RE Report's Vacancy Rate score evaluates each company's ability to minimize vacancy across its portfolio.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do property management fees compare between companies?</summary>
+          <p>Fees vary significantly between property management companies and property types. Residential management typically costs 8-12% of monthly rent, while commercial management may be calculated as a percentage of gross revenue or a fixed fee per square foot. RE Report's Fee Structure score evaluates not just the rate itself but the transparency and predictability of the overall fee model.</p>
         </details>
       </div>
 

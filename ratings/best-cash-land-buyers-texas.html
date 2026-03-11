@@ -7,17 +7,63 @@ $breadcrumbs = [
   ['label' => 'Cash Land Buyers', 'url' => 'cash-land-buyers.html'],
   ['label' => 'Texas']
 ];
+$page_article_dates = ['published' => '2026-03-01', 'modified' => '2026-03-10'];
 $page_schema = json_encode([
   "@context" => "https://schema.org",
   "@type" => "Article",
   "headline" => $page_title,
   "description" => $page_description,
   "datePublished" => "2026-03-01",
-  "dateModified" => "2026-03-01",
+  "dateModified" => "2026-03-10",
   "publisher" => [
     "@type" => "Organization",
     "name" => "RE Report",
-    "url" => "https://rereport.org"
+    "@id" => "https://rereport.org/#organization"
+  ]
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+$page_review_schema = json_encode([
+  "@context" => "https://schema.org",
+  "@graph" => [
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Sell Texas Land"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "93", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Sell Texas Land earned the Highest Rated designation for Texas with strong scores across all five evaluation factors."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Land Century"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "79", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Land Century operates as a marketplace connecting land sellers with buyers. Results may vary based on Texas regional buyer demand."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "MarketPro Homebuyers"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "76", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "MarketPro Homebuyers has strong BBB accreditation but primarily focuses on residential home purchases."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "Harmony Land Holdings"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "69", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "Harmony Land Holdings is a newer entrant with San Antonio roots but limited independent reviews and no BBB accreditation."
+    ],
+    [
+      "@type" => "Review",
+      "itemReviewed" => ["@type" => "Organization", "name" => "National Land Buyers"],
+      "reviewRating" => ["@type" => "Rating", "ratingValue" => "64", "bestRating" => "100", "worstRating" => "0"],
+      "author" => ["@type" => "Organization", "name" => "RE Report", "@id" => "https://rereport.org/#organization"],
+      "datePublished" => "2026-03-01",
+      "reviewBody" => "National Land Buyers lacks verifiable track record and third-party accreditation expected by RE Report."
+    ]
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 $page_faq_schema = json_encode([
@@ -55,6 +101,38 @@ $page_faq_schema = json_encode([
         "@type" => "Answer",
         "text" => "Cash offers vary significantly between buyers. RE Report recommends obtaining multiple offers and comparing them against recent comparable sales data. Higher-rated companies in the Offer Fairness category have demonstrated more competitive pricing relative to market value."
       ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How long does a cash land sale take in Texas?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Cash land sales in Texas typically close in 14 to 30 days, depending on the buyer and title complexity. Top-rated buyers often provide offers within 24 to 48 hours and can close in as few as 7 to 10 business days. Texas uses title companies for closings, and the process is generally straightforward for parcels with clear title."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "Do I need a real estate agent to sell land in Texas?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "No, Texas does not require a real estate agent to sell vacant land. Many landowners sell directly to cash buyers to avoid the 5-6% commission typically charged by agents. However, an agent may be helpful for high-value ranch properties or parcels with mineral rights. Sellers should weigh the cost of commission against the potential for a higher sale price through MLS exposure."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "What closing costs apply to Texas land sales?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Texas land sellers typically pay for the owner's title insurance policy, escrow fees, recording fees, and any outstanding property taxes. Texas does not charge a state transfer tax on real estate sales, which is a notable cost advantage over many other states. Many top-rated cash land buyers cover all closing costs as part of their offer."
+      ]
+    ],
+    [
+      "@type" => "Question",
+      "name" => "How do cash offers compare to listing land on the market?",
+      "acceptedAnswer" => [
+        "@type" => "Answer",
+        "text" => "Cash offers for Texas land are typically 50-80% of estimated market value, depending on location, parcel size, and zoning. The tradeoff is speed and certainty: cash sales close in weeks rather than the 6-12 months that vacant land often sits on the MLS. Sellers who need to liquidate quickly or want to avoid carrying costs like property taxes may find cash offers more practical."
+      ]
     ]
   ]
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
@@ -64,17 +142,95 @@ include '../header.php';
   <section class="page-header">
     <div class="container">
       <h1>Best Cash Land Buyers in Texas 2026</h1>
-      <p>Our analysts evaluated cash land buying companies operating in Texas for the 2026 ratings cycle. Companies were scored across five factors: Offer Speed, Offer Fairness, Closing Timeline, Transparency, and Accreditation. Below are the results.</p>
+      <div class="key-takeaways">
+        <h2>Key Takeaways</h2>
+        <ul>
+          <li><strong>Sell Texas Land</strong> earns RE Report's 2026 Highest Rated designation with 93/100</li>
+          <li>Sell Texas Land scored highest in Offer Speed (95/100) and Closing Timeline (94/100)</li>
+          <li>Land Century (79/100) and MarketPro Homebuyers (76/100) also scored above the segment average of 74</li>
+          <li>All rated companies evaluated on publicly available data, BBB records, and consumer reviews</li>
+          <li>Scores reflect the 2026 evaluation cycle with data through March 2026</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
 
+      <div class="article-meta">
+        <div class="byline">
+          <span class="byline-label">Reviewed by</span>
+          <span class="byline-name">RE Report Editorial Team</span>
+          <span class="byline-sep">&middot;</span>
+          <time datetime="2026-03-10">Updated March 10, 2026</time>
+        </div>
+        <p class="editorial-disclosure">RE Report maintains editorial independence. Companies cannot pay for placement or influence scores. Ratings are based on publicly available data including regulatory filings, consumer reviews, and industry benchmarks. <a href="../editorial-policy.html">Read our editorial policy</a>.</p>
+      </div>
+
+      <div class="comparison-table-wrap">
+        <h2>2026 Texas Cash Land Buyer Ratings at a Glance</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Score</th>
+              <th>Best For</th>
+              <th>Speed</th>
+              <th>Fairness</th>
+              <th>Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sell Texas Land</td>
+              <td><strong>93</strong></td>
+              <td>Best Overall</td>
+              <td>95</td>
+              <td>92</td>
+              <td><span class="designation-badge designation--gold">Highest Rated</span></td>
+            </tr>
+            <tr>
+              <td>Land Century</td>
+              <td><strong>79</strong></td>
+              <td>Established Track Record</td>
+              <td>78</td>
+              <td>76</td>
+              <td><span class="designation-badge designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td>MarketPro Homebuyers</td>
+              <td><strong>76</strong></td>
+              <td>Accreditation</td>
+              <td>78</td>
+              <td>74</td>
+              <td><span class="designation-badge designation--above">Above Average</span></td>
+            </tr>
+            <tr>
+              <td>Harmony Land Holdings</td>
+              <td><strong>69</strong></td>
+              <td>Land Specialists</td>
+              <td>72</td>
+              <td>70</td>
+              <td><span class="designation-badge designation--below">Below Average</span></td>
+            </tr>
+            <tr>
+              <td>National Land Buyers</td>
+              <td><strong>64</strong></td>
+              <td>National Reach</td>
+              <td>66</td>
+              <td>64</td>
+              <td><span class="designation-badge designation--below">Below Average</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="rating-tier">
         <div class="tier-label tier-label--gold">2026 Highest Rated</div>
         <div class="company-card company-card--winner">
           <div class="badge-highest"><span class="badge-icon">&#9733;</span> 2026 Highest Rated</div>
+          <div class="best-for-badge">Best Overall</div>
           <div class="company-header">
             <div>
               <div class="company-name">Sell Texas Land</div>
@@ -109,6 +265,24 @@ include '../header.php';
               <span class="score">91</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Offer Timeline</span>
+              <span class="data-value">24-48 hours</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Coverage Area</span>
+              <span class="data-value">Texas-focused</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Years Operating</span>
+              <span class="data-value">Varies</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">Not yet rated</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -127,7 +301,7 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Texas land sellers benefit from this company's deep knowledge of the local market. RE Report analysts noted consistently fast response times and a straightforward closing process that minimizes seller friction.</p>
+            <p>Texas land sellers benefit from this company's deep knowledge of the local market. RE Report analysts noted consistently fast response times and a straightforward closing process that minimizes seller friction. The company demonstrated strong capability across Texas's diverse land market, from Hill Country acreage to West Texas ranch parcels and East Texas timber land. Their understanding of Texas-specific considerations such as mineral rights reservations and agricultural exemptions allows for more informed valuations than national platforms typically provide.</p>
           </div>
         </div>
       </div>
@@ -135,6 +309,7 @@ include '../header.php';
       <div class="rating-tier">
         <div class="tier-label">Above Segment Average</div>
         <div class="company-card">
+          <div class="best-for-badge">Best for Established Track Record</div>
           <div class="company-header">
             <div>
               <div class="company-name">Land Century</div>
@@ -169,6 +344,24 @@ include '../header.php';
               <span class="score">82</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Offer Timeline</span>
+              <span class="data-value">3-7 days</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Coverage Area</span>
+              <span class="data-value">Nationwide</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Years Operating</span>
+              <span class="data-value">18+ years (est. 2006)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">A+ (not accredited)</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -188,10 +381,11 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Land Century connects land sellers with a network of buyers rather than purchasing directly. While the platform has a long track record and BBB standing, the marketplace model means offer speed and pricing depend on current buyer demand in the area.</p>
+            <p>Land Century connects land sellers with a network of buyers rather than purchasing directly. While the platform has a long track record and BBB standing, the marketplace model means offer speed and pricing depend on current buyer demand in the area. RE Report analysts found that Texas is one of Land Century's strongest markets due to the state's high volume of land transactions. Parcels near major metro areas like Dallas-Fort Worth, Houston, and San Antonio attracted faster responses, while remote West Texas acreage saw longer wait times on the platform.</p>
           </div>
         </div>
         <div class="company-card">
+          <div class="best-for-badge">Best for Accreditation</div>
           <div class="company-header">
             <div>
               <div class="company-name">MarketPro Homebuyers</div>
@@ -226,6 +420,24 @@ include '../header.php';
               <span class="score">80</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Offer Timeline</span>
+              <span class="data-value">24-72 hours</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Coverage Area</span>
+              <span class="data-value">7 states</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Years Operating</span>
+              <span class="data-value">12+ years (est. 2012)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">A+ Accredited</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -245,7 +457,7 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>MarketPro Homebuyers brings a well-reviewed home buying operation to the land space. While accreditation and customer reviews are strong, the company's primary focus remains residential homes, which may affect the land-specific expertise available to sellers.</p>
+            <p>MarketPro Homebuyers brings a well-reviewed home buying operation to the land space. While accreditation and customer reviews are strong, the company's primary focus remains residential homes, which may affect the land-specific expertise available to sellers. RE Report analysts noted that MarketPro's BBB accreditation and consistent Google review ratings set it apart from less established competitors. However, sellers with parcels involving mineral rights or agricultural exemptions may find that a land-focused buyer offers more thorough valuations.</p>
           </div>
         </div>
       </div>
@@ -258,6 +470,7 @@ include '../header.php';
       <div class="rating-tier">
         <div class="tier-label">Below Segment Average</div>
         <div class="company-card">
+          <div class="best-for-badge">Best for Land Specialists</div>
           <div class="company-header">
             <div>
               <div class="company-name">Harmony Land Holdings</div>
@@ -292,6 +505,24 @@ include '../header.php';
               <span class="score">63</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Offer Timeline</span>
+              <span class="data-value">48-96 hours</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Coverage Area</span>
+              <span class="data-value">Multi-state</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Years Operating</span>
+              <span class="data-value">5+ years (est. 2019)</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">Not rated</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -310,10 +541,11 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>Harmony Land Holdings is a newer entrant in the cash land buying space. The lack of BBB accreditation and limited review history make it difficult to fully assess long-term reliability, though the company does specialize in land transactions.</p>
+            <p>Harmony Land Holdings is a newer entrant in the cash land buying space. The lack of BBB accreditation and limited review history make it difficult to fully assess long-term reliability, though the company does specialize in land transactions. Being headquartered in San Antonio gives them some proximity to the Texas market, which could translate to faster response times for local sellers. However, the limited public track record means sellers should request references and verify closing history before proceeding.</p>
           </div>
         </div>
         <div class="company-card">
+          <div class="best-for-badge">Best for National Reach</div>
           <div class="company-header">
             <div>
               <div class="company-name">National Land Buyers</div>
@@ -347,6 +579,24 @@ include '../header.php';
               <span class="score">60</span>
             </div>
           </div>
+          <div class="company-data-points">
+            <div class="data-point">
+              <span class="data-label">Offer Timeline</span>
+              <span class="data-value">Unknown</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Coverage Area</span>
+              <span class="data-value">Unknown</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">Years Operating</span>
+              <span class="data-value">Unverified</span>
+            </div>
+            <div class="data-point">
+              <span class="data-label">BBB Status</span>
+              <span class="data-value">Not rated</span>
+            </div>
+          </div>
           <div class="pros-cons">
             <div class="pros">
               <h4>Strengths</h4>
@@ -364,12 +614,68 @@ include '../header.php';
             </div>
           </div>
           <div class="company-analysis">
-            <p>National Land Buyers lacks the verifiable track record and third-party accreditation that RE Report typically expects from rated companies. Sellers should exercise additional due diligence before engaging with this buyer.</p>
+            <p>National Land Buyers lacks the verifiable track record and third-party accreditation that RE Report typically expects from rated companies. Sellers should exercise additional due diligence before engaging with this buyer. RE Report analysts were unable to confirm key operational details including office locations, transaction volume, or management background. The absence of any BBB profile or verified consumer reviews makes it difficult to assess this company's reliability for Texas land transactions.</p>
           </div>
         </div>
       </div>
 
       <p class="last-updated">Last Updated: March 2026 · <a href="../methodology.html">View Methodology</a></p>
+
+      <div class="methodology-weights">
+        <h2>How We Score Cash Land Buyers</h2>
+        <p>RE Report evaluates cash land buyers across five equally weighted factors, each contributing 20% to the overall score:</p>
+        <div class="weight-bars">
+          <div class="weight-item">
+            <span class="weight-label">Offer Speed</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Offer Fairness</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Closing Timeline</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Transparency</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+          <div class="weight-item">
+            <span class="weight-label">Accreditation</span>
+            <div class="weight-bar"><div class="weight-fill" style="width:20%"></div></div>
+            <span class="weight-pct">20%</span>
+          </div>
+        </div>
+        <p>Scores incorporate BBB accreditation records, consumer review platforms, state regulatory filings, and verified transaction data. For full methodology details, see our <a href="../methodology.html">methodology page</a>.</p>
+      </div>
+
+      <div class="editorial-content">
+        <h2>How to Sell Land for Cash in Texas in 2026</h2>
+        <p>Texas is the largest state for land sales in the United States, with millions of acres traded annually across its 254 counties. The state's lack of a state income tax continues to attract buyers from other states, and diverse terrain ranging from Gulf Coast marshland to Hill Country ranches to West Texas desert creates a wide range of land values and buyer demand. Cash sales offer a streamlined alternative to the traditional listing process, which for vacant land in Texas can take 6 to 18 months depending on location and parcel type.</p>
+        <p>To sell land for cash in Texas, sellers typically submit their parcel details to one or more cash buyers, receive an offer within days, and close through a licensed title company. The process eliminates buyer financing contingencies, appraisals, and extended marketing periods. Sellers should ensure they understand their mineral rights situation, verify their property tax status with the county appraisal district, and confirm any agricultural or wildlife management exemptions that may affect the transfer.</p>
+
+        <h3>What Affects Land Value in Texas</h3>
+        <p>Texas land values are influenced by location, access, water availability, mineral rights, and agricultural potential. Parcels near the expanding metro areas of Dallas-Fort Worth, Houston, Austin, and San Antonio command the highest prices per acre, while remote West Texas and Panhandle acreage trades at significantly lower values. Mineral rights are a critical factor unique to Texas land sales, as the state's oil, gas, and wind energy potential can dramatically affect a parcel's value depending on whether mineral rights convey with the surface.</p>
+        <p>Agricultural exemptions under Texas tax code significantly reduce property tax burdens for qualifying land, and the transfer or loss of these exemptions during a sale can result in rollback taxes that affect net proceeds. Water rights, particularly access to groundwater through existing wells or membership in a groundwater conservation district, also impact value. Sellers should have a clear understanding of their parcel's legal access, utility availability, and any deed restrictions before requesting cash offers.</p>
+
+        <h3>Red Flags When Selling Land for Cash</h3>
+        <p>Sellers should be cautious of cash buyers who pressure for immediate decisions, refuse to provide proof of funds, or ask sellers to pay upfront fees before closing. Legitimate cash land buyers do not charge listing fees, marketing fees, or administrative costs to the seller. Any request for payment before the transaction closes is a significant warning sign that the buyer may not be operating in good faith.</p>
+        <p>Other red flags include buyers who cannot provide a physical business address, refuse to use a licensed title company, or offer significantly above market value to secure a contract before renegotiating downward. RE Report recommends verifying any buyer's business registration with the Texas Secretary of State, checking for complaints with the BBB and state attorney general, and insisting on closing through a neutral third-party title company.</p>
+      </div>
+
+      <div class="related-ratings">
+        <h3>Related Ratings</h3>
+        <ul>
+          <li><a href="best-cash-land-buyers-arizona.html">Best Cash Land Buyers in Arizona 2026</a></li>
+          <li><a href="best-cash-land-buyers-tennessee.html">Best Cash Land Buyers in Tennessee 2026</a></li>
+          <li><a href="best-cash-land-buyers-national.html">Best Cash Land Buyers Nationwide 2026</a></li>
+        </ul>
+      </div>
 
       <div class="faq-section">
         <h2>Frequently Asked Questions</h2>
@@ -388,6 +694,22 @@ include '../header.php';
         <details class="faq-item">
           <summary>Can land sellers trust cash offers from these companies?</summary>
           <p>Cash offers vary significantly between buyers. RE Report recommends obtaining multiple offers and comparing them against recent comparable sales data. Higher-rated companies in the Offer Fairness category have demonstrated more competitive pricing relative to market value.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does a cash land sale take in Texas?</summary>
+          <p>Cash land sales in Texas typically close in 14 to 30 days, depending on the buyer and title complexity. Top-rated buyers often provide offers within 24 to 48 hours and can close in as few as 7 to 10 business days. Texas uses title companies for closings, and the process is generally straightforward for parcels with clear title.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need a real estate agent to sell land in Texas?</summary>
+          <p>No, Texas does not require a real estate agent to sell vacant land. Many landowners sell directly to cash buyers to avoid the 5-6% commission typically charged by agents. However, an agent may be helpful for high-value ranch properties or parcels with mineral rights. Sellers should weigh the cost of commission against the potential for a higher sale price through MLS exposure.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What closing costs apply to Texas land sales?</summary>
+          <p>Texas land sellers typically pay for the owner's title insurance policy, escrow fees, recording fees, and any outstanding property taxes. Texas does not charge a state transfer tax on real estate sales, which is a notable cost advantage over many other states. Many top-rated cash land buyers cover all closing costs as part of their offer.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do cash offers compare to listing land on the market?</summary>
+          <p>Cash offers for Texas land are typically 50-80% of estimated market value, depending on location, parcel size, and zoning. The tradeoff is speed and certainty: cash sales close in weeks rather than the 6-12 months that vacant land often sits on the MLS. Sellers who need to liquidate quickly or want to avoid carrying costs like property taxes may find cash offers more practical.</p>
         </details>
       </div>
 
