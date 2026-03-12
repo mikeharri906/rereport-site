@@ -4,6 +4,11 @@ on:
   push:
     branches: [master]
   workflow_dispatch:
+    inputs:
+      full_sync:
+        description: 'Upload all files (not just changed)'
+        type: boolean
+        default: false
 
 jobs:
   deploy:
@@ -13,30 +18,43 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Upload changed files via lftp
+      - name: Upload files via lftp
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq lftp
 
-          # Get list of changed files (excluding .git, .github, .claude)
-          CHANGED=$(git diff --name-only HEAD~1 HEAD | grep -v '^\.\(git\|github\|claude\)' || true)
+          FULL_SYNC="${{ inputs.full_sync || 'false' }}"
 
-          if [ -z "$CHANGED" ]; then
-            echo "No deployable files changed."
+          if [ "$FULL_SYNC" = "true" ]; then
+            echo "Full sync — uploading all files"
+            FILES=$(find . -type f \
+              ! -path './.git/*' \
+              ! -path './.github/*' \
+              ! -path './.claude/*' \
+              ! -path './node_modules/*' \
+              | sed 's|^\./||')
+          else
+            echo "Incremental — uploading changed files only"
+            FILES=$(git diff --name-only HEAD~1 HEAD \
+              | grep -v '^\.\(git\|github\|claude\)' || true)
+          fi
+
+          if [ -z "$FILES" ]; then
+            echo "No files to deploy."
             exit 0
           fi
 
-          echo "Files to upload:"
-          echo "$CHANGED"
+          echo "Deploying $(echo "$FILES" | wc -l) files:"
+          echo "$FILES"
 
-          # Build lftp put commands — create directories as needed
+          # Build lftp commands
           CMDS=""
-          for f in $CHANGED; do
+          for f in $FILES; do
             if [ -f "$f" ]; then
               DIR=$(dirname "$f")
               if [ "$DIR" != "." ]; then
                 CMDS="$CMDS mkdir -p /public_html/$DIR;"
               fi
-              CMDS="$CMDS put -O /public_html/$DIR $f;"
+              CMDS="$CMDS put -O /public_html/$([ "$DIR" = "." ] && echo "" || echo "$DIR/") $f;"
             fi
           done
 
@@ -51,7 +69,7 @@ jobs:
             quit;
           "
 
-          echo "Deployed $(echo "$CHANGED" | wc -l) files."
+          echo "Done — deployed $(echo "$FILES" | wc -l) files."
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
