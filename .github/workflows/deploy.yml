@@ -1,0 +1,36 @@
+name: Deploy to Hostinger via FTP
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy via lftp mirror
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          lftp -e "
+            set ssl:verify-certificate no;
+            set net:timeout 30;
+            set net:max-retries 3;
+            set net:reconnect-interval-base 5;
+            set mirror:parallel-transfer-count 5;
+            open $FTP_HOST;
+            user $FTP_USER $FTP_PASS;
+            mirror --reverse --delete --verbose \
+              --exclude ^\.git/ \
+              --exclude ^\.github/ \
+              --exclude ^\.claude/ \
+              --exclude ^node_modules/ \
+              . /public_html/;
+            quit;
+          "
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASS: ${{ secrets.FTP_PASS }}
