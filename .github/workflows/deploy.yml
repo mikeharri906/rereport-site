@@ -25,51 +25,63 @@ jobs:
           FULL_SYNC="${{ inputs.full_sync || 'false' }}"
 
           if [ "$FULL_SYNC" = "true" ]; then
-            echo "Full sync — uploading all files"
-            FILES=$(find . -type f \
-              ! -path './.git/*' \
-              ! -path './.github/*' \
-              ! -path './.claude/*' \
-              ! -path './node_modules/*' \
-              | sed 's|^\./||')
+            echo "Full sync — mirror all files to server"
+            lftp -e "
+              set ssl:verify-certificate no;
+              set net:timeout 30;
+              set net:max-retries 3;
+              set ftp:passive-mode yes;
+              set mirror:parallel-transfer-count 5;
+              open $FTP_HOST;
+              user $FTP_USER $FTP_PASS;
+              mirror --reverse --no-perms --no-umask --parallel=5 \
+                --exclude ^\.git/ \
+                --exclude ^\.github/ \
+                --exclude ^\.claude/ \
+                --exclude ^node_modules/ \
+                --exclude ^CLAUDE\.md$ \
+                . /public_html/;
+              quit;
+            "
+            echo "Done — full sync complete."
           else
             echo "Incremental — uploading changed files only"
             FILES=$(git diff --name-only HEAD~1 HEAD \
               | grep -v '^\.\(git\|github\|claude\)' || true)
-          fi
 
-          if [ -z "$FILES" ]; then
-            echo "No files to deploy."
-            exit 0
-          fi
-
-          echo "Deploying $(echo "$FILES" | wc -l) files:"
-          echo "$FILES"
-
-          # Build lftp commands
-          CMDS=""
-          for f in $FILES; do
-            if [ -f "$f" ]; then
-              DIR=$(dirname "$f")
-              if [ "$DIR" != "." ]; then
-                CMDS="$CMDS mkdir -p /public_html/$DIR;"
-              fi
-              CMDS="$CMDS put -O /public_html/$([ "$DIR" = "." ] && echo "" || echo "$DIR/") $f;"
+            if [ -z "$FILES" ]; then
+              echo "No files to deploy."
+              exit 0
             fi
-          done
 
-          lftp -e "
-            set ssl:verify-certificate no;
-            set net:timeout 30;
-            set net:max-retries 3;
-            set ftp:passive-mode yes;
-            open $FTP_HOST;
-            user $FTP_USER $FTP_PASS;
-            $CMDS
-            quit;
-          "
+            echo "Deploying $(echo "$FILES" | wc -l) files:"
+            echo "$FILES"
 
-          echo "Done — deployed $(echo "$FILES" | wc -l) files."
+            # Build lftp commands
+            CMDS=""
+            for f in $FILES; do
+              if [ -f "$f" ]; then
+                DIR=$(dirname "$f")
+                if [ "$DIR" != "." ]; then
+                  CMDS="$CMDS mkdir -p /public_html/$DIR;"
+                fi
+                CMDS="$CMDS put -O /public_html/$([ "$DIR" = "." ] && echo "" || echo "$DIR/") $f;"
+              fi
+            done
+
+            lftp -e "
+              set ssl:verify-certificate no;
+              set net:timeout 30;
+              set net:max-retries 3;
+              set ftp:passive-mode yes;
+              open $FTP_HOST;
+              user $FTP_USER $FTP_PASS;
+              $CMDS
+              quit;
+            "
+
+            echo "Done — deployed $(echo "$FILES" | wc -l) files."
+          fi
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
