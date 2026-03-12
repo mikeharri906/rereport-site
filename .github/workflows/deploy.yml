@@ -16,13 +16,14 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq lftp
           lftp -e "
             set ssl:verify-certificate no;
-            set net:timeout 30;
-            set net:max-retries 3;
+            set net:timeout 60;
+            set net:max-retries 5;
             set net:reconnect-interval-base 5;
-            set mirror:parallel-transfer-count 5;
+            set mirror:parallel-transfer-count 3;
+            set ftp:passive-mode yes;
             open $FTP_HOST;
             user $FTP_USER $FTP_PASS;
-            mirror --reverse --delete --verbose \
+            mirror --reverse --only-newer --verbose \
               --exclude ^\.git/ \
               --exclude ^\.github/ \
               --exclude ^\.claude/ \
