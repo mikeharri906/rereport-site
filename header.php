@@ -97,13 +97,13 @@
       <?php
         $base = (strpos($_SERVER['REQUEST_URI'], '/ratings/') !== false) ? '../' : '';
       ?>
-      <a href="<?php echo $base; ?>index.html" class="site-logo">RE Report</a>
+      <a href="<?php echo $base ?: '/'; ?>" class="site-logo">RE Report</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'); document.querySelector('.main-nav').classList.toggle('open')">&#9776;</button>
       <nav class="main-nav">
-        <a href="<?php echo $base; ?>ratings/cash-land-buyers.html">Ratings</a>
-        <a href="<?php echo $base; ?>methodology.html">Methodology</a>
-        <a href="<?php echo $base; ?>about.html">About</a>
-        <a href="<?php echo $base; ?>contact.html">Contact</a>
+        <a href="<?php echo $base; ?>ratings/cash-land-buyers">Ratings</a>
+        <a href="<?php echo $base; ?>methodology">Methodology</a>
+        <a href="<?php echo $base; ?>about">About</a>
+        <a href="<?php echo $base; ?>contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -111,7 +111,7 @@
   <nav class="breadcrumbs" aria-label="Breadcrumb">
     <div class="container">
       <ol>
-        <li><a href="<?php echo $base; ?>index.html">Home</a></li>
+        <li><a href="<?php echo $base ?: '/'; ?>">Home</a></li>
         <?php foreach ($breadcrumbs as $crumb): ?>
         <?php if (isset($crumb['url'])): ?>
         <li><a href="<?php echo $crumb['url']; ?>"><?php echo $crumb['label']; ?></a></li>
