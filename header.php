@@ -100,7 +100,19 @@
       <a href="<?php echo $base ?: '/'; ?>" class="site-logo">RE Report</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'); document.querySelector('.main-nav').classList.toggle('open')">&#9776;</button>
       <nav class="main-nav">
-        <a href="<?php echo $base; ?>ratings/cash-land-buyers">Ratings</a>
+        <div class="nav-dropdown">
+          <a href="<?php echo $base; ?>ratings/cash-land-buyers" class="nav-dropdown-trigger">Ratings</a>
+          <div class="nav-dropdown-menu">
+            <a href="<?php echo $base; ?>ratings/cash-land-buyers">Cash Land Buyers</a>
+            <a href="<?php echo $base; ?>ratings/cash-home-buyers">Cash Home Buyers</a>
+            <a href="<?php echo $base; ?>ratings/ibuyers">iBuyers</a>
+            <a href="<?php echo $base; ?>ratings/mortgage-lenders">Mortgage Lenders</a>
+            <a href="<?php echo $base; ?>ratings/title-companies">Title Companies</a>
+            <a href="<?php echo $base; ?>ratings/real-estate-agents">Real Estate Agents</a>
+            <a href="<?php echo $base; ?>ratings/property-management">Property Management</a>
+            <a href="<?php echo $base; ?>ratings/hard-money-lenders">Hard Money Lenders</a>
+          </div>
+        </div>
         <a href="<?php echo $base; ?>methodology">Methodology</a>
         <a href="<?php echo $base; ?>about">About</a>
         <a href="<?php echo $base; ?>contact">Contact</a>
