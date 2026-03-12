@@ -43,7 +43,7 @@
   <meta property="article:author" content="RE Report">
   <?php endif; ?>
   <link rel="icon" type="image/svg+xml" href="<?php echo $base ?? ''; ?>favicon.svg">
-  <link rel="stylesheet" href="<?php echo $page_css_path; ?>?v=2">
+  <link rel="stylesheet" href="<?php echo $page_css_path; ?>?v=<?php echo filemtime(__DIR__ . '/style.css'); ?>">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
