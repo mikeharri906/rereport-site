@@ -10,27 +10,48 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
-      - name: Deploy via lftp mirror
+      - name: Upload changed files via lftp
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+          # Get list of changed files (excluding .git, .github, .claude)
+          CHANGED=$(git diff --name-only HEAD~1 HEAD | grep -v '^\.\(git\|github\|claude\)' || true)
+
+          if [ -z "$CHANGED" ]; then
+            echo "No deployable files changed."
+            exit 0
+          fi
+
+          echo "Files to upload:"
+          echo "$CHANGED"
+
+          # Build lftp put commands — create directories as needed
+          CMDS=""
+          for f in $CHANGED; do
+            if [ -f "$f" ]; then
+              DIR=$(dirname "$f")
+              if [ "$DIR" != "." ]; then
+                CMDS="$CMDS mkdir -p /public_html/$DIR;"
+              fi
+              CMDS="$CMDS put -O /public_html/$DIR $f;"
+            fi
+          done
+
           lftp -e "
             set ssl:verify-certificate no;
-            set net:timeout 60;
-            set net:max-retries 5;
-            set net:reconnect-interval-base 5;
-            set mirror:parallel-transfer-count 3;
+            set net:timeout 30;
+            set net:max-retries 3;
             set ftp:passive-mode yes;
             open $FTP_HOST;
             user $FTP_USER $FTP_PASS;
-            mirror --reverse --only-newer --verbose \
-              --exclude ^\.git/ \
-              --exclude ^\.github/ \
-              --exclude ^\.claude/ \
-              --exclude ^node_modules/ \
-              . /public_html/;
+            $CMDS
             quit;
           "
+
+          echo "Deployed $(echo "$CHANGED" | wc -l) files."
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
