@@ -14,66 +14,48 @@ const mimeTypes = {
 
 function extractVars(content) {
   const vars = {};
-  // Extract $var = "value"; assignments
   const re = /\$(\w+)\s*=\s*"([^"]*)";\s*/g;
   let m;
-  while ((m = re.exec(content)) !== null) {
-    vars[m[1]] = m[2];
-  }
-  // Extract $var = '...'; single-quote assignments
+  while ((m = re.exec(content)) !== null) vars[m[1]] = m[2];
   const re2 = /\$(\w+)\s*=\s*'([^']*)';\s*/g;
-  while ((m = re2.exec(content)) !== null) {
-    vars[m[1]] = m[2];
-  }
+  while ((m = re2.exec(content)) !== null) vars[m[1]] = m[2];
   return vars;
 }
 
-function processPhp(content, filePath) {
+function processFile(filePath, urlPath) {
   const dir = path.dirname(filePath);
-  const isInRatings = filePath.replace(/\\/g, '/').includes('/ratings/');
-  const isInBadges = filePath.replace(/\\/g, '/').includes('/badges/');
-  const base = (isInRatings || isInBadges) ? '../' : '';
+  const isSubdir = urlPath.includes('/ratings/') || urlPath.includes('/badges/');
+  const base = isSubdir ? '../' : '';
+  const cssPath = isSubdir ? '../style.css' : 'style.css';
 
-  // Extract PHP variables from the page
+  let content = fs.readFileSync(filePath, 'utf-8');
   const vars = extractVars(content);
 
-  // Process includes - match the full PHP block containing include
-  let out = content.replace(/<\?php[\s\S]*?include\s+['"]([^'"]+)['"]\s*;\s*\?>/g, (match, inc) => {
+  // Process include directives
+  content = content.replace(/<\?php[\s\S]*?include\s+['"]([^'"]+)['"]\s*;\s*\?>/g, (match, inc) => {
     const incPath = path.resolve(dir, inc);
     try {
-      let incContent = fs.readFileSync(incPath, 'utf-8');
-
-      // Replace PHP echo of variables
-      incContent = incContent.replace(/<\?php\s+echo\s+\$(\w+);\s*\?>/g, (m, varName) => {
-        return vars[varName] || '';
-      });
-
-      // Replace $base variable references
-      incContent = incContent.replace(/<\?php\s+echo\s+\$base\s*(?:\?\?\s*'')?\s*;\s*\?>/g, base);
-
-      // Handle $page_css_path
-      incContent = incContent.replace(/<\?php\s+echo\s+\$page_css_path;\s*\?>/g,
-        vars['page_css_path'] || (base + 'style.css'));
-
-      // Strip remaining PHP blocks (conditionals, etc) but keep their HTML content
-      // Handle <?php if (...): ?> ... <?php endif; ?> blocks by stripping the PHP tags
-      incContent = incContent.replace(/<\?php\s+if\s*\([^)]*\)\s*:\s*\?>/g, '');
-      incContent = incContent.replace(/<\?php\s+endif;\s*\?>/g, '');
-      incContent = incContent.replace(/<\?php\s+else\s*:\s*\?>/g, '');
-      incContent = incContent.replace(/<\?php\s+foreach[\s\S]*?\?>/g, '');
-      incContent = incContent.replace(/<\?php\s+endforeach;\s*\?>/g, '');
-
-      // Strip any remaining PHP blocks
-      incContent = incContent.replace(/<\?php[\s\S]*?\?>/g, '');
-
-      return incContent;
-    } catch (e) { return `<!-- include not found: ${inc} (${e.message}) -->`; }
+      return fs.readFileSync(incPath, 'utf-8');
+    } catch (e) {
+      return `<!-- include error: ${inc} -->`;
+    }
   });
 
-  // Strip remaining PHP blocks (variable declarations at top of page)
-  out = out.replace(/<\?php[\s\S]*?\?>/g, '');
+  // Replace all $variable echo patterns
+  content = content.replace(/<\?php\s+echo\s+\$(\w+);\s*\?>/g, (m, v) => {
+    if (v === 'base') return base;
+    if (v === 'page_css_path') return vars['page_css_path'] || cssPath;
+    return vars[v] || '';
+  });
 
-  return out;
+  // Handle <?php echo $base ?? ''; ?> and similar
+  content = content.replace(/<\?php\s+echo\s+\$base\s*\?\?\s*''\s*;\s*\?>/g, base);
+
+  // Strip all remaining PHP blocks (conditionals, assignments, logic)
+  // But preserve HTML content between PHP if/endif blocks
+  content = content.replace(/<\?php[\s\S]*?\?>/g, '');
+
+  return content;
 }
 
 http.createServer((req, res) => {
@@ -81,28 +63,28 @@ http.createServer((req, res) => {
   if (urlPath.endsWith('/')) urlPath += 'index.html';
 
   let filePath = path.join(ROOT, urlPath);
-
-  // Try .html extension if no extension
-  if (!path.extname(filePath) && !fs.existsSync(filePath)) {
-    filePath += '.html';
-  }
+  if (!path.extname(filePath) && !fs.existsSync(filePath)) filePath += '.html';
 
   if (!fs.existsSync(filePath)) {
-    res.writeHead(404);
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
     res.end('Not Found');
     return;
   }
 
   const ext = path.extname(filePath);
   const mime = mimeTypes[ext] || 'application/octet-stream';
+  const isBinary = ['.png', '.jpg', '.ico'].includes(ext);
 
-  let content = fs.readFileSync(filePath, ext === '.png' || ext === '.jpg' || ext === '.ico' ? null : 'utf-8');
-
-  // Process PHP includes in HTML files
-  if (ext === '.html' && typeof content === 'string' && content.includes('<?php')) {
-    content = processPhp(content, filePath);
+  let content;
+  if (isBinary) {
+    content = fs.readFileSync(filePath);
+  } else {
+    content = fs.readFileSync(filePath, 'utf-8');
+    if (ext === '.html' && content.includes('<?php')) {
+      content = processFile(filePath, urlPath);
+    }
   }
 
   res.writeHead(200, { 'Content-Type': mime });
   res.end(content);
-}).listen(PORT, () => console.log(`Dev server running at http://localhost:${PORT}`));
+}).listen(PORT, () => console.log(`Dev server at http://localhost:${PORT}`));
