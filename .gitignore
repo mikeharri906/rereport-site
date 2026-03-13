@@ -1,0 +1,23 @@
+# Environment and secrets
+.env
+.env.*
+*.key
+*.pem
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Node (if ever used)
+node_modules/
+
+# Logs
+*.log
